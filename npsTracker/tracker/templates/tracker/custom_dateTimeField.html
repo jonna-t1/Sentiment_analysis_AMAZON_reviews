@@ -1,0 +1,16 @@
+{% load crispy_forms_field %}
+
+<div class="container">
+    <div class='col-md-15'>
+        <!--{{ form.resolution_date|as_crispy_field }}-->
+      <div id="tadLeft" class="form-group">
+          <b><p>Resolution Date*</p></b>
+        <div class='input-group date' id='datetimepicker6'>
+          <input type='text' class="form-control" data-date-format="DD/MM/YYYY HH:mm"/>
+          <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+</div>

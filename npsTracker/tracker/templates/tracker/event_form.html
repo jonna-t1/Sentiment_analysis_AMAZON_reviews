@@ -1,0 +1,129 @@
+{% extends "tracker/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<!--<html>-->
+
+<!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+
+<!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+<!--&lt;!&ndash;<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">&ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />-->
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>-->
+
+<!--<style>-->
+    <!--/* The navigation bar */-->
+<!--.navbar {-->
+  <!--overflow: hidden;-->
+  <!--background-color: #333;-->
+  <!--position: fixed; /* Set the navbar to fixed position */-->
+  <!--top: 0; /* Position the navbar at the top of the page */-->
+  <!--width: 100%; /* Full width */-->
+<!--}-->
+
+<!--.features {-->
+      <!--left: auto !important;-->
+      <!--right: 0px;-->
+      <!--float: right;-->
+    <!--}-->
+
+<!--#id_type {-->
+    <!--height: 50px;-->
+<!--}-->
+<!--#id_status {-->
+    <!--height: 50px;-->
+<!--}-->
+<!--#id_priority {-->
+    <!--height: 50px;-->
+<!--}-->
+<!--#id_assigned_team {-->
+    <!--height: 50px;-->
+<!--}-->
+<!--#id_assigned_person {-->
+    <!--height: 50px;-->
+<!--}-->
+
+<!--#id_resolution_date {-->
+    <!--//height: 200px;-->
+<!--}-->
+
+<!--#tadLeft{-->
+    <!--position:relative;-->
+    <!--right: 15px;-->
+<!--}-->
+<!--</style>-->
+
+<!--<script>-->
+  <!--$(document).ready(function() {-->
+
+  <!--//$("#id_resolution_date").append("<span class="glyphicon glyphicon-calendar">"+data.id_resolution_date+"</span>";-->
+    <!--//$("#id_resolution_date").append("<span class='label label-important'>"+data.id_resolution_date+'</span>');-->
+  <!--$(function() {-->
+    <!--$('#id_resolution_date1').datetimepicker({-->
+        <!--format: 'DD/MM/YYYY HH:mm:ss',-->
+    <!--});-->
+    <!--$('#datetimepicker6').datetimepicker({-->
+      <!--useCurrent: false //Important! See issue #1075-->
+
+    <!--});-->
+    <!--$("#id_resolution_date1").on("dp.change", function(e) {-->
+      <!--$('#datetimepicker6').data("DateTimePicker").minDate(e.date);-->
+    <!--});-->
+    <!--$("#datetimepicker6").on("dp.change", function(e) {-->
+      <!--$('#id_resolution_date').data("DateTimePicker").maxDate(e.date);-->
+    <!--});-->
+  <!--});-->
+<!--});-->
+
+  <!--</script>-->
+
+    <!--<form action="" method="post">-->
+        <!--<ul class="contactList">-->
+            <!--<li id="subject" class="contact">{{ form.reference }}</li>-->
+            <!--<li id="email" class="contact">{{ form.email }}</li>-->
+            <!--<li id="message" class="contact">{{ form.message }}</li>-->
+        <!--</ul>-->
+        <!--<input type="submit" value="Submit">-->
+    <!--</form>-->
+
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Event</legend>
+
+                      <div class="container">
+                        <div class='col-md-15'>
+                            <!--{{ form.resolution_date|as_crispy_field }}-->
+                          <div id="tadLeft" class="form-group">
+                              <!--<b><p>Resolution Date*</p></b>-->
+                            <div class='input-group date' id='datetimepicker6'>
+
+                              <!--<input type='text' class="form-control" data-date-format="DD/MM/YYYY HH:mm"/>-->
+                              <!--<span class="input-group-addon">-->
+                                            <!--<span class="glyphicon glyphicon-calendar"></span>-->
+                              <!--</span>-->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                <div style="position: relative">
+                    {{ form|crispy }}
+                </div>
+
+
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}

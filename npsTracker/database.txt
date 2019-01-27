@@ -1,0 +1,19 @@
+import datetime
+from tracker.models import Event
+from django.contrib.auth.models import User
+
+cr_date = datetime.datetime(2019, 5, 5, 18, 23, 29)
+user = User.objects.first()
+
+event_1 = Event(type = 'Problem', reference = 'P1063', status = 1, resolution_date=cr_date, priority = 'P4', assigned_team = 'NISPI/DWP', assigned_person = user, summary = 'this is an example summary')
+event_1.save()
+
+event_2 = Event(type = 'Incident', reference = '728546', status = 1, resolution_date=cr_date, priority = 'P5', assigned_team = 'NISPI/DWP', assigned_person = user, summary = 'this is an example summary')
+event_2.save()
+
+#delta = datetime.datetime(2019, 5, 5, 18, 23, 29) - datetime.datetime.now()
+#durationH = (delta.seconds + delta.days*86400)//3600
+#duration = datetime.timedelta(days=durationH)
+
+
+type = 'Problem', reference = 'P1075', status = 1, resolution_date=cr_date, priority = 'P4', assigned_team = 'NISPI/DWP', assigned_person = user, summary = 'this is an example summary'
