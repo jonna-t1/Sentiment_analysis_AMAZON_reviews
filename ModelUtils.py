@@ -37,22 +37,19 @@ def getModelFileName(path):
     dirFiles = os.listdir(path)  # list of directory files
     lastFilename = dirFiles[-1]
 
-    vals = [int(x) for x in lastFilename if x.isdigit()]
+    numbersInFile = [int(x) for x in lastFilename if x.isdigit()]
 
     # guards against an empty directory
-    if vals == [] and (lastFilename == 'finalised_model.sav' or lastFilename == 'finalised_tfidftransformer.sav'):
+    if numbersInFile == [] or (lastFilename == 'finalised_model.sav' or lastFilename == 'finalised_tfidftransformer.sav'):
         if lastFilename == 'finalised_model.sav':
-            return path+'finalised_model.sav1'
+            return path+'retrained_model.sav1'
         if lastFilename == 'finalised_tfidftransformer.sav':
-            return path+'finalised_tfidftransformer.sav1'
-    else:
-        sys.exit("An empty model directory or incorrect fileName. Try re-running 'AmazonTrain.py''")
-
-    if len(vals) > 1:
+            return path+'retrained_tfidftransformer.sav1'
+    elif len(numbersInFile) > 1:
         print("An error has occured writing to model to file")
         return "Error"
 
-    newFileNo = vals[0] + 1
+    newFileNo = numbersInFile[0] + 1
     file = path + lastFilename[:-1] + str(newFileNo)
 
     return file

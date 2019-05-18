@@ -125,7 +125,7 @@ def populateReviews(view):
     else:
         sys.exit("Incorrect Dateframe formatting")
 
-def populateDatabase(path, *args):
+def populateDatabase(path, filesAdded, *args):
     start = time.time() # start time
 
     df = proc.getDF(path)
@@ -143,10 +143,15 @@ def populateDatabase(path, *args):
     print("Completed successfully!")
 
     end = time.time()
-    print("Populating database took:    {} seconds".format(end - start))
+    print("Populating databases took:    {} seconds".format(end - start))
 
     # new data is used to produce a new model
     testDF = pd.read_csv(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp\Datasets\TestData\TestData.csv')
-    retrain(df, testDF, args)
+    model_filename, tfidf_filename = retrain(df, testDF, args)
+
+    filesAdded.append(model_filename)
+    filesAdded.append(tfidf_filename)
+
+    return filesAdded
 
 

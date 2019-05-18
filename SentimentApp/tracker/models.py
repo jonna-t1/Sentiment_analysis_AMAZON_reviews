@@ -21,6 +21,23 @@ def no_future(value):
 #     key1 = models.IntegerField(primary_key=True)
 #     key2 = models.IntegerField()
 
+# class Batch(models.Model):
+#     batch_date = models.DateTimeField(default=timezone.now)
+#
+# ## classification table
+# class Classification(models.Model):
+#     precision = models.DecimalField(max_digits=5, decimal_places=3)
+#     recall = models.DecimalField(max_digits=5, decimal_places=3)
+#     f1 = models.DecimalField(max_digits=5, decimal_places=3)
+#     support = models.IntegerField()
+#     batch_ID = models.ForeignKey(Batch, on_delete=models.CASCADE)
+#
+#     def __str__(self):
+#         val = 'Batch Number - ' + str(self.pk)
+#         return val
+
+
+
 class PosScores(models.Model):
 
     precision = models.DecimalField(max_digits=5, decimal_places=3)

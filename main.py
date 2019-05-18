@@ -19,14 +19,18 @@ if ans == '1':
     app.withdraw()
     app.wm_attributes('-topmost', 1)
     path = filedialog.askopenfilename(filetypes=(("Zipped files", "*.gz"),
-                                                 ("CSV files", "*.csv"),
                                                  ("All files", "*.*")))
     sys.exit("No file uploaded, aborting script") if path == '' else print(path)
     if path[-2:] != 'gz':
         sys.exit("Wrong file extension, please upload .gz file")
     print(path)
-    populateDB.populateDatabase(path)
+    modelFiles = []
+    modelFiles = populateDB.populateDatabase(path, modelFiles)
     print("All operations complete")
+
+    print('Files added...')
+    for i in modelFiles:
+        print(i)
 
 
 elif ans == '2':
@@ -47,32 +51,37 @@ elif ans == '2':
                 "Input: ")
 
     if ans == 'Y' or ans == 'y':
-        ans = input("Select the number of files you wish to upload or for all files in directory type all: ")
-        if ans == 'all' or ans == 'All':
-            count = 1
-            for file in file_list:
-                path = dirPath + file
-                populateDB.populateDatabase(path)
-                print("File number {} complete".format(count))
-                sys.exit("Operations complete exiting script")
-
+        batch = 'batch'
+        ans = input("How many files do you wish to upload - there are {} files: ".format(len(file_list)))
         try:
             val = int(ans)
         except ValueError:
             sys.exit("That's not an integer! Exiting script")
 
+        modelFiles = []
+
         if int(ans) <= len(file_list):
             count = 1
             for file in file_list:
                 path = dirPath + file
-                populateDB.populateDatabase(path, batch)
+                filePath = populateDB.populateDatabase(path, modelFiles, batch)
+                modelFiles.append(filePath)
                 print("File number {} complete".format(count))
                 if count == ans:
                     sys.exit("Operations complete exiting script")
+        else:
+            sys.exit("Number exceeds the number of files in directory. Exiting script...")
+
+
+        print('Files added...')
+        for i in modelFiles:
+            print(i)
+
     else:
         sys.exit("Operation aborted")
 
 else:
     sys.exit("Invalid input")
+
 
 

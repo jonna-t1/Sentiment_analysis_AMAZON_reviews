@@ -65,15 +65,21 @@ def retrain(reviews, testDF, *args):
 
     print(proc.style.GREEN("Models trained and saved to disk") + proc.style.RESET(""))
 
+    print(testDF.head())
+
     ## validate new model on the original test data
     test_set = testDF
-    text_test, y_test = test_set['reviewText'], test_set['sentiment'] # test_set['overall'] provides labels
+    text_test, y_test = test_set['reviewText'].apply(lambda x: np.str_(x)), test_set['sentiment']
 
-    ## loading dummy data
-    data = text_test['reviewText']
-    ## model prediction on new data
-    X_test = loaded_tfidf.transform(data)
+    # df['Review'].apply(lambda x: np.str_(x))
+
+    ## model transform on test data
+    X_test = loaded_tfidf.transform(text_test)
+
 
     print("SGD/LogReg Accuracy on new training set: {:.3f}".format(loaded_model.score(X_new, y_new)))
     print("SGD/LogReg Accuracy on original test set: {:.3f}".format(loaded_model.score(X_test, y_test)))
+
+    return model_filename, tfidf_filename
+
 

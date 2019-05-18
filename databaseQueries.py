@@ -1,5 +1,6 @@
 import datetime
 import os
+import re
 import sys
 import django
 
@@ -121,9 +122,9 @@ def getMonthlyArray():
     return dates
 
 # q = Review.objects.values('avg_batch_no').all()
-q = Review.objects.values('avg_batch_no').distinct()
-# date_querySet = Review.objects.all().values_list('batch_date', flat=True)
-print(q)
+# q = Review.objects.values('avg_batch_no').distinct()
+# # date_querySet = Review.objects.all().values_list('batch_date', flat=True)
+# print(q)
 
 def addMontlyDates():
 
@@ -138,6 +139,27 @@ def addMontlyDates():
             count += 1
             newDate = dates[count]
         changeTimeStamp(id, newDate)
+
+
+def cleanModelsDir():
+    dirPath = r'C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\model\\'
+    print(dirPath)
+    dirFiles = os.listdir(dirPath)  # list of directory files
+    for file in dirFiles:
+        if 'retrained_model.sav' in file and os.path.exists(dirPath + file):
+            os.remove(dirPath + file)
+            print(file + " Removed!")
+
+
+def cleanTransformersDir():
+    dirPath = r'C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\transformer\\'
+    print(dirPath)
+    dirFiles = os.listdir(dirPath)   # list of directory files
+    for file in dirFiles:
+        if 'retrained_tfidftransformer.sav' in file and os.path.exists(dirPath + file):
+            os.remove(dirPath + file)
+            print(file + " Removed!")
+
 
 #########################
 ### execute script  #####

@@ -17,7 +17,7 @@ def parse(path):
     for l in g:
         yield eval(l)
 
-def getDF(path, **args):
+def getDF(path, *args):
     print(path)
     i = 0
     df = {}

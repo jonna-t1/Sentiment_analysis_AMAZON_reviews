@@ -9,11 +9,20 @@
 #     week = datetime.timedelta(weeks = i)
 #     week = aDate + week
 #     dates.append(week)
-valSplit = 0
-
-if id % valSplit + 1 == 0:
-    count += 1
+# def funct(batch, **kwargs):
+#     print("stumep")
 #
+#
+# def greet_me(**kwargs):
+#     for key, value in kwargs.items():
+#         print("{0} = {1}".format(key, value))
+#         print(key)
+import pandas as pd
+
+testDF = pd.read_csv(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp\Datasets\TestData\TestData.csv')
+print(testDF.head())
+
+print(testDF['reviewText'])
 # print(len(dates))
 # print(dates)
 import os

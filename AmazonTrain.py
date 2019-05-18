@@ -46,8 +46,6 @@ singleJSON = directory+'output.json.gz'
 ## loading datasets to pandas dataframe
 singleDF = proc.getDF(singleJSON)
 
-sys.exit("sterps")
-
 df = proc.files2DF(singleDF, directory)
 # df = proc.getDF(gzpathSmall)
 df = df.reset_index(drop=True)
@@ -62,7 +60,7 @@ df.info(memory_usage='deep')
 # reviews_with_id = df.reset_index() # adds an `index` column
 # reviewText = df['reviewText']
 # train_set1, test_set2 = proc.split_train_test_by_id(reviews_with_id, 0.2, "index") # custom script that, splits dataset 80:20
-train_set, test_set = train_test_split(df, test_size=0.2, random_state=42) #splits dataset 80:20
+train_set, test_set = train_test_split(df, test_size=0.2, random_state=42) #splits dataset 80:20, always produces the isolated test set
 print(proc.sentiCounts(train_set, 'rating'))
 
 # balancing dataframe
@@ -74,10 +72,10 @@ train_set = proc.balanceData(singleDF, train_set, sample_size)
 train_set = proc.addSenimentColumn(train_set, 'd1')
 test_set = proc.addSenimentColumn(test_set, 'd1')
 
-test_set.to_csv(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp\Datasets\TestData\TestData.csv')
+test_set.to_csv(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp\Datasets\TestData\TestData.csv', encoding='utf-8', index=False)
 print("Test data uploaded")
 
-
+sys.exit("stopped")
 text_test, y_test = test_set['reviewText'], test_set['sentiment'] # test_set['overall'] provides labels
 text_train = train_set['reviewText']    # easier naming convention
 
