@@ -1,72 +1,19 @@
-What data would you like to upload??:
-Individual file use:    1
-Annual datastore use:   2
-Input:  Individual file
-C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file.gz.partaa.gz
-C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file.gz.partaa.gz
-C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file.gz.partaa.gz
-36968
-C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\pandas\core\indexing.py:190: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  self._setitem_with_indexer(indexer, value)
-[[0.03970185 0.96029815]
- [0.41542638 0.58457362]
- [0.00155125 0.99844875]
- ...
- [0.11321017 0.88678983]
- [0.18324123 0.81675877]
- [0.08117541 0.91882459]]
-       reviewerID        asin  ... sentiment prediction
-0  A1JHMIRSOIMP8O  B00834SJSK  ...  positive   positive
-1   AXAJXJZUL2J5P  B00834SJSK  ...  positive   positive
-2  A1UDWR133BMIEO  B00834SJSK  ...  positive   positive
-3  A1S505K01LCE63  B00834SJSK  ...  positive   positive
-4   A2YECFMBM0ZS6  B00834SJSK  ...  positive   positive
-
-[5 rows x 11 columns]
-830
-830
-              precision    recall  f1-score   support
-
-    positive       0.66      0.78      0.72        68
-    negative       0.98      0.96      0.97       762
-
-   micro avg       0.95      0.95      0.95       830
-   macro avg       0.82      0.87      0.84       830
-weighted avg       0.95      0.95      0.95       830
-
-32
-PosScores Dataframe to database COMPLETED
-32
-NegScores Dataframe to database COMPLETED
-32
-WeightedAvg Dataframe to database COMPLETED
-Populating database started...
-Completed successfully!
-Populating databases took:    27.76648736000061 seconds
-Are you sure you would like to retrain the model??? If you wish to continue press Y or y: C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6
-C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav6
-DataFrame loaded
-C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
-  DeprecationWarning)
-Model trained using the new data
-New transformer saved to disk
-New model saved to disk
-Models trained and saved to disk
-       reviewerID        asin  ...   reviewTime sentiment
-0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
-1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
-2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
-3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
-4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
-
-[5 rows x 10 columns]
-check
-SGD/LogReg Accuracy on new training set: 0.949
-SGD/LogReg Accuracy on original test set: 0.906
-All operations complete
-Files added...
-C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav7
-C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7
+Traceback (most recent call last):
+  File "C:/Users/j.turnbull/PycharmProjects/SentimentApp/main.py", line 6, in <module>
+    import populateDatabase as populateDB
+  File "C:\Users\j.turnbull\PycharmProjects\SentimentApp\populateDatabase.py", line 12, in <module>
+    import databaseQueries as dbQuery
+  File "C:\Users\j.turnbull\PycharmProjects\SentimentApp\databaseQueries.py", line 15, in <module>
+    django.setup()
+  File "C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\django\apps\registry.py", line 114, in populate
+    app_config.import_models()
+  File "C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\django\apps\config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\j.turnbull\AppData\Local\Programs\Python\Python37\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "C:\\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker\models.py", line 33
+    :
+    ^
+SyntaxError: invalid syntax

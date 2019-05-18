@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac999d69-d170-42c8-83d0-73a9cee94ff7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AmazonTrain.py" beforeDir="false" afterPath="$PROJECT_DIR$/AmazonTrain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModelUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ModelUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databaseQueries.py" beforeDir="false" afterPath="$PROJECT_DIR$/databaseQueries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/populateDatabase.py" beforeDir="false" afterPath="$PROJECT_DIR$/populateDatabase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrainModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/retrainModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/transformer/finalised_tfidftransformer.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weeklyScriopt.py" beforeDir="false" afterPath="$PROJECT_DIR$/weeklyScriopt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/main.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +19,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-720">
+            <state relative-caret-position="17">
               <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -142,8 +144,6 @@
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_detail.html" />
         <option value="$PROJECT_DIR$/LoadModel.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/admin.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/models.py" />
         <option value="$PROJECT_DIR$/dataprocess.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/ModelUtils.py" />
@@ -152,6 +152,8 @@
         <option value="$PROJECT_DIR$/populateDatabase.py" />
         <option value="$PROJECT_DIR$/weeklyScriopt.py" />
         <option value="$PROJECT_DIR$/retrainModel.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/models.py" />
       </list>
     </option>
   </component>
@@ -483,12 +485,12 @@
       <workItem from="1557852149161" duration="223000" />
       <workItem from="1558033913054" duration="19267000" />
       <workItem from="1558106535589" duration="14104000" />
-      <workItem from="1558165581143" duration="24052000" />
+      <workItem from="1558165581143" duration="25696000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109658000" />
+    <option name="totallyTimeSpent" value="111302000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -501,21 +503,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49577466" visible="true" weight="0.2287793" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49577466" visible="true" weight="0.2271625" />
       <window_info id="Structure" order="1" sideWeight="0.5042254" side_tool="true" weight="0.22231205" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32624114" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.2890071" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920508" weight="0.2890071" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39539006" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32740214" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32978722" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007949" side_tool="true" weight="0.3291815" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49920508" weight="0.36879432" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49920508" visible="true" weight="0.34397164" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32446808" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -594,7 +595,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SentimentApp$AmazonTrain.coverage" NAME="AmazonTrain Coverage Results" MODIFIED="1558188382536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SentimentApp$main.coverage" NAME="main Coverage Results" MODIFIED="1558190251260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/SentimentApp$main.coverage" NAME="main Coverage Results" MODIFIED="1558192024428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/SentimentApp$populateDatabase.coverage" NAME="populateDatabase Coverage Results" MODIFIED="1558123465409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/SentimentApp$databaseQueries.coverage" NAME="databaseQueries Coverage Results" MODIFIED="1558185293014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/SentimentApp$weeklyScriopt.coverage" NAME="weeklyScriopt Coverage Results" MODIFIED="1558189222006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
@@ -796,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LoadModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -906,9 +900,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
+        <state relative-caret-position="17">
           <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />

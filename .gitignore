@@ -3,3 +3,6 @@ Datasets/
 
 #ignore venv
 venv/
+
+#ignore database
+SentimentApp/db.sqlite3
