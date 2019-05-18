@@ -1,0 +1,37 @@
+{% extends "tracker/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Event</legend>
+
+                      <div class="container">
+                        <div class='col-md-15'>
+                          <div id="tadLeft" class="form-group">
+                              <!--<b><p>Resolution Date*</p></b>-->
+                            <div class='input-group date' id='datetimepicker6'>
+
+                              <!--<input type='text' class="form-control" data-date-format="DD/MM/YYYY HH:mm"/>-->
+                              <!--<span class="input-group-addon">-->
+                                            <!--<span class="glyphicon glyphicon-calendar"></span>-->
+                              <!--</span>-->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                <div style="position: relative">
+                    {{ form|crispy }}
+                </div>
+
+
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}

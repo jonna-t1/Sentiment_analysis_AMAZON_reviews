@@ -1,0 +1,5 @@
+#Ignore Datasets
+Datasets/
+
+#ignore venv
+venv/

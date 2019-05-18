@@ -1,0 +1,15 @@
+{% extends "tracker/base.html" %}
+
+{% block custom_js %}
+
+{% endblock custom_js %}
+
+{% block content %}
+        <p>First Name: {{ request.name }}</p>
+        <p>Surname: {{ request.surname }} </a></p>
+        <p>Contact Email: {{ request.email }} </p>
+        <p>Contact Number: {{ request.contactNo }} </p>
+
+<!--        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'event-update' object.id %}">Update</a>-->
+        <a class="btn btn-info btn-sm mt-1 mb-1" href="/">OK</a>
+{% endblock content %}
