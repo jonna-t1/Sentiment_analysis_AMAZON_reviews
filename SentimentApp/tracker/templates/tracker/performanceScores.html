@@ -1,0 +1,360 @@
+{% extends "tracker/base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+      <!-- Page Heading -->
+      <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Model performance</h1>
+<!--          <img src="C:\Users\j.turnbull\PycharmProjects\SentimentApp\ResultDiagrams\ngramCoef.png" alt="W3Schools">-->
+<!--        </a>-->
+        <a href="{%static 'img/chartPhoto.svg'%}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" download>
+          <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
+        </a>
+      </div>
+        <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+
+      <div class="row">
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-4 col-md-6 mb-4">
+          <div id="precision" class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center"> Precision </div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-bullseye  fa-2x text-gray-300"></i>
+                  <i class="fas fa-bullseye-arrow"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-4 col-md-6 mb-4">
+          <div id="recall" class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center"> Recall </div>
+                  <div class="row no-gutters align-items-center">
+                  </div>
+                </div>
+                <div class="col-auto">
+<!--                  <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>-->
+                  <i class="fas fa-history fa-2x text-gray-300"></i>
+<!--                  <i class="far fa-history"></i>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews tab -->
+        <div class="col-xl-4 col-md-6 mb-4">
+          <div id="f1" class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center"> F1-score </div>
+                </div>
+                <div class="col-auto">
+<!--                  <i class="fas fa-comments fa-2x text-gray-300"></i>-->
+                  <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Content Row -->
+
+      <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col-xl-12 col-lg-7">
+          <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+              <h6 class="m-0 font-weight-bold text-primary">Sentiment overview</h6>
+              <div class="dropdown no-arrow">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                  <div class="dropdown-header">Dropdown Header:</div>
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+              <div id="chart-area" class="chart-area">
+                <canvas id="myAreaChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!--        &lt;!&ndash; Pie Chart &ndash;&gt;-->
+<!--        <div class="col-xl-4 col-lg-5">-->
+<!--          <div class="card shadow mb-4">-->
+<!--            &lt;!&ndash; Card Header - Dropdown &ndash;&gt;-->
+<!--            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">-->
+<!--              <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>-->
+<!--              <div class="dropdown no-arrow">-->
+<!--                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                  <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>-->
+<!--                </a>-->
+<!--                <div class="dropdown-menu dropdown-menu-right shadow animated&#45;&#45;fade-in" aria-labelledby="dropdownMenuLink">-->
+<!--                  <div class="dropdown-header">Dropdown Header:</div>-->
+<!--                  <a class="dropdown-item" href="#">Action</a>-->
+<!--                  <a class="dropdown-item" href="#">Another action</a>-->
+<!--                  <div class="dropdown-divider"></div>-->
+<!--                  <a class="dropdown-item" href="#">Something else here</a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Card Body &ndash;&gt;-->
+<!--            <div class="card-body">-->
+<!--              <div class="chart-pie pt-4 pb-2">-->
+<!--                <canvas id="myPieChart"></canvas>-->
+<!--              </div>-->
+<!--              <div class="mt-4 text-center small">-->
+<!--                <span class="mr-2">-->
+<!--                  <i class="fas fa-circle text-primary"></i> Direct-->
+<!--                </span>-->
+<!--                <span class="mr-2">-->
+<!--                  <i class="fas fa-circle text-success"></i> Social-->
+<!--                </span>-->
+<!--                <span class="mr-2">-->
+<!--                  <i class="fas fa-circle text-info"></i> Referral-->
+<!--                </span>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+      </div>
+
+
+
+    </div>
+    <!-- /.container-fluid -->
+
+
+<script>
+
+  var monthCount = '{{distinct_month_count}}';
+  var scoreCount = '{{ distinct_id_count }}';
+
+  if (monthCount != scoreCount) {
+      alert("Different counts - please contact the administrator");
+  };
+
+  var dates = [];
+  var classObjects = {};
+
+</script>
+
+{% for date in distinct_months %}
+<!--  <script>alert("{{ date }}")</script>-->
+  <script>dates.push("{{ date }}");</script>
+{% endfor %}
+
+{% for class in class_results %}
+<!--  <script>alert("{{ class.id }}")</script>-->
+
+
+  <script>
+   (function(window) {
+
+    $type = String;
+    $type.__typeName = 'String';
+    $type.__class = true;
+
+    $prototype = $type.prototype;
+    $prototype.endsWith = function String$endsWith(suffix) {
+        /// <summary>Determines whether the end of this instance matches the specified string.</summary>
+        /// <param name="suffix" type="String">A string to compare to.</param>
+        /// <returns type="Boolean">true if suffix matches the end of this instance; otherwise, false.</returns>
+        return (this.substr(this.length - suffix.length) === suffix);
+    }
+
+    $prototype.startsWith = function String$startsWith(prefix) {
+        /// <summary >Determines whether the beginning of this instance matches the specified string.</summary>
+        /// <param name="prefix" type="String">The String to compare.</param>
+        /// <returns type="Boolean">true if prefix matches the beginning of this string; otherwise, false.</returns>
+        return (this.substr(0, prefix.length) === prefix);
+    }
+
+    $prototype.trim = function String$trim() {
+        /// <summary >Removes all leading and trailing white-space characters from the current String object.</summary>
+        /// <returns type="String">The string that remains after all white-space characters are removed from the start and end of the current String object.</returns>
+        return this.replace(/^\s+|\s+$/g, '');
+    }
+
+    $prototype.trimEnd = function String$trimEnd() {
+        /// <summary >Removes all trailing white spaces from the current String object.</summary>
+        /// <returns type="String">The string that remains after all white-space characters are removed from the end of the current String object.</returns>
+        return this.replace(/\s+$/, '');
+    }
+
+    $prototype.trimStart = function String$trimStart() {
+        /// <summary >Removes all leading white spaces from the current String object.</summary>
+        /// <returns type="String">The string that remains after all white-space characters are removed from the start of the current String object.</returns>
+        return this.replace(/^\s+/, '');
+    }
+
+    $type.format = function String$format(format, args) {
+        /// <summary>Replaces the format items in a specified String with the text equivalents of the values of   corresponding object instances. The invariant culture will be used to format dates and numbers.</summary>
+        /// <param name="format" type="String">A format string.</param>
+        /// <param name="args" parameterArray="true" mayBeNull="true">The objects to format.</param>
+        /// <returns type="String">A copy of format in which the format items have been replaced by the   string equivalent of the corresponding instances of object arguments.</returns>
+        return String._toFormattedString(false, arguments);
+    }
+
+    $type._toFormattedString = function String$_toFormattedString(useLocale, args) {
+        var result = '';
+        var format = args[0];
+
+        for (var i = 0; ; ) {
+            // Find the next opening or closing brace
+            var open = format.indexOf('{', i);
+            var close = format.indexOf('}', i);
+            if ((open < 0) && (close < 0)) {
+                // Not found: copy the end of the string and break
+                result += format.slice(i);
+                break;
+            }
+            if ((close > 0) && ((close < open) || (open < 0))) {
+
+                if (format.charAt(close + 1) !== '}') {
+                    throw new Error('format stringFormatBraceMismatch');
+                }
+
+                result += format.slice(i, close + 1);
+                i = close + 2;
+                continue;
+            }
+
+            // Copy the string before the brace
+            result += format.slice(i, open);
+            i = open + 1;
+
+            // Check for double braces (which display as one and are not arguments)
+            if (format.charAt(i) === '{') {
+                result += '{';
+                i++;
+                continue;
+            }
+
+            if (close < 0) throw new Error('format stringFormatBraceMismatch');
+
+
+            // Find the closing brace
+
+            // Get the string between the braces, and split it around the ':' (if any)
+            var brace = format.substring(i, close);
+            var colonIndex = brace.indexOf(':');
+            var argNumber = parseInt((colonIndex < 0) ? brace : brace.substring(0, colonIndex), 10) + 1;
+
+            if (isNaN(argNumber)) throw new Error('format stringFormatInvalid');
+
+            var argFormat = (colonIndex < 0) ? '' : brace.substring(colonIndex + 1);
+
+            var arg = args[argNumber];
+            if (typeof (arg) === "undefined" || arg === null) {
+                arg = '';
+            }
+
+            // If it has a toFormattedString method, call it.  Otherwise, call toString()
+            if (arg.toFormattedString) {
+                result += arg.toFormattedString(argFormat);
+            }
+            else if (useLocale && arg.localeFormat) {
+                result += arg.localeFormat(argFormat);
+            }
+            else if (arg.format) {
+                result += arg.format(argFormat);
+            }
+            else
+                result += arg.toString();
+
+            i = close + 1;
+        }
+
+        return result;
+    }
+
+})(window);
+
+    var classList = [];
+    classList.push("{{ class.precision }}");
+    classList.push("{{ class.recall }}");
+    classList.push("{{ class.f1 }}");
+    classList.push("{{ class.support }}");
+    // classObjects["{{ class.id }}"] = classList;
+    classObjects["{{ class.id }}"] = classList;
+
+    function printIndex(ind) {console.log(ind); console.log(precision[ind]);}
+
+
+    // alert(classObjects["24"]);
+    // alert(classObjects["{{ class.id }}"])
+
+  </script>
+
+
+
+{% endfor %}
+
+
+<!--{% for class in class_results %}-->
+<!--&lt;!&ndash;  <script>alert("{{ date }}")</script>&ndash;&gt;-->
+<!--  <script>dates.push("{{ date }}");</script>-->
+<!--{% endfor %}-->
+<script>
+      var stuff = 2;
+      function graphClickEvent(event){
+
+          // alert(stuff);
+
+        var path = "asdf";
+        alert(path);
+          //
+          // var path = "{% url 'avg-detail' 20 %}"
+          // window.location = path;
+      }
+
+</script>
+
+
+
+<script src="{% static 'js/demo/chart-classification.js' %}"></script>
+
+
+{% else %}
+    <h1 class="text-center" ><a href="{% url 'login' %}">Login here</a></h1>
+    <br>
+    <h2 class="text-center"> <a href="{% url 'login' %}"> Request access </a> </h2>
+
+{% endif %}
+
+{% endblock content %}
+
+

@@ -32,21 +32,6 @@ from tracker.models import NegScores
 from tracker.models import WeightedAvg
 
 
-# def populate_batch_no():
-#     batch_no=None
-#
-#     if Review.objects.order_by('-batch_no').first() == None:
-#         batch_no = 1
-#         return batch_no
-#
-#     last_batch_no = Review.objects.order_by('-batch_no').first().batch_no
-#     if last_batch_no == 1:
-#         batch_no = last_batch_no + 1
-#     # print(last_batch_no)
-#     return batch_no
-#
-# batch_no = populate_batch_no()
-
 def populatePosScores(arr):
     model = PosScores()
     model.precision = arr[0]
@@ -133,12 +118,35 @@ def populateDatabase(path, filesAdded, *args):
     view, classificationReport = load.classify(df)
 
     #populates tables with classification scores
-    populatePosScores(classificationReport[0])
-    populateNegScores(classificationReport[1])
-    populateWeightedAvg(classificationReport[-1])
+
+    #positive table
+    try:
+        populatePosScores(classificationReport[0])
+    except IOError as err:
+        print(err.args)
+
+    try:
+        populateNegScores(classificationReport[1])
+    except IOError as err:
+        PosScores.objects.latest('id').delete()
+        print(err.args)
+
+    try:
+        populateWeightedAvg(classificationReport[-1])
+    except IOError as err:
+        PosScores.objects.latest('id').delete()
+        NegScores.objects.latest('id').delete()
+        print(err.args)
+
 
     #populates the reviews table
-    populateReviews(view)
+    try:
+        populateReviews(view)
+    except IOError as err:
+        PosScores.objects.latest('id').delete()
+        NegScores.objects.latest('id').delete()
+        WeightedAvg.objects.latest('id').delete()
+        print(err.args)
 
     print("Completed successfully!")
 
@@ -146,8 +154,17 @@ def populateDatabase(path, filesAdded, *args):
     print("Populating databases took:    {} seconds".format(end - start))
 
     # new data is used to produce a new model
-    testDF = pd.read_csv(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp\Datasets\TestData\TestData.csv')
-    model_filename, tfidf_filename = retrain(df, testDF, args)
+    try:
+        print(args)
+        testDF = pd.read_csv(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp\Datasets\TestData\TestData.csv')
+        model_filename, tfidf_filename = retrain(df, testDF, args[0])
+    except IOError as err:
+        PosScores.objects.latest('id').delete()
+        NegScores.objects.latest('id').delete()
+        WeightedAvg.objects.latest('id').delete()
+        Review.objects.latest('pos_batch_no').delete()
+        print(err.args)
+
 
     filesAdded.append(model_filename)
     filesAdded.append(tfidf_filename)

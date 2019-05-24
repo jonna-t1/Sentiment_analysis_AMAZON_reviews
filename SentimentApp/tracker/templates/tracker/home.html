@@ -10,23 +10,29 @@
       <!-- Page Heading -->
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+<!--          <img src="C:\Users\j.turnbull\PycharmProjects\SentimentApp\ResultDiagrams\ngramCoef.png" alt="W3Schools">-->
+<!--        </a>-->
+        <a href="{%static 'img/chartPhoto.svg'%}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" download>
+          <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
+        </a>
       </div>
+        <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+
 
       <!-- Content Row -->
       <div class="row">
 
         <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-4 col-md-6 mb-4">
+        <div class="col-xl-12 col-md-6 mb-4">
           <div class="card border-left-primary shadow h-100 py-2">
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Performance scores (MONTHLY)</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{% url 'tracker-scores' %}">Load Model<a></a></div>
                 </div>
                 <div class="col-auto">
-                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                  <i class="fas fa-calendar fa-4x text-gray-300"></i>
                 </div>
               </div>
             </div>
@@ -34,25 +40,26 @@
         </div>
 
         <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-4 col-md-6 mb-4">
+        <div class="col-xl-12 col-md-6 mb-4">
           <div class="card border-left-info shadow h-100 py-2">
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
+                  <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><a href="{% url 'tracker-counts' %}">Predicted Counts<a></a></div>
                   <div class="row no-gutters align-items-center">
                     <div class="col-auto">
-                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                      <div id = "perc1" class="h7 mb-0 mr-3 font-weight-bold text-gray-800"></div>
                     </div>
                     <div class="col">
                       <div class="progress progress-sm mr-2">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div id="barPerc" class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-auto">
-                  <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+<!--                  <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>-->
+                  <i class="fas fa-chart-pie fa-4x text-gray-300"></i>
                 </div>
               </div>
             </div>
@@ -60,7 +67,7 @@
         </div>
 
         <!-- Reviews tab -->
-        <div class="col-xl-4 col-md-6 mb-4">
+        <div class="col-xl-12 col-md-6 mb-4">
           <div class="card border-left-warning shadow h-100 py-2">
             <div class="card-body">
               <div class="row no-gutters align-items-center">
@@ -69,7 +76,7 @@
                   <div class="h5 mb-0 font-weight-bold text-gray-800">{{ total_reviews }} Review{{ total_reviews|pluralize }}</div>
                 </div>
                 <div class="col-auto">
-                  <i class="fas fa-comments fa-2x text-gray-300"></i>
+                  <i class="fas fa-comments fa-4x text-gray-300"></i>
                 </div>
               </div>
             </div>
@@ -86,7 +93,7 @@
           <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-              <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Sentiment overview</h6>
               <div class="dropdown no-arrow">
                 <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -320,18 +327,76 @@
     </div>
     <!-- /.container-fluid -->
 
+
+
 <script>
   var predictedPos = '{{predict_positive}}';
   var predictedNeg = '{{predict_negative}}';
   var actualPos = '{{actual_positive}}';
   var actualNeg = '{{actual_negative}}';
+
+  var monthCount = '{{distinct_month_count}}';
+  var dates = []
+
 </script>
+
+{% for date in distinct_months %}
+<!--  <script>alert("{{ date }}")</script>-->
+  <script>dates.push("{{ date }}")</script>
+{% endfor %}
+
+
+<script>
+
+  var predictedPos = '{{predict_positive}}';
+  var predictedNeg = '{{predict_negative}}';
+  var actualPos = '{{actual_positive}}';
+  var actualNeg = '{{actual_negative}}';
+
+  var total = parseInt(predictedPos) + parseInt(predictedNeg);
+  var perc1 = myFunc(predictedPos, total);
+  // var perc2 = myFunc(predictedNeg, actualNeg);
+  //
+  document.getElementById('perc1').innerHTML = + perc1 + "%";
+  document.getElementById('barPerc').style.width = perc1+"%";
+  // style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+
+
+  function myFunc(val, total) {
+    var posPerc = parseInt(val) / total;
+    var roundedVal = parseFloat(Math.round(posPerc * 100) / 100).toFixed(2);
+    roundedVal = roundedVal *100;
+    roundedVal = parseFloat(roundedVal).toFixed(2);
+
+    return roundedVal.toString()
+  }
+
+</script>
+
+
+<!--<a class="dropdown-item d-flex align-items-center" href="#">-->
+<!--                  <div class="dropdown-list-image mr-3">-->
+<!--                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">-->
+<!--                    <div class="status-indicator bg-success"></div>-->
+<!--                  </div>-->
+<!--                  <div class="font-weight-bold">-->
+<!--                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>-->
+<!--                    <div class="small text-gray-500">Emily Fowler · 58m</div>-->
+<!--                  </div>-->
+<!--                </a>-->
+
+
+
+  <!-- Page level custom scripts -->
+<script src="{% static 'js/demo/chart-area.js' %}"></script>
+<script src="{% static 'js/demo/chart-pie-1.js' %}"></script>
+<script src="{% static 'js/demo/chart-pie-2.js' %}"></script>
 
 
 {% else %}
     <h1 class="text-center" ><a href="{% url 'login' %}">Login here</a></h1>
     <br>
-    <h2 class="text-center"> <a href="{% url 'login' %}"> Request access </a> </h2>
+    <h2 class="text-center"> <a href="{% url 'request-create' %}"> Request access </a> </h2>
 
 {% endif %}
 

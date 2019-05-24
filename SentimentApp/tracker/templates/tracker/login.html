@@ -5,11 +5,14 @@
         <form method="POST">
             <!--Added security-->
             {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Login</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
+                      <div class="container">
+                        <div class='col-md-10' style="position: relative; margin-left: 10%">
+                            <div style="position: relative">
+                                {{ form|crispy }}
+                            </div>
+                        </div>
+                      </div>
+            <div class="form-group" style="position: relative; margin-left: 45%">
                 <button id="login-button" class="btn btn-outline-info" type="submit">Login</button>
                 <small class="text-muted ml-2">
                 </small>

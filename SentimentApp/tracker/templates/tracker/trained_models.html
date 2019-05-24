@@ -1,0 +1,51 @@
+{% extends "tracker/base.html" %}
+{% block content %}
+
+    <h1>Classification Scores</h1>
+    <br><br>
+
+    <div class="col-12 col-lg-12">
+              <div class="card card-table">
+                <div class="card-header">
+                  <div class="tools dropdown"> <span class="icon mdi mdi-download"></span><a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"><span class="icon mdi mdi-more-vert"></span></a>
+                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a>
+                      <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body table-responsive">
+                  <table class="table table-striped table-borderless">
+                    <thead>
+                      <tr>
+                      <th style="width:25%;">Batch ID</th>
+                        <th style="width:25%;">Model File</th>
+                      </tr>
+                    </thead>
+                    <tbody class="no-border-x">
+                        <tr>
+                            <td> 0 </td>
+                            <td> retrained_model.sav </td>
+                          </tr>
+                    {% for file in files %}
+                          <tr>
+                            <td> {{ file.id }} </td>
+                            <td> {{ file.file }} </td>
+                          </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                  <a class="btn btn-info btn-sm mt-1 mb-1" style="position: relative; margin-left: 45%" href="/models/">TOP</a>
+
+                </div>
+              </div>
+            </div>
+
+
+
+{% endblock content %}
+
+<!--<style>-->
+<!--input {-->
+<!--    width: 20px-->
+<!--}-->
+<!--</style>-->

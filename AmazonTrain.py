@@ -37,8 +37,7 @@ start = time. time()
 
 
 path = os.getcwd()
-gzpathSmall = 'Datasets\\reviews_Office_Products_5.json.gz'
-gzpath = 'Datasets\\reviews_Electronics_5.json.gz'
+
 directory = path + '/Datasets/ElectronicsReviews/'
 singleJSON = directory+'output.json.gz'
 
@@ -75,7 +74,7 @@ test_set = proc.addSenimentColumn(test_set, 'd1')
 test_set.to_csv(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp\Datasets\TestData\TestData.csv', encoding='utf-8', index=False)
 print("Test data uploaded")
 
-sys.exit("stopped")
+# sys.exit("stopped")
 text_test, y_test = test_set['reviewText'], test_set['sentiment'] # test_set['overall'] provides labels
 text_train = train_set['reviewText']    # easier naming convention
 
@@ -102,10 +101,17 @@ print("Every 500th feature:\n{}".format(feature_names[::500]))
 # algs.batchAlgs(X_train, y_train, X_test, y_test)
 # sys.exit('break')
 # hyperparameter tuning
-# # algs.top4(X_train, y_train, X_test, y_test)
+algs.top4(X_train, y_train, X_test, y_test)
+sys.exit("sterp")
 # algs.top2(X_train, y_train, X_test, y_test)
 # algs.top2Tuning(X_train, y_train, X_test, y_test)
 
+
+# vectorizer = TfidfVectorizer(min_df=5, ngram_range=(1,3), stop_words='english')
+# vect = vectorizer.fit(text_train)
+# X_train = vect.transform(text_train)
+# vect = vectorizer.fit(text_train)
+# X_train = vect.transform(text_train)
 
 # stop words
 # Specifying stop_words="english" uses the built-in list - can pass own list of stop words

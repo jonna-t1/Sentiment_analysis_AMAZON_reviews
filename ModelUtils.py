@@ -27,7 +27,7 @@ def sortDirFiles(dirPath):
             if len(strDig) == 2:
                 fileArray[1].append(i)
         else:
-            sys.exit("Incorrect file naming convention")
+            sys.exit("Incorrect file naming convention. Uses (n) to determine file order - windows batch naming convention")
 
     file_list = [item for sublist in fileArray for item in sublist]
     print(file_list)
@@ -62,5 +62,16 @@ def getLastModel(path):
         sys.exit("Empty Directory, please include the inital model")
 
     lastFilename = dirFiles[-1]
+    lastFilename = path + lastFilename
+    return lastFilename
+
+
+def get2ndLastModel(path):
+    dirFiles = os.listdir(path)  # list of directory files
+
+    if dirFiles == []:
+        sys.exit("Empty Directory, please include the inital model")
+
+    lastFilename = dirFiles[-2]
     lastFilename = path + lastFilename
     return lastFilename

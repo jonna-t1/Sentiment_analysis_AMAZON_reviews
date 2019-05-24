@@ -4,12 +4,62 @@
 
 {% endblock custom_js %}
 
-{% block content %}
-        <p>First Name: {{ request.name }}</p>
-        <p>Surname: {{ request.surname }} </a></p>
-        <p>Contact Email: {{ request.email }} </p>
-        <p>Contact Number: {{ request.contactNo }} </p>
 
-<!--        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'event-update' object.id %}">Update</a>-->
-        <a class="btn btn-info btn-sm mt-1 mb-1" href="/">OK</a>
+<style>
+table {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+}
+</style>
+
+
+
+{% block content %}
+<div class="container-fluid">
+            <h1 class="h3 mb-0 text-gray-800">Request Confirmed</h1>
+
+  <div class="row card mb-4 py-3  border-bottom-success border-right-0">
+
+    <table style="position: relative; margin-left: 10%" class="table table-responsive-md btn-table col-xl-9 " >
+    <thead>
+    <tr class="table-success">
+    <th>Fields</th>
+    <th colspan="2">User Information</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>First Name</td>
+        <td>{{ request.name }}</td>
+    </tr>
+    <tr>
+        <td>Surname</td>
+        <td>{{ request.surname }}</td>
+    </tr>
+    <tr>
+        <td>Contact Email</td>
+        <td>{{ request.email }}</td>
+    </tr>
+    <tr>
+        <td>Contact Number</td>
+        <td>{{ request.contactNo }}</td>
+    </tr>
+    <tr>
+        <td>Reason</td>
+        <td>{{ request.reason }}</td>
+    </tr>
+    <tr>
+        <td>Other Information</td>
+        <td>{{ request.other }}</td>
+    </tr>
+
+    </tbody>
+    </table>
+
+</div>
+</div>
+
+
+        <a class="btn btn-success btn-sm mt-1 mb-1" style="position: relative; margin-left: 45%" href="/">OK</a>
 {% endblock content %}
+

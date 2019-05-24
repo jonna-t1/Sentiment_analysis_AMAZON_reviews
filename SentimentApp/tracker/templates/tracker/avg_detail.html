@@ -1,0 +1,15 @@
+{% extends "tracker/base.html" %}
+
+{% block custom_js %}
+
+{% endblock custom_js %}
+
+{% block content %}
+        <p>First Name: {{ weightedavg.id }}</p>
+        <p>First Name: {{ weightedavg.precision }}</p>
+        <p>First Name: {{ weightedavg.recall }}</p>
+        <p>First Name: {{ weightedavg.f1 }}</p>
+        <p>First Name: {{ weightedavg.support }}</p>
+
+        <a class="btn btn-info btn-sm mt-1 mb-1" href="/performance/">OK</a>
+{% endblock content %}

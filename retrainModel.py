@@ -12,13 +12,13 @@ import ModelUtils
 
 def retrain(reviews, testDF, *args):
 
-    if args != 'batch' or args != 'Batch':
+    if args[0] == 'batch' or args[0] == 'Batch':
+        print("Batch training implemented skipping question...")
+    else:
         answer = input(Fore.YELLOW + "Are you sure you would like to retrain the model??? If you wish to continue press Y or y: ")
-    elif args == 'batch' or args == 'Batch':
-        answer = 'y'
 
-    if answer != 'Y' and answer != 'y':
-        exit('Retraining ABORTED')
+        if (answer != 'Y' and answer != 'y') or answer == '':
+            exit('Retraining ABORTED')
 
     path = os.getcwd()
     transformerPath = path + '/savedModels/transformer/'

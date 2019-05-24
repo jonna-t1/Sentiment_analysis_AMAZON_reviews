@@ -1,0 +1,53 @@
+{% extends "tracker/base.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+    <div class="col-12 col-lg-12">
+              <div class="card card-table">
+                <div class="card-header">
+                  <div class="tools dropdown"> <span class="icon mdi mdi-download"></span><a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"><span class="icon mdi mdi-more-vert"></span></a>
+                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a>
+                      <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body table-responsive">
+                  <table class="table table-striped table-borderless">
+                    <thead>
+                      <tr>
+                      <th style="width:25%;">Classification</th>
+                        <th style="width:25%;">Precision</th>
+                        <th style="width:25%;">Recall</th>
+                        <th style="width:25%;">F1-score</th>
+                        <th style="width:25%;">Support</th>
+                      </tr>
+                    </thead>
+                    <tbody class="no-border-x">
+                      <tr>
+                         <td>Positive:</td>
+                         {% for arr in array %}
+                                {% if forloop.counter|divisibleby:2 %} <td>Negative: </td> {% endif %}
+                            {% if forloop.counter|divisibleby:3 %}<td>Weighted Average: </td>{% endif %}
+                                <td>{{ arr.precision }}</td>
+                                <td>{{ arr.recall }} </td>
+                                <td>{{ arr.f1 }} </td>
+                                <td>{{ arr.support }} </td>
+
+                       </tr>
+                        {% endfor %}
+                    </tbody>
+                  </table>
+                  <a class="btn btn-info btn-sm mt-1 mb-1" style="position: relative; margin-left: 45%" href="/classification/">OK</a>
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+{% endblock content %}

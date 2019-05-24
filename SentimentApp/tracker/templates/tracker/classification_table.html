@@ -1,0 +1,64 @@
+{% extends "tracker/base.html" %}
+{% block content %}
+
+    <h1>Classification Scores</h1>
+    <br><br>
+
+        <form class="mr-auto">
+            <div class="input-group">
+              <input type="number" name="q" class="form-control" placeholder="Input a number for BatchID search..." aria-label="Search" >
+              <div class="input-group-append">
+                <button class="btn btn-secondary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+            </div>
+            </div>
+        </form>
+
+    <div class="col-12 col-lg-12">
+              <div class="card card-table">
+                <div class="card-header">
+                  <div class="tools dropdown"> <span class="icon mdi mdi-download"></span><a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"><span class="icon mdi mdi-more-vert"></span></a>
+                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a>
+                      <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body table-responsive">
+                  <table class="table table-striped table-borderless">
+                    <thead>
+                      <tr>
+                      <th style="width:25%;">BatchID</th>
+                        <th style="width:25%;">Precision</th>
+                        <th style="width:25%;">Recall</th>
+                        <th style="width:25%;">F1-score</th>
+                        <th style="width:25%;">Support</th>
+                      </tr>
+                    </thead>
+                    <tbody class="no-border-x">
+                        {% for dat in datum %}
+                          <tr>
+                            <td> <a href="{% url 'class-detail' dat.id %}"> {{ dat.id }} </a> </td>
+                            <td> {{ dat.precision}} </td>
+                            <td> {{ dat.recall }} </td>
+                            <td> {{ dat.f1 }} </td>
+                            <td> {{ dat.support }} </td>
+                          </tr>
+                        {% endfor %}
+                    </tbody>
+                  </table>
+                  <a class="btn btn-info btn-sm mt-1 mb-1" style="position: relative; margin-left: 45%" href="/classification/">TOP</a>
+
+                </div>
+              </div>
+            </div>
+
+
+
+{% endblock content %}
+
+<!--<style>-->
+<!--input {-->
+<!--    width: 20px-->
+<!--}-->
+<!--</style>-->

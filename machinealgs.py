@@ -1,6 +1,5 @@
 import re
 import spacy
-
 import mglearn
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
@@ -271,38 +270,44 @@ def top2Tuning(X_train, y_train, X_test, y_test):
     # test data
     print("Test data score: {:.2f}".format(grid.score(X_test, y_test)))
 
+
 def top4(X_train, y_train, X_test, y_test):
-    param_grid = {'C': [0.001, 0.01, 0.1, 1, 10],
-                  'solver': ['liblinear', 'newton-cg', 'lbfgs', 'sag', 'saga']
-                  }
 
-    grid = GridSearchCV(LogisticRegression(), param_grid, cv=5)
-    # grid = GridSearchCV(LinearSVC(), param_grid, cv=5)
-    grid.fit(X_train, y_train)
-    print("Best cross-validation LogisticReg score: {:.2f}".format(grid.best_score_))
-    print("Best parameters: ", grid.best_params_)
+    # ## logistic regression
+    # param_grid = {'C': [0.001, 0.01, 0.1, 1, 10],
+    #               'solver': ['liblinear', 'newton-cg', 'lbfgs', 'sag', 'saga']
+    #               }
+    #
+    # grid = GridSearchCV(LogisticRegression(), param_grid, cv=5)
+    # # grid = GridSearchCV(LinearSVC(), param_grid, cv=5)
+    # grid.fit(X_train, y_train)
+    # print("Best cross-validation LogisticReg score: {:.2f}".format(grid.best_score_))
+    # print("Best parameters: ", grid.best_params_)
+    #
+    # # test data
+    # print("Test data score: {:.2f}".format(grid.score(X_test, y_test)))
+    #
+    # # random forest
+    # n_estimators = {'n_estimators': [1, 2, 4, 8, 16, 32, 64, 100, 200]}
+    # grid = GridSearchCV(RandomForestClassifier(random_state=2), n_estimators, cv=5)
+    # grid.fit(X_train, y_train)
+    # print("Best cross-validation RandomForest score: {:.2f}".format(grid.best_score_))
+    # print("Best parameters: ", grid.best_params_)
+    #
+    # # test data
+    # print("Test data score: {:.2f}".format(grid.score(X_test, y_test)))
+    #
+    # # gradient boosting
+    # learning_rate = {'learning_rate': [0.0001, 0.001, 0.01, 0.1, 0.2, 0.3]}
+    # grid = GridSearchCV(GradientBoostingClassifier(random_state=2), learning_rate, cv=5)
+    # grid.fit(X_train, y_train)
+    # print("Best cross-validation GradientBoostingClassifier score: {:.2f}".format(grid.best_score_))
+    # print("Best parameters: ", grid.best_params_)
+    #
+    # # test data
+    # print("Test data score: {:.2f}".format(grid.score(X_test, y_test)))
 
-    # test data
-    print("Test data score: {:.2f}".format(grid.score(X_test, y_test)))
-
-    n_estimators = {'n_estimators': [1, 2, 4, 8, 16, 32, 64, 100, 200]}
-    grid = GridSearchCV(RandomForestClassifier(random_state=2), n_estimators, cv=5)
-    grid.fit(X_train, y_train)
-    print("Best cross-validation RandomForest score: {:.2f}".format(grid.best_score_))
-    print("Best parameters: ", grid.best_params_)
-
-    # test data
-    print("Test data score: {:.2f}".format(grid.score(X_test, y_test)))
-
-    learning_rate = {'learning_rate': [0.0001, 0.001, 0.01, 0.1, 0.2, 0.3]}
-    grid = GridSearchCV(GradientBoostingClassifier(random_state=2), learning_rate, cv=5)
-    grid.fit(X_train, y_train)
-    print("Best cross-validation GradientBoostingClassifier score: {:.2f}".format(grid.best_score_))
-    print("Best parameters: ", grid.best_params_)
-
-    # test data
-    print("Test data score: {:.2f}".format(grid.score(X_test, y_test)))
-
+    # SVC - support vector machines
     param_grid = [
         {'C': [1, 10, 100, 1000], 'kernel': ['linear']},
         {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},

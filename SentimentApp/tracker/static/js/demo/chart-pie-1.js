@@ -3,6 +3,12 @@ Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,Bli
 Chart.defaults.global.defaultFontColor = '#858796';
 
 
+// alert("hello world");
+
+// var total = actualPos + actualNeg;
+// alert(total)
+
+
 // Pie Chart Example
 var ctx = document.getElementById("myPieChart1");
 var myPieChart1 = new Chart(ctx, {

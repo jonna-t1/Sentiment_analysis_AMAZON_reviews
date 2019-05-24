@@ -1,0 +1,147 @@
+{% extends "tracker/base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+      <!-- Page Heading -->
+      <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Pie charts</h1>
+<!--          <img src="C:\Users\j.turnbull\PycharmProjects\SentimentApp\ResultDiagrams\ngramCoef.png" alt="W3Schools">-->
+<!--        </a>-->
+        <a href="{%static 'img/chartPhoto.svg'%}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" download>
+          <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
+        </a>
+      </div>
+        <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+
+
+      <!-- Content Row -->
+
+      <div class="row">
+        <!-- Pie Chart -->
+        <div class="col-xl-6 col-lg-5">
+          <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+              <h6 class="m-0 font-weight-bold text-primary">Actual Sources</h6>
+              <div class="dropdown no-arrow">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                  <div class="dropdown-header">Dropdown Header:</div>
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+              <div class="chart-pie pt-4 pb-2">
+                <canvas id="myPieChart1"></canvas>
+              </div>
+              <div class="mt-4 text-center small">
+                <span id='pos1' class="mr-2">
+                  <i class="fas fa-circle text-primary"></i> Positive
+                </span>
+                <span id='neg1' class="mr-2">
+                  <i class="fas fa-circle text-success"></i> Negative
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Pie Chart -->
+        <div class="col-xl-6 col-lg-5">
+          <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+              <h6 class="m-0 font-weight-bold text-primary">Predicted Sources</h6>
+              <div class="dropdown no-arrow">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                  <div class="dropdown-header">Dropdown Header:</div>
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+              <div class="chart-pie pt-4 pb-2">
+                <canvas id="myPieChart2"></canvas>
+              </div>
+              <div class="mt-4 text-center small">
+                <span id='pos2' class="mr-2">
+                  <i class="fas fa-circle text-primary"></i> Positive
+                </span>
+                <span id="neg2" class="mr-2">
+                  <i class="fas fa-circle text-success"></i> Negative
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Content Row -->
+      <div class="row">
+
+        <!-- Content Column -->
+        <div class="col-lg-12 mb-4">
+
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /.container-fluid -->
+
+
+<script>
+
+
+  var predictedPos = '{{predict_positive}}';
+  var predictedNeg = '{{predict_negative}}';
+  var actualPos = '{{actual_positive}}';
+  var actualNeg = '{{actual_negative}}';
+
+  function myFunc(val, total) {
+    var posPerc = parseInt(val) / total;
+    var roundedVal = parseFloat(Math.round(posPerc * 100) / 100).toFixed(2);
+    return roundedVal.toString()
+  }
+
+  // alert("FACK")
+
+
+</script>
+
+
+<script src="{% static 'js/demo/pie-1.js' %}"></script>
+<script src="{% static 'js/demo/pie-predict.js' %}"></script>
+
+{% else %}
+    <h1 class="text-center" ><a href="{% url 'login' %}">Login here</a></h1>
+    <br>
+    <h2 class="text-center"> <a href="{% url 'login' %}"> Request access </a> </h2>
+
+{% endif %}
+
+{% endblock content %}
+
+

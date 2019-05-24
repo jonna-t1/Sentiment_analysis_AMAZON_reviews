@@ -63,19 +63,20 @@ elif ans == '2':
         if int(ans) <= len(file_list):
             count = 1
             for file in file_list:
+                print("File upload {} started".format(count))
                 path = dirPath + file
                 filePath = populateDB.populateDatabase(path, modelFiles, batch)
                 modelFiles.append(filePath)
                 print("File number {} complete".format(count))
-                if count == ans:
-                    sys.exit("Operations complete exiting script")
+                print("File completed: "+ file)
+                if int(ans) == count:
+                    break
+                count += 1
+            print('Files added...')
+            for i in modelFiles:
+                print(i)
         else:
             sys.exit("Number exceeds the number of files in directory. Exiting script...")
-
-
-        print('Files added...')
-        for i in modelFiles:
-            print(i)
 
     else:
         sys.exit("Operation aborted")

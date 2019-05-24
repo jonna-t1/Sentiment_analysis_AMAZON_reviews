@@ -1,19 +1,721 @@
-Traceback (most recent call last):
-  File "C:/Users/j.turnbull/PycharmProjects/SentimentApp/main.py", line 6, in <module>
-    import populateDatabase as populateDB
-  File "C:\Users\j.turnbull\PycharmProjects\SentimentApp\populateDatabase.py", line 12, in <module>
-    import databaseQueries as dbQuery
-  File "C:\Users\j.turnbull\PycharmProjects\SentimentApp\databaseQueries.py", line 15, in <module>
-    django.setup()
-  File "C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\django\__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\django\apps\registry.py", line 114, in populate
-    app_config.import_models()
-  File "C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\django\apps\config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "C:\Users\j.turnbull\AppData\Local\Programs\Python\Python37\lib\importlib\__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "C:\\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker\models.py", line 33
-    :
-    ^
-SyntaxError: invalid syntax
+What data would you like to upload??:
+Individual file use:    1
+Annual datastore use:   2
+Input:  Annual stores
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/
+['file (1).gz', 'file (2).gz', 'file (3).gz', 'file (4).gz', 'file (5).gz', 'file (6).gz', 'file (7).gz', 'file (8).gz', 'file (9).gz', 'file (10).gz', 'file (11).gz', 'file (12).gz', 'file (13).gz']
+Are you sure you want to upload files from this directory??
+Press Y or y to continue..
+Input: How many files do you wish to upload - there are 13 files: File upload 1 started
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file (1).gz
+36968
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\pandas\core\indexing.py:190: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  self._setitem_with_indexer(indexer, value)
+[[0.0399913  0.9600087 ]
+ [0.42091002 0.57908998]
+ [0.00156376 0.99843624]
+ ...
+ [0.1140512  0.8859488 ]
+ [0.18435864 0.81564136]
+ [0.08172419 0.91827581]]
+       reviewerID        asin  ... sentiment prediction
+0  A1JHMIRSOIMP8O  B00834SJSK  ...  positive   positive
+1   AXAJXJZUL2J5P  B00834SJSK  ...  positive   positive
+2  A1UDWR133BMIEO  B00834SJSK  ...  positive   positive
+3  A1S505K01LCE63  B00834SJSK  ...  positive   positive
+4   A2YECFMBM0ZS6  B00834SJSK  ...  positive   positive
+
+[5 rows x 11 columns]
+830
+830
+              precision    recall  f1-score   support
+
+    positive       0.66      0.78      0.72        68
+    negative       0.98      0.96      0.97       762
+
+   micro avg       0.95      0.95      0.95       830
+   macro avg       0.82      0.87      0.84       830
+weighted avg       0.95      0.95      0.95       830
+
+19
+PosScores Dataframe to database COMPLETED
+19
+NegScores Dataframe to database COMPLETED
+19
+WeightedAvg Dataframe to database COMPLETED
+Populating database started...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\django\db\models\fields\__init__.py:1363: RuntimeWarning: DateTimeField Review.batch_date received a naive datetime (2019-05-18 00:00:00) while time zone support is active.
+  RuntimeWarning)
+Completed successfully!
+Populating databases took:    28.469337463378906 seconds
+('batch',)
+Batch training implemented skipping question...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/finalised_tfidftransformer.sav
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/finalised_model.sav
+DataFrame loaded
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+Model trained using the new data
+New transformer saved to disk
+New model saved to disk
+Models trained and saved to disk
+       reviewerID        asin  ...   reviewTime sentiment
+0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
+1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
+2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
+3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
+4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
+
+[5 rows x 10 columns]
+SGD/LogReg Accuracy on new training set: 0.949
+SGD/LogReg Accuracy on original test set: 0.906
+File number 1 complete
+File completed: file (1).gz
+File upload 2 started
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file (2).gz
+36968
+[[0.09336218 0.90663782]
+ [0.14298615 0.85701385]
+ [0.10362899 0.89637101]
+ ...
+ [0.40732397 0.59267603]
+ [0.21693223 0.78306777]
+ [0.14598972 0.85401028]]
+       reviewerID        asin reviewerName  ...   reviewTime sentiment  prediction
+0  A31GDWUM6AGI7S  B0083BWGDC      Mike M.  ...  03 14, 2014  positive    positive
+1  A18ALNY3K0L6QE  B0083BWGDC      Mocha12  ...   09 4, 2013  positive    positive
+2  A3U8XAV7IZYQLS  B0083BWGDC         Paul  ...  12 27, 2013  positive    positive
+3   AXLTJGU51XFNK  B0083BWGDC       Rastro  ...  11 23, 2012  positive    positive
+4   AMELYQ70DXW6M  B0083BWGDC       Sherie  ...  11 10, 2013  positive    positive
+
+[5 rows x 11 columns]
+830
+830
+              precision    recall  f1-score   support
+
+    positive       0.55      0.66      0.60        87
+    negative       0.96      0.94      0.95       743
+
+   micro avg       0.91      0.91      0.91       830
+   macro avg       0.76      0.80      0.77       830
+weighted avg       0.92      0.91      0.91       830
+
+20
+PosScores Dataframe to database COMPLETED
+20
+NegScores Dataframe to database COMPLETED
+20
+WeightedAvg Dataframe to database COMPLETED
+Populating database started...
+Completed successfully!
+Populating databases took:    29.553263425827026 seconds
+('batch',)
+Batch training implemented skipping question...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav1
+DataFrame loaded
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+Model trained using the new data
+New transformer saved to disk
+New model saved to disk
+Models trained and saved to disk
+       reviewerID        asin  ...   reviewTime sentiment
+0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
+1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
+2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
+3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
+4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
+
+[5 rows x 10 columns]
+SGD/LogReg Accuracy on new training set: 0.908
+SGD/LogReg Accuracy on original test set: 0.906
+File number 2 complete
+File completed: file (2).gz
+File upload 3 started
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file (3).gz
+36968
+[[0.508258   0.491742  ]
+ [0.38313905 0.61686095]
+ [0.13829273 0.86170727]
+ ...
+ [0.26323529 0.73676471]
+ [0.4012877  0.5987123 ]
+ [0.39750706 0.60249294]]
+       reviewerID        asin  ... sentiment prediction
+0  A3LJINXW8JL7WD  B0083P3VFA  ...  negative   negative
+1  A3N8T534UDMJRL  B0083P3VFA  ...  negative   positive
+2   AVE93C3GPMTN2  B0083P3VFA  ...  positive   positive
+3  A1Q7EGHCAUXO59  B0083P3VFA  ...  positive   positive
+4   AAEBDBP10HOUI  B0083P3VFA  ...  positive   positive
+
+[5 rows x 11 columns]
+830
+830
+              precision    recall  f1-score   support
+
+    positive       0.57      0.58      0.58        72
+    negative       0.96      0.96      0.96       758
+
+   micro avg       0.93      0.93      0.93       830
+   macro avg       0.76      0.77      0.77       830
+weighted avg       0.93      0.93      0.93       830
+
+21
+PosScores Dataframe to database COMPLETED
+21
+NegScores Dataframe to database COMPLETED
+21
+WeightedAvg Dataframe to database COMPLETED
+Populating database started...
+Completed successfully!
+Populating databases took:    30.838168144226074 seconds
+('batch',)
+Batch training implemented skipping question...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav2
+DataFrame loaded
+Model trained using the new data
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+New transformer saved to disk
+New model saved to disk
+Models trained and saved to disk
+       reviewerID        asin  ...   reviewTime sentiment
+0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
+1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
+2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
+3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
+4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
+
+[5 rows x 10 columns]
+SGD/LogReg Accuracy on new training set: 0.925
+SGD/LogReg Accuracy on original test set: 0.906
+File number 3 complete
+File completed: file (3).gz
+File upload 4 started
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file (4).gz
+36968
+[[0.09998811 0.90001189]
+ [0.14744    0.85256   ]
+ [0.07926766 0.92073234]
+ ...
+ [0.24292722 0.75707278]
+ [0.0785442  0.9214558 ]
+ [0.38293522 0.61706478]]
+       reviewerID        asin  ... sentiment prediction
+0   A54Z7H7KJD152  B0083YIGXI  ...  positive   positive
+1  A2WOLB2PE4QTFU  B0083YIGXI  ...  positive   positive
+2  A39S9OE9BA8R7Q  B0083YIGXI  ...  positive   positive
+3   ALXX1I6UXYOWZ  B0083YIGXI  ...  positive   positive
+4  A3GFUZTVNMRSSE  B0083YIGXI  ...  positive   negative
+
+[5 rows x 11 columns]
+830
+830
+              precision    recall  f1-score   support
+
+    positive       0.51      0.65      0.57        62
+    negative       0.97      0.95      0.96       768
+
+   micro avg       0.93      0.93      0.93       830
+   macro avg       0.74      0.80      0.76       830
+weighted avg       0.94      0.93      0.93       830
+
+22
+PosScores Dataframe to database COMPLETED
+22
+NegScores Dataframe to database COMPLETED
+22
+WeightedAvg Dataframe to database COMPLETED
+Populating database started...
+Completed successfully!
+Populating databases took:    29.519511222839355 seconds
+('batch',)
+Batch training implemented skipping question...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav3
+DataFrame loaded
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+Model trained using the new data
+New transformer saved to disk
+New model saved to disk
+Models trained and saved to disk
+       reviewerID        asin  ...   reviewTime sentiment
+0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
+1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
+2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
+3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
+4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
+
+[5 rows x 10 columns]
+SGD/LogReg Accuracy on new training set: 0.927
+SGD/LogReg Accuracy on original test set: 0.906
+File number 4 complete
+File completed: file (4).gz
+File upload 5 started
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file (5).gz
+36968
+[[0.39661729 0.60338271]
+ [0.16522718 0.83477282]
+ [0.23690482 0.76309518]
+ ...
+ [0.36347402 0.63652598]
+ [0.42665741 0.57334259]
+ [0.74481378 0.25518622]]
+       reviewerID        asin  ... sentiment prediction
+0  A2M6ELNT31HT74  B00846Z34K  ...  positive   positive
+1  A3222AFGFSEUX6  B00846Z34K  ...  positive   positive
+2  A373IZ7I85KDV4  B00846Z34K  ...  positive   positive
+3  A29P24MAIVY1HP  B00846Z34K  ...  positive   positive
+4   AFEIVI3FFKHY7  B00846Z34K  ...  positive   positive
+
+[5 rows x 11 columns]
+830
+830
+              precision    recall  f1-score   support
+
+    positive       0.58      0.70      0.63        93
+    negative       0.96      0.94      0.95       737
+
+   micro avg       0.91      0.91      0.91       830
+   macro avg       0.77      0.82      0.79       830
+weighted avg       0.92      0.91      0.91       830
+
+23
+PosScores Dataframe to database COMPLETED
+23
+NegScores Dataframe to database COMPLETED
+23
+WeightedAvg Dataframe to database COMPLETED
+Populating database started...
+Completed successfully!
+Populating databases took:    28.759984493255615 seconds
+('batch',)
+Batch training implemented skipping question...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav4
+DataFrame loaded
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+Model trained using the new data
+New transformer saved to disk
+New model saved to disk
+Models trained and saved to disk
+       reviewerID        asin  ...   reviewTime sentiment
+0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
+1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
+2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
+3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
+4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
+
+[5 rows x 10 columns]
+SGD/LogReg Accuracy on new training set: 0.910
+SGD/LogReg Accuracy on original test set: 0.906
+File number 5 complete
+File completed: file (5).gz
+File upload 6 started
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file (6).gz
+36968
+[[0.51387072 0.48612928]
+ [0.21062618 0.78937382]
+ [0.12888709 0.87111291]
+ ...
+ [0.33891769 0.66108231]
+ [0.56291665 0.43708335]
+ [0.67404459 0.32595541]]
+       reviewerID        asin  ... sentiment prediction
+0  A24AK0OGLWN2RB  B0084JFM34  ...  positive   negative
+1  A3PJC4IV9M209Y  B0084JFM34  ...  positive   positive
+2  A2ERJC53R5PD50  B0084JFM34  ...  positive   positive
+3  A21X36B8EBJBM4  B0084JFM34  ...  positive   positive
+4  A3HW656FXATBA3  B0084JFM34  ...  positive   positive
+
+[5 rows x 11 columns]
+830
+830
+              precision    recall  f1-score   support
+
+    positive       0.70      0.61      0.65       113
+    negative       0.94      0.96      0.95       717
+
+   micro avg       0.91      0.91      0.91       830
+   macro avg       0.82      0.79      0.80       830
+weighted avg       0.91      0.91      0.91       830
+
+24
+PosScores Dataframe to database COMPLETED
+24
+NegScores Dataframe to database COMPLETED
+24
+WeightedAvg Dataframe to database COMPLETED
+Populating database started...
+Completed successfully!
+Populating databases took:    26.80324935913086 seconds
+('batch',)
+Batch training implemented skipping question...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav5
+DataFrame loaded
+Model trained using the new data
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+New transformer saved to disk
+New model saved to disk
+Models trained and saved to disk
+       reviewerID        asin  ...   reviewTime sentiment
+0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
+1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
+2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
+3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
+4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
+
+[5 rows x 10 columns]
+SGD/LogReg Accuracy on new training set: 0.912
+SGD/LogReg Accuracy on original test set: 0.906
+File number 6 complete
+File completed: file (6).gz
+File upload 7 started
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file (7).gz
+36968
+[[0.37039478 0.62960522]
+ [0.41231827 0.58768173]
+ [0.11192767 0.88807233]
+ ...
+ [0.33468355 0.66531645]
+ [0.0950485  0.9049515 ]
+ [0.15212857 0.84787143]]
+       reviewerID        asin  ... sentiment prediction
+0  A1MYV5SYW2YS8N  B00855B5QA  ...  positive   positive
+1  A15S26550AJ3WC  B00855B5QA  ...  positive   positive
+2   A9DW3IODLLHJG  B00855B5QA  ...  positive   positive
+3  A3UHAU8IRWEA30  B00855B5QA  ...  positive   positive
+4  A2FZBYWHKD7RTO  B00855B5QA  ...  positive   positive
+
+[5 rows x 11 columns]
+830
+830
+              precision    recall  f1-score   support
+
+    positive       0.69      0.64      0.67        98
+    negative       0.95      0.96      0.96       732
+
+   micro avg       0.92      0.92      0.92       830
+   macro avg       0.82      0.80      0.81       830
+weighted avg       0.92      0.92      0.92       830
+
+25
+PosScores Dataframe to database COMPLETED
+25
+NegScores Dataframe to database COMPLETED
+25
+WeightedAvg Dataframe to database COMPLETED
+Populating database started...
+Completed successfully!
+Populating databases took:    27.37212061882019 seconds
+('batch',)
+Batch training implemented skipping question...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav6
+DataFrame loaded
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+Model trained using the new data
+New transformer saved to disk
+New model saved to disk
+Models trained and saved to disk
+       reviewerID        asin  ...   reviewTime sentiment
+0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
+1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
+2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
+3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
+4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
+
+[5 rows x 10 columns]
+SGD/LogReg Accuracy on new training set: 0.924
+SGD/LogReg Accuracy on original test set: 0.906
+File number 7 complete
+File completed: file (7).gz
+File upload 8 started
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file (8).gz
+36968
+[[0.13034549 0.86965451]
+ [0.21177845 0.78822155]
+ [0.09598239 0.90401761]
+ ...
+ [0.07678652 0.92321348]
+ [0.40415661 0.59584339]
+ [0.16617408 0.83382592]]
+       reviewerID        asin  ... sentiment prediction
+0   AY8VDIAAIAXU4  B0085DZRDE  ...  positive   positive
+1  A365UWK3K5SD1X  B0085DZRDE  ...  positive   positive
+2  A2PFKU1AN35FXJ  B0085DZRDE  ...  positive   positive
+3  A1ON0R9KYVI5DJ  B0085DZRDE  ...  positive   positive
+4  A2J1IR98GYJ8II  B0085DZRDE  ...  positive   positive
+
+[5 rows x 11 columns]
+830
+830
+              precision    recall  f1-score   support
+
+    positive       0.59      0.64      0.61        94
+    negative       0.95      0.94      0.95       736
+
+   micro avg       0.91      0.91      0.91       830
+   macro avg       0.77      0.79      0.78       830
+weighted avg       0.91      0.91      0.91       830
+
+26
+PosScores Dataframe to database COMPLETED
+26
+NegScores Dataframe to database COMPLETED
+26
+WeightedAvg Dataframe to database COMPLETED
+Populating database started...
+Completed successfully!
+Populating databases took:    26.937020301818848 seconds
+('batch',)
+Batch training implemented skipping question...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav7
+DataFrame loaded
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+Model trained using the new data
+  DeprecationWarning)
+New transformer saved to disk
+New model saved to disk
+Models trained and saved to disk
+       reviewerID        asin  ...   reviewTime sentiment
+0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
+1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
+2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
+3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
+4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
+
+[5 rows x 10 columns]
+SGD/LogReg Accuracy on new training set: 0.908
+SGD/LogReg Accuracy on original test set: 0.906
+File number 8 complete
+File completed: file (8).gz
+File upload 9 started
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file (9).gz
+36968
+[[0.06423964 0.93576036]
+ [0.37576288 0.62423712]
+ [0.61194619 0.38805381]
+ ...
+ [0.40571602 0.59428398]
+ [0.29391424 0.70608576]
+ [0.25608739 0.74391261]]
+       reviewerID        asin  ... sentiment prediction
+0  A2QRGHEACR75F3  B0085RNKOS  ...  positive   positive
+1  A2BQGP22S0EAB2  B0085RNKOS  ...  positive   positive
+2   AYD5G172A3CDP  B0085RNKOS  ...  positive   negative
+3  A23JACPHYV1P86  B0085RNKOS  ...  positive   positive
+4  A1EKSETIBS9ETQ  B0085RO8U8  ...  positive   positive
+
+[5 rows x 11 columns]
+830
+830
+              precision    recall  f1-score   support
+
+    positive       0.62      0.75      0.68       109
+    negative       0.96      0.93      0.94       721
+
+   micro avg       0.91      0.91      0.91       830
+   macro avg       0.79      0.84      0.81       830
+weighted avg       0.92      0.91      0.91       830
+
+27
+PosScores Dataframe to database COMPLETED
+27
+NegScores Dataframe to database COMPLETED
+27
+WeightedAvg Dataframe to database COMPLETED
+Populating database started...
+Completed successfully!
+Populating databases took:    27.0854172706604 seconds
+('batch',)
+Batch training implemented skipping question...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav8
+DataFrame loaded
+Model trained using the new data
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+New transformer saved to disk
+New model saved to disk
+Models trained and saved to disk
+       reviewerID        asin  ...   reviewTime sentiment
+0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
+1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
+2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
+3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
+4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
+
+[5 rows x 10 columns]
+SGD/LogReg Accuracy on new training set: 0.906
+SGD/LogReg Accuracy on original test set: 0.906
+File number 9 complete
+File completed: file (9).gz
+File upload 10 started
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file (10).gz
+36968
+[[0.09725398 0.90274602]
+ [0.44955267 0.55044733]
+ [0.70468187 0.29531813]
+ ...
+ [0.1381133  0.8618867 ]
+ [0.21573122 0.78426878]
+ [0.11729484 0.88270516]]
+       reviewerID        asin  ... sentiment prediction
+0  A3PUI4IBDJYGOZ  B0085YH7JK  ...  positive   positive
+1   A9DYWY9VOSP1P  B0085YH7JK  ...  negative   positive
+2   AT370LRJ8UOV1  B0085YH7JK  ...  positive   negative
+3  A1JAUY5S0ELYBD  B0085YH7JK  ...  negative   negative
+4   AWO0CKMVE6AEK  B0085YH7JK  ...  positive   positive
+
+[5 rows x 11 columns]
+830
+830
+              precision    recall  f1-score   support
+
+    positive       0.52      0.60      0.56        96
+    negative       0.95      0.93      0.94       734
+
+   micro avg       0.89      0.89      0.89       830
+   macro avg       0.73      0.77      0.75       830
+weighted avg       0.90      0.89      0.89       830
+
+28
+PosScores Dataframe to database COMPLETED
+28
+NegScores Dataframe to database COMPLETED
+28
+WeightedAvg Dataframe to database COMPLETED
+Populating database started...
+Completed successfully!
+Populating databases took:    27.085097312927246 seconds
+('batch',)
+Batch training implemented skipping question...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav9
+DataFrame loaded
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+Model trained using the new data
+New transformer saved to disk
+New model saved to disk
+Models trained and saved to disk
+       reviewerID        asin  ...   reviewTime sentiment
+0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
+1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
+2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
+3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
+4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
+
+[5 rows x 10 columns]
+SGD/LogReg Accuracy on new training set: 0.889
+SGD/LogReg Accuracy on original test set: 0.906
+File number 10 complete
+File completed: file (10).gz
+File upload 11 started
+C:/Users/j.turnbull/PycharmProjects/SentimentApp/Datasets/ElectronicsReviews/evenSmaller/file (11).gz
+36968
+[[0.07032468 0.92967532]
+ [0.13842411 0.86157589]
+ [0.13864523 0.86135477]
+ ...
+ [0.3242068  0.6757932 ]
+ [0.03069607 0.96930393]
+ [0.20335713 0.79664287]]
+       reviewerID        asin  ... sentiment prediction
+0  A1OQMFQPIDNBLA  B0086SQDMM  ...  positive   positive
+1  A174X7S1J75AZ3  B0086SQDMM  ...  positive   positive
+2  A1QN19A24T50A7  B0086SQDMM  ...  positive   positive
+3  A39WT88YZXIJTB  B0086SQDMM  ...  positive   positive
+4  A22WKLIWP67KZJ  B0086SQDMM  ...  positive   positive
+
+[5 rows x 11 columns]
+830
+830
+              precision    recall  f1-score   support
+
+    positive       0.59      0.74      0.66        77
+    negative       0.97      0.95      0.96       753
+
+   micro avg       0.93      0.93      0.93       830
+   macro avg       0.78      0.84      0.81       830
+weighted avg       0.94      0.93      0.93       830
+
+29
+PosScores Dataframe to database COMPLETED
+29
+NegScores Dataframe to database COMPLETED
+29
+WeightedAvg Dataframe to database COMPLETED
+Populating database started...
+Completed successfully!
+Populating databases took:    26.195370197296143 seconds
+('batch',)
+Batch training implemented skipping question...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav9
+DataFrame loaded
+Model trained using the new data
+C:\Users\j.turnbull\PycharmProjects\SentimentApp\venv\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:152: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+New transformer saved to disk
+New model saved to disk
+Models trained and saved to disk
+       reviewerID        asin  ...   reviewTime sentiment
+0  A2HOYLB0HXLLJJ  B002J9GDBA  ...  10 30, 2010  negative
+1  A15JJCW1G4777M  B003SGDAPU  ...  10 14, 2011  positive
+2   A5GCWW51V5SH7  B0063705PE  ...  10 17, 2012  positive
+3   A7RJ19XG5PDRU  B000063V7N  ...   03 5, 2003  positive
+4  A3GOVWMQ10MI75  B0043T7FXE  ...  05 17, 2011  positive
+
+[5 rows x 10 columns]
+SGD/LogReg Accuracy on new training set: 0.929
+SGD/LogReg Accuracy on original test set: 0.907
+File number 11 complete
+File completed: file (11).gz
+Files added...
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav1
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1
+['C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav1', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav2', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav3', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav4', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav5', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav6', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav7', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav8', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav9', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...]]
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav2
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2
+['C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav1', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav2', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav3', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav4', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav5', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav6', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav7', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav8', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav9', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...]]
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav3
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3
+['C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav1', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav2', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav3', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav4', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav5', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav6', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav7', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav8', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav9', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...]]
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav4
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4
+['C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav1', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav2', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav3', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav4', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav5', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav6', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav7', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav8', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav9', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...]]
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav5
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5
+['C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav1', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav2', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav3', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav4', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav5', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav6', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav7', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav8', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav9', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...]]
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav6
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6
+['C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav1', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav2', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav3', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav4', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav5', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav6', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav7', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav8', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav9', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...]]
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav7
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7
+['C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav1', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav2', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav3', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav4', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav5', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav6', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav7', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav8', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav9', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...]]
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav8
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8
+['C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav1', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav2', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav3', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav4', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav5', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav6', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav7', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav8', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav9', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...]]
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav9
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9
+['C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav1', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav2', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav3', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav4', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav5', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav6', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav7', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav8', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav9', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...]]
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav10
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10
+['C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav1', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav2', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav3', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav4', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav5', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav6', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav7', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav8', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav9', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...]]
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/model/retrained_model.sav10
+C:\Users\j.turnbull\PycharmProjects\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10
+['C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav1', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav1', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav2', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav2', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav3', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav3', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav4', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav4', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav5', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav5', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav6', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav6', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav7', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav7', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav8', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav8', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav9', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav9', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...], 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/model/retrained_model.sav10', 'C:\\Users\\j.turnbull\\PycharmProjects\\SentimentApp/savedModels/transformer/retrained_tfidftransformer.sav10', [...]]
