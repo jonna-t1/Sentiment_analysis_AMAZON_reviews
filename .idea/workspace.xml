@@ -2,70 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac999d69-d170-42c8-83d0-73a9cee94ff7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ROC.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/context_processors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/migrations/0002_auto_20190518_2157.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/migrations/0003_auto_20190518_2202.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/migrations/0004_auto_20190518_2234.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/migrations/0005_auto_20190518_2239.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/migrations/0006_auto_20190522_1712.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/img/default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-classification.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/pie-1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/pie-predict.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/media/ngramCoef.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/avgClassification.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/avg_detail.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_detail.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/neg_detail.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/negativeClassification.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/performanceScores.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/pos_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/positiveClassification.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/trained_models.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AmazonTrain.py" beforeDir="false" afterPath="$PROJECT_DIR$/AmazonTrain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModelUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ModelUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/SentimentApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/SentimentApp/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/context_processors.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/static/img/undraw_posting_photo.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/static/img/undraw_posting_photo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/img/chartPhoto.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-area-demo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-area-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-area.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-pie-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-pie-1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/startbootstrap-sb-admin-2-gh-pages/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/startbootstrap-sb-admin-2-gh-pages/charts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/event_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/event_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/neg_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databaseQueries.py" beforeDir="false" afterPath="$PROJECT_DIR$/databaseQueries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexcodes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/colour_hexcodes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/AmazonTrain.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/AmazonTrain.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/main.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machinealgs.py" beforeDir="false" afterPath="$PROJECT_DIR$/machinealgs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/originalScript.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/populateDatabase.py" beforeDir="false" afterPath="$PROJECT_DIR$/populateDatabase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrainModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/retrainModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/model/retrained_model.sav1" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/model/retrained_model.sav1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/model/retrained_model.sav2" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/model/retrained_model.sav2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/model/retrained_model.sav3" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/model/retrained_model.sav3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/model/retrained_model.sav4" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/model/retrained_model.sav4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/model/retrained_model.sav5" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/model/retrained_model.sav5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/model/retrained_model.sav6" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/model/retrained_model.sav6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/model/retrained_model.sav7" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/model/retrained_model.sav7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav1" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav2" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav3" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav4" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav5" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav6" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav7" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/transformer/retrained_tfidftransformer.sav7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weeklyScriopt.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,8 +113,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/databaseQueries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="353" column="19" lean-forward="true" selection-start-line="353" selection-start-column="19" selection-end-line="353" selection-end-column="19" />
+            <state relative-caret-position="289">
+              <caret line="348" column="19" selection-start-line="348" selection-start-column="19" selection-end-line="348" selection-end-column="19" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#2920#3134#0" />
@@ -656,12 +634,12 @@
       <workItem from="1558165581143" duration="76465000" />
       <workItem from="1558538441308" duration="844000" />
       <workItem from="1558540142246" duration="85977000" />
-      <workItem from="1558723698456" duration="2269000" />
+      <workItem from="1558723698456" duration="4080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251161000" />
+    <option name="totallyTimeSpent" value="252972000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1177,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/databaseQueries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="353" column="19" lean-forward="true" selection-start-line="353" selection-start-column="19" selection-end-line="353" selection-end-column="19" />
+        <state relative-caret-position="289">
+          <caret line="348" column="19" selection-start-line="348" selection-start-column="19" selection-end-line="348" selection-end-column="19" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#2920#3134#0" />
