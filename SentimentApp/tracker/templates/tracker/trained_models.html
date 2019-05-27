@@ -1,7 +1,7 @@
 {% extends "tracker/base.html" %}
 {% block content %}
 
-    <h1>Classification Scores</h1>
+    <h1>Model Accuracy</h1>
     <br><br>
 
     <div class="col-12 col-lg-12">
@@ -19,17 +19,19 @@
                       <tr>
                       <th style="width:25%;">Batch ID</th>
                         <th style="width:25%;">Model File</th>
+                        <th style="width:25%;">Model Accuracy from original test set</th>
                       </tr>
                     </thead>
                     <tbody class="no-border-x">
                         <tr>
                             <td> 0 </td>
-                            <td> retrained_model.sav </td>
+                            <td> finalised_model.sav </td>
                           </tr>
                     {% for file in files %}
                           <tr>
                             <td> {{ file.id }} </td>
                             <td> {{ file.file }} </td>
+                            <td> {{ file.score }} </td>
                           </tr>
                     {% endfor %}
                     </tbody>

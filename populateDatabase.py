@@ -110,30 +110,30 @@ def populateReviews(view):
     else:
         sys.exit("Incorrect Dateframe formatting")
 
-def populateDatabase(path, filesAdded, *args):
+def populateDatabase(path, filesAdded):
     start = time.time() # start time
 
     df = proc.getDF(path)
     df = proc.addSenimentColumn(df, 'd1')
-    view, classificationReport = load.classify(df)
+    view, classificationReport, files = load.classify(df)
 
     #populates tables with classification scores
 
     #positive table
     try:
         populatePosScores(classificationReport[0])
-    except IOError as err:
+    except ValueError as err:
         print(err.args)
 
     try:
         populateNegScores(classificationReport[1])
-    except IOError as err:
+    except ValueError as err:
         PosScores.objects.latest('id').delete()
         print(err.args)
 
     try:
         populateWeightedAvg(classificationReport[-1])
-    except IOError as err:
+    except ValueError as err:
         PosScores.objects.latest('id').delete()
         NegScores.objects.latest('id').delete()
         print(err.args)
@@ -153,22 +153,44 @@ def populateDatabase(path, filesAdded, *args):
     end = time.time()
     print("Populating databases took:    {} seconds".format(end - start))
 
+    #rename ROC file to batchID convention
+    files = renamaingROC()
+
     # new data is used to produce a new model
     try:
-        print(args)
         testDF = pd.read_csv(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp\Datasets\TestData\TestData.csv')
-        model_filename, tfidf_filename = retrain(df, testDF, args[0])
-    except IOError as err:
-        PosScores.objects.latest('id').delete()
-        NegScores.objects.latest('id').delete()
-        WeightedAvg.objects.latest('id').delete()
-        Review.objects.latest('pos_batch_no').delete()
-        print(err.args)
+        model_filename, tfidf_filename = retrain(df, testDF)
+    except FileNotFoundError as err:
+        PosScores.objects.last().delete()
+        lastID = PosScores.objects.last().id
+        NegScores.objects.last().delete()
+        WeightedAvg.objects.last().delete()
+        Review.objects.filter(pos_batch_no=lastID).delete()
+        print(err)
+        sys.exit("Script stopped")
 
 
     filesAdded.append(model_filename)
     filesAdded.append(tfidf_filename)
+    for i in files:
+        filesAdded.append(i)
 
     return filesAdded
 
 
+
+
+def renamaingROC():
+    path = os.getcwd()
+    print(path)
+    # sys.exit("step")
+    oldFile1 = path+'\\savedModels\\ROC\\'+'newfile.png'
+    oldFile2 = path+'\\SentimentApp\\tracker\\static\\roc\\'+'newfile.png'
+    p = PosScores.objects.last()
+    ROCFileName1 = path + '\\savedModels\\ROC\\' + 'RocCurve' + str(p.id) + '.png'
+    ROCFileName2 = path + '\\SentimentApp\\tracker\\static\\roc\\' + 'RocCurve' + str(p.id) + '.png'
+
+    os.rename(oldFile1,ROCFileName1)
+    os.rename(oldFile2,ROCFileName2)
+
+    return ROCFileName1,ROCFileName2

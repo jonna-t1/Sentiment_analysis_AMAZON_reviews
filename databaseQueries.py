@@ -6,7 +6,6 @@ import django
 import datetime
 import calendar
 
-
 sys.path.append(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp')
 sys.path.append(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp')
 sys.path.append(r'C:\Users\j.turnbull\PycharmProjects\SentimentApp') # add path to project root dir
@@ -89,6 +88,12 @@ def changeTimeStamp(batch_id, date):
     # print("hi")
     Review.objects.filter(pos_batch_no = batch_id).update(batch_date = date)
 
+
+somedate = datetime.date.today()
+d = datetime.timedelta(days=30)
+t = somedate + d
+# changeTimeStamp(27, t)
+
 # def getWeeklyArray():
 #     aDate = input("Please supply a start date in this format 'ddmmyyyy': ")
 #     cleaned = [x for x in aDate if x.isdigit()]
@@ -112,8 +117,12 @@ def add_months(sourcedate, months):
     day = min(sourcedate.day, calendar.monthrange(year,month)[1])
     return datetime.date(year, month, day)
 
+
+
 def getMonthlyArray():
     # somedate = datetime.date.today()
+    somedate = datetime.datetime.strptime(aDate, "%d%m%Y").date()  #string 2 datetime obj
+
 
     aDate = input("Please supply a start date in this format 'ddmmyyyy': ")
     cleaned = [x for x in aDate if x.isdigit()]
@@ -138,7 +147,7 @@ def changeMonthlyDates():
 
     print(dateTimeSet.first())
     print(dateTimeSet.last())
-    sys.exit("stop")
+    # sys.exit("stop")
 
     print("Pre date change...")
     print(dateTimeSet)
@@ -176,16 +185,9 @@ def changeMonthlyDates():
 
 # changeMonthlyDates()
 
-def resetTime(date):
-    # date = Review.objects.all().values_list('batch_date', flat=True).last()
-    # print(date)
-    new = date.replace(microsecond=0, second=00, minute=00, hour=00)
-    return new
-    # print(new)
-    # return new
-    # .update()
+# print(Review.objects.none())
 
-# print(resetTime(Review.objects.all().values_list('batch_date', flat=True).last()))
+
 
 def getMonths():
     dates = Review.objects.all().values_list('batch_date', flat=True)
@@ -215,7 +217,7 @@ def getMonths():
     # for val in vals:
     #     print(Review.objects.filter(batch_date = val))      # .delete to delete the outliers
 
-
+# print(printLast())
 
 # getMonths()
 
@@ -253,23 +255,144 @@ def cleanTransformersDir():
             os.remove(dirPath + file)
             print(file + " Removed!")
 
-def getMonthlyRange():
+
+def subtract_one_month(t):
+    """Return a `datetime.date` or `datetime.datetime` (as given) that is
+    one month later.
+
+    Note that the resultant day of the month might change if the following
+    month has fewer days:
+
+        >>> subtract_one_month(datetime.date(2010, 3, 31))
+        datetime.date(2010, 2, 28)
+    """
+    import datetime
+    one_day = datetime.timedelta(days=1)
+    one_month_earlier = t - one_day
+    while one_month_earlier.month == t.month or one_month_earlier.day > t.day:
+        one_month_earlier -= one_day
+    return one_month_earlier
+
+
+def getMonthLabels():
+    import pandas as pd
 
     # reviews = Review.objects.order_by('batch_date').values_list('batch_date', flat=True).distinct()
-    reviews = Review.objects.order_by('batch_date').values_list('batch_date', flat=True).distinct()
+    months = Review.objects.order_by('batch_date').values_list('batch_date', flat=True).distinct()
+
+    final = []
+    array = []
+    for month in months:
+        mon = month.strftime("%Y-%b")
+        array.append(mon)
+
+    start = months.first()
+    start = subtract_one_month(start)
+
+    new = start.strftime('%Y-%m-%d')
+    finish = months.last().strftime('%Y-%m-%d')
+
+    dateLabels = pd.date_range(new, finish,
+                  freq='MS').strftime("%Y-%b").tolist()
+    dateLabels = [months.first().strftime("%Y-%b")]+dateLabels
+
+    count = 0
+    for date in dateLabels:
+        if date == array[count]:
+            final.append(date)
+            count+=1
+            continue
+        if date != array[count] and date !=array[0]:
+            final.append("")
+
+    # for date in dateLabels:
+    #     Review.objects.filter(batch_date=dat)
+
+    print(final)
+
+# getMonthLabels()
+
+def getLatestBatchPerMonth():
+    import pandas as pd
+    import calendar
+
+    pos = []
+    neg = []
+    avg = []
+
+    dates = Review.objects.order_by('batch_date').values_list('batch_date', flat=True).distinct()
+    first = dates.first()
+    last = dates.last()
+
+    # first = subtract_one_month(first)
+    first = first.strftime('%Y-%m-%d')
+    finish = last.strftime('%Y-%m-%d')
+    dateRange = pd.date_range(first, finish,
+                               freq='MS').tolist()
+    hash = {}
+    count = 0
+    for date in dateRange:
+
+        # print(type(date.month))
+        # sys.exit("stop")
+        hash[date.month] = date.year
+        count+=1
+
+    # print(hash[0])
+    for key, value in hash.items():
+        # print("{}  {}".format(key, value))
+        month = key
+        # nextMonth = key + 1
+        year = value
+        arr = calendar.monthrange(year, month)
+        start_date = datetime.date(year, month, 1)
+        end_date = datetime.date(year, month, arr[1])
+        vals = Review.objects.filter(batch_date__range=(start_date, end_date)).values_list('pos_batch_no', flat=True)
+
+        lastVal = vals.last()
+        # skip if there arent any batches in that month
+        pos_score = ""
+        neg_score = ""
+        avg_score = ""
+
+        try:
+            pos_score = PosScores.objects.get(pk=lastVal)
+        except PosScores.DoesNotExist:
+            go = None
+        try:
+            neg_score = NegScores.objects.get(pk=lastVal)
+        except NegScores.DoesNotExist:
+            go = None
+        try:
+            avg_score = WeightedAvg.objects.get(pk=lastVal)
+        except WeightedAvg.DoesNotExist:
+            go = None
+
+        pos.append(pos_score)
+        neg.append(neg_score)
+        avg.append(avg_score)
+
+    return pos, neg, avg
 
 
-    print(reviews.first())
-    print(reviews.last())
-    print(reviews.count())
-
-    return reviews, reviews.count()
-
-    # Review.objects.filter(date_from__year__gte=year,
-    #                               date_from__month__gte=month,
-    #                               date_to__year__lte=year,
-    #                               date_to__month__lte=month)
-
+# # one, two, three = getLatestBatchPerMonth()
+#
+# for i in one:
+#     try:
+#         print(i.precision)
+#     except AttributeError as err:
+#         continue
+#
+# for i in two:
+#     try:
+#         print(i.precision)
+#     except AttributeError as err:
+#         continue
+# for i in three:
+#     try:
+#         print(i.precision)
+#     except AttributeError as err:
+#         continue
 
 
 def getWeightAvg():
@@ -316,51 +439,88 @@ from tracker.models import NegScores
 from tracker.models import WeightedAvg
 
 
-def getROC():
+def eachROC():
     path = os.getcwd()
     transformerPath = path + '/savedModels/transformer/'
     modelPath = path + '/savedModels/model/'
 
-    # load the model from disk
-    tfidf_filename = utils.get2ndLastModel(transformerPath)
-    model_filename = utils.get2ndLastModel(modelPath)
-    loaded_tfidf = pickle.load(open(tfidf_filename, 'rb'))
-    loaded_model = pickle.load(open(model_filename, 'rb'))
 
+    pos = PosScores.objects.all()
+    firstID = PosScores.objects.first().id
+    count = 1
 
     ## get from db
-    qs = Review.objects.all()
-    reviews = read_frame(qs)
+    for p in pos:
 
-    ## loading dummy data
-    data = reviews['reviewText']
+        if p.id == firstID:
+            tfidf_filename = transformerPath + 'finalised_tfidftransformer.sav'
+            model_filename = modelPath + 'finalised_model.sav'
 
-    ## model prediction on new data
-    X_new = loaded_tfidf.transform(data)
-    y_pred = loaded_model.predict(X_new)
+        # load the model from disk
+        tfidf_filename = utils.getModel(transformerPath, count)
+        model_filename = utils.getModel(modelPath, count)
+        f1 = open(tfidf_filename, 'rb')
+        f2 = open(model_filename, 'rb')
+        loaded_tfidf = pickle.load(f1)
+        loaded_model = pickle.load(f2)
 
-    target_names = ['positive', 'negative']
-    y_true = reviews['actualSentiment']
+        reviews = pd.DataFrame()
+        qs = Review.objects.filter(pos_batch_no=p.id)
 
+        reviews = read_frame(qs)
 
-    probs = loaded_model.predict_proba(X_new)
-    # keep probabilities for the positive outcome only
-    probs = probs[:, 1]
-    # calculate AUC
-    auc = roc_auc_score(y_pred, probs)
-    print('AUC: %.3f' % auc)
-    # calculate roc curve
-    fpr, tpr, thresholds = roc_curve(y_pred, probs, pos_label='positive')
-    # plot no skill
-    pyplot.plot([0, 1], [0, 1], linestyle='--')
-    # plot the roc curve for the model
-    pyplot.plot(fpr, tpr, marker='.')
-    # show the plot
-    pyplot.show()
+        ## loading dummy data
+        data = reviews['reviewText']
 
+        ## model prediction on new data
+        X_new = loaded_tfidf.transform(data)
+        y_pred = loaded_model.predict(X_new)
 
-getROC()
+        target_names = ['positive', 'negative']
+        y_true = reviews['actualSentiment']
 
+        probs = []
+        probs = loaded_model.predict_proba(X_new)
+        print(probs)
+        # keep probabilities for the positive outcome only
+        probs = probs[:, 1]
+        # calculate AUC
+        auc = roc_auc_score(y_true, probs)
+
+        print('AUC: %.3f' % auc)
+        # sys.exit("step")
+
+        # calculate roc curve
+        fpr, tpr, thresholds = roc_curve(y_true, probs, pos_label='positive')
+        # plot no skill
+        pyplot.plot([0, 1], [0, 1], linestyle='--')
+        # plot the roc curve for the model
+        pyplot.plot(fpr, tpr, marker='.')
+        # show the plot
+        # pyplot.show()
+        ROCFileName1 = path + '\\savedModels\\ROC\\' + 'RocCurve' + str(p.id) + '.png'
+        ROCFileName2 = path + '\\SentimentApp\\tracker\\static\\roc\\' + 'RocCurve' + str(p.id) + '.png'
+
+        pyplot.savefig(ROCFileName1)
+        pyplot.savefig(ROCFileName2)
+        pyplot.close()
+
+        count += 1
+        f1.close()
+        f2.close()
+
+# eachROC()
+
+def filterIncorrect():
+    from django.db.models import F
+    all = Review.objects.all()
+    matches = Review.objects.filter(predictSentiment=F('actualSentiment'))
+    falsePos = Review.objects.exclude(predictSentiment=F('actualSentiment'))
+
+    for val in falsePos:
+        print(val.predictSentiment + "  "+ val.actualSentiment)
+
+    return matches, falsePos
 
 
 #########################

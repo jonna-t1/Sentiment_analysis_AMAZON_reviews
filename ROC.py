@@ -12,27 +12,6 @@ import pickle
 import dataprocess as proc
 from sklearn.metrics import classification_report, roc_auc_score, roc_curve
 import ModelUtils as utils
-from SentimentApp.tracker.models import Review
-
-
-sys.path.append(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp')
-sys.path.append(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp')
-sys.path.append(r'C:\Users\j.turnbull\PycharmProjects\SentimentApp') # add path to project root dir
-os.environ["DJANGO_SETTINGS_MODULE"] = "SentimentApp.settings"
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'SentimentApp.settings')
-
-# for more sophisticated setups, if you need to change connection settings (e.g. when using django-environ):
-#os.environ["DATABASE_URL"] = "postgres://myuser:mypassword@localhost:54324/mydb"
-settings.configure()
-# Connect to Django ORM
-django.setup()
-
-# process data
-# Review.objects.create(reviewText='MyAgency', predictSentiment='POSITIVE', actualSentiment='POSITIVE')
-from tracker.models import Review
-from tracker.models import PosScores
-from tracker.models import NegScores
-from tracker.models import WeightedAvg
 
 
 def getROC():
@@ -63,10 +42,11 @@ def getROC():
 
 
     probs = loaded_model.predict_proba(X_new)
+
     # keep probabilities for the positive outcome only
     probs = probs[:, 1]
     # calculate AUC
-    auc = roc_auc_score(y_pred, probs)
+    auc = roc_auc_score(y_true, probs)
     print('AUC: %.3f' % auc)
     # calculate roc curve
     fpr, tpr, thresholds = roc_curve(y_pred, probs)
@@ -78,4 +58,12 @@ def getROC():
     pyplot.show()
 
 
-getROC()
+
+def test():
+    f = open("guru99.txt", "w+")
+
+
+try:
+    test()
+except NameError as err:
+    print("shat")

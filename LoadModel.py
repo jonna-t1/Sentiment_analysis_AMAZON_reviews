@@ -2,12 +2,51 @@ import os
 import re
 import sys
 
+from matplotlib import pyplot
+
 import retrainModel as retrain
 import pandas as pd
 import pickle
 import dataprocess as proc
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, roc_auc_score, roc_curve
 import ModelUtils as utils
+
+import os
+import re
+import sys
+
+import django
+from django_pandas.io import read_frame
+from matplotlib import pyplot
+
+import retrainModel as retrain
+import pandas as pd
+import pickle
+import dataprocess as proc
+from sklearn.metrics import classification_report, roc_auc_score, roc_curve
+import ModelUtils as utils
+
+
+sys.path.append(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp')
+sys.path.append(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp')
+sys.path.append(r'C:\Users\j.turnbull\PycharmProjects\SentimentApp') # add path to project root dir
+os.environ["DJANGO_SETTINGS_MODULE"] = "SentimentApp.settings"
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'SentimentApp.settings')
+
+# for more sophisticated setups, if you need to change connection settings (e.g. when using django-environ):
+#os.environ["DATABASE_URL"] = "postgres://myuser:mypassword@localhost:54324/mydb"
+# Connect to Django ORM
+django.setup()
+
+# process data
+# Review.objects.create(reviewText='MyAgency', predictSentiment='POSITIVE', actualSentiment='POSITIVE')
+from tracker.models import Review
+from tracker.models import PosScores
+from tracker.models import NegScores
+from tracker.models import WeightedAvg
+
+
+
 
 def classify(reviews):
 
@@ -47,7 +86,38 @@ def classify(reviews):
     # for i in range(5):
     #     classDF.loc[i] = classArr[i]
 
-    return reviews, classArr
+    probs = loaded_model.predict_proba(X_new)
+    print(probs)
+    # keep probabilities for the positive outcome only
+    probs = probs[:, 1]
+    # calculate AUC
+    auc = roc_auc_score(y_true, probs)
+
+    print('AUC: %.3f' % auc)
+    # sys.exit("step")
+
+    # calculate roc curve
+    fpr, tpr, thresholds = roc_curve(y_true, probs, pos_label='positive')
+    # plot no skill
+    pyplot.plot([0, 1], [0, 1], linestyle='--')
+    # plot the roc curve for the model
+    pyplot.plot(fpr, tpr, marker='.')
+    # show the plot
+    # pyplot.show()
+    p = PosScores.objects.last()
+    ROCFileName1 = path + '\\savedModels\\ROC\\' + 'newfile.png'
+    ROCFileName2 = path + '\\SentimentApp\\tracker\\static\\roc\\' + 'newfile.png'
+
+    pyplot.savefig(ROCFileName1)
+    pyplot.savefig(ROCFileName2)
+
+    files = []
+    files.append(ROCFileName1)
+    files.append(ROCFileName2)
+    pyplot.close()
+
+
+    return reviews, classArr, files
 
 def process_report(report):
     report_data = []

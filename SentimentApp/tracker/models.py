@@ -49,7 +49,7 @@ class PosScores(models.Model):
 
     def __str__(self):
         val = 'Batch Number - ' + str(self.pk)
-        return val
+        return str(self.pk)
 
 
 class NegScores(models.Model):
@@ -61,7 +61,7 @@ class NegScores(models.Model):
 
     def __str__(self):
         val = 'Batch Number - ' + str(self.pk)
-        return val
+        return str(self.pk)
 
 
 class WeightedAvg(models.Model):
@@ -73,7 +73,7 @@ class WeightedAvg(models.Model):
 
     def __str__(self):
         val = 'Batch Number - ' + str(self.pk)
-        return val
+        return str(self.pk)
 
 class Review(models.Model):
 

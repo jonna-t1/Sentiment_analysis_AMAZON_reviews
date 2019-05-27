@@ -1,4 +1,9 @@
 import json
+import datetime
+import pandas as pd
+import calendar
+from colorama import Fore
+from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 import os
 # from databaseQueries import getMonthlyRange
@@ -31,13 +36,66 @@ class dataView(ListView):
     paginate_by = 10
     queryset = Review.objects.all()  # Default: Model.objects.all()
 
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        if query:
+
+            return Review.objects.filter(pos_batch_no=query)
+        else:
+            return Review.objects.all()
 
     def get_context_data(self, *args, **kwargs):
         context = super(dataView, self).get_context_data(*args, **kwargs)
 
+
         context['total_reviews'] = Review.objects.all().count()
 
         return context
+
+def filterIncorrect():
+    from django.db.models import F
+    falsePos = Review.objects.exclude(predictSentiment=F('actualSentiment'))
+
+
+    return falsePos
+
+def filterCorrect():
+    from django.db.models import F
+    matches = Review.objects.filter(predictSentiment=F('actualSentiment'))
+
+    return matches
+
+
+def incorrectMatchView(request):
+
+    vals = filterIncorrect()
+    paginator = Paginator(vals, 10)
+
+    page = request.GET.get('page')
+    vals = paginator.get_page(page)
+
+
+    # context data
+    context = {
+        'datum': vals,
+    }
+
+    return render(request, 'tracker/false_matches.html', context)
+
+
+def matchView(request, format=None):
+
+    vals = filterCorrect()
+    paginator = Paginator(vals, 10)
+
+    page = request.GET.get('page')
+    vals = paginator.get_page(page)
+    # context data
+    context = {
+        'datum': vals,
+    }
+
+    return render(request, 'tracker/matches.html', context)
 
 def stuff():
 
@@ -117,37 +175,59 @@ def sortDirFiles():
     if numberOfFiles < 9:
         return dirFiles.sort()
 
-
-
-
 def trainedModelsView(request):
 
-    dirFiles = sortDirFiles()
-    # print(dirFiles)
-    # dirFiles.pop(0)
+    # dirFiles = sortDirFiles()
+    # # print(dirFiles)
+    # # dirFiles.pop(0)
+    #
+    # # reviews = Review.objects.order_by('batch_date').values_list('batch_date', flat=True).distinct()
+    # ids = PosScores.objects.values_list('id', flat=True).distinct()
+    # idCount = PosScores.objects.values_list('id', flat=True).distinct().count()
+    # print(idCount)
+    # print(ids)
+    # print(len(dirFiles))
+    # # dirFiles = ['Original File'] + dirFiles
+    # arr = []
+    # count = 0
+    # for id in ids:
+    #     dict = {}
+    #
+    #     if count+1 == idCount:
+    #         break
+    #     dict['id'] = id
+    #     dict['file'] = dirFiles[count]
+    #     count+=1
+    #     arr.append(dict)
 
-    # reviews = Review.objects.order_by('batch_date').values_list('batch_date', flat=True).distinct()
-    ids = PosScores.objects.values_list('id', flat=True).distinct()
-    idCount = PosScores.objects.values_list('id', flat=True).distinct().count()
-    print(idCount)
-    print(ids)
-    print(len(dirFiles))
-    # dirFiles = ['Original File'] + dirFiles
+
+    p = Path(os.getcwd())
+    file = p.parent / ('savedModels/accuracy/modelAccuracy.csv')
+    # dirFiles = os.listdir(dirPath)  # list of directory files
+
     arr = []
-    count = 0
-    for id in ids:
-        dict = {}
 
-        if count+1 == idCount:
-            break
-        dict['id'] = id
-        dict['file'] = dirFiles[count]
-        count+=1
-        arr.append(dict)
+    with open(file, 'r') as f:
+        rows = f.readlines()
+    count = 1
+    for row in rows:
+        hash = {}
+        if count == 1:
+            vals = row.split(',')
+            hash['id'] = vals[0]
+            hash['file'] = vals[1]
+            hash['score'] = vals[2]
+            count+=1
+            continue
+        vals = row.split(',')
+        print(vals)
+        hash['id'] = vals[0]
+        hash['file'] = vals[1]
+        hash['score'] = vals[2]
+        count += 1
 
-    for ar in arr:
-        print(ar)
-    # print(dict)
+        arr.append(hash)
+
     context = {
         'files': arr,
     }
@@ -223,9 +303,37 @@ class PerformanceListView(ListView):
 
             # all = Review.objects.all()
             # context['total_reviews'] = all.count()
-            context['distinct_months'], context['distinct_month_count'] = getMonthlyRange()
-            context['class_results'], context['distinct_id_count'] = getWeightedAvg()
+            # context['distinct_months'], context['distinct_month_count'] = getMonthlyRange()
+            # context['class_results'], context['distinct_id_count'] = getWeightedAvg()
+            # context['pos_results'], context['distinct_id_count_pos'] = getPos()
+            # context['neg_results'], context['distinct_id_count_neg'] = getNeg()
 
+            context['distinct_months'] = getMonthLabels()
+
+            pos, neg, avg, final = getLatestBatchPerMonth()
+
+            context['class_results']= pos
+            context['pos_results'] = neg
+            context['neg_results']= avg
+            context['class_results_count'] = len(pos)
+            context['final'] = final
+
+            # for i in pos:
+            #     try:
+            #         print(i.precision)
+            #     except AttributeError as err:
+            #         continue
+            #
+            # for i in neg:
+            #     try:
+            #         print(i.precision)
+            #     except AttributeError as err:
+            #         continue
+            # for i in avg:
+            #     try:
+            #         print(i.precision)
+            #     except AttributeError as err:
+            #         continue
 
             return context
 
@@ -249,10 +357,7 @@ def class_detail(request, pk):   #pass through the primary key to the view
     context = {
         'vals': vals,
         'array': arr,
-        # 'is_liked': is_liked,
-        # 'total_likes': post.total_likes(),
-        # 'comments': comments,
-        # 'comment_form': comment_form
+        'fileNo': pk,
     }
 
     return render(request, 'tracker/classification_detail.html', context)
@@ -279,56 +384,6 @@ class PredictCountsListView(ListView):
             # context['actual_negative'] = all.filter(actualSentiment='negative').count()
             return context
 
-# class EventListView(ListView):
-#     model = Review
-#     template_name = 'tracker/home.html'
-#
-#     #
-#     # def get_queryset(self):
-#     #     toggle = self.request.session.get('toggleTime',None)
-#     #
-#     #     if toggle is None:
-#     #         self.request.session['toggleTime'] = False
-#     #         toggle = False
-#     #     if toggle:
-#     #         # original qs
-#     #         qs = super().get_queryset()
-#     #         # filter by a variable captured from url, for example
-#     #         return qs.order_by('-resolution_date')
-#     #     else:
-#     #         return Event.objects.all()
-#
-#     def get_context_data(self, **kwargs):
-#         username = None
-#         # event = get_object_or_404(Event, id=self.kwargs['pk'])
-#         # toggle = self.request.session.get('toggleTime2', None)
-#
-#         if self.request.user.is_authenticated:
-#
-#             # username = self.request.user.username
-#             context = super(EventListView, self).get_context_data(**kwargs)
-#             #
-#             # if toggle is None:
-#             #     self.request.session['toggleTime2'] = False
-#             #     toggle = False
-#             # if toggle:
-#             #     # print("toggle")
-#             #     context['values'] = Event.objects.all().filter(assigned_person__username=username)
-#             # else:
-#             #     # print("else")
-#             #     context['values'] = Event.objects.all().filter(assigned_person__username=username).order_by('-resolution_date')
-#
-#             all = Review.objects.all()
-#             context['total_reviews'] = all.count()
-#             context['predict_positive'] = all.filter(predictSentiment='positive').count()
-#             context['predict_negative'] = all.filter(predictSentiment='negative').count()
-#             context['actual_positive'] = all.filter(actualSentiment='positive').count()
-#             context['actual_negative'] = all.filter(actualSentiment='negative').count()
-#             context['distinct_months'], context['distinct_month_count'] = getMonthlyRange()
-#
-#             # context['actual_positive'] = all.filter(actualSentiment='positive').count()
-#             # context['actual_negative'] = all.filter(actualSentiment='negative').count()
-#             return context
 
 
 def toggleView(request):
@@ -411,12 +466,137 @@ def getMonthlyRange():
 
     return vals, reviews.count()
 
-def getWeightedAvg():
-    reviews = Review.objects.order_by('batch_date').values_list('avg_batch_no', flat=True).distinct()
-    results = []
-    for id in reviews:
-        obj = WeightedAvg.objects.get(pk=id)
-        results.append(obj)
 
-    return results, reviews.count()
+def subtract_one_month(t):
+    one_day = datetime.timedelta(days=1)
+    one_month_earlier = t - one_day
+    while one_month_earlier.month == t.month or one_month_earlier.day > t.day:
+        one_month_earlier -= one_day
+    return one_month_earlier
 
+
+def getMonthLabels():
+    import pandas as pd
+
+    # reviews = Review.objects.order_by('batch_date').values_list('batch_date', flat=True).distinct()
+    months = Review.objects.order_by('batch_date').values_list('batch_date', flat=True).distinct()
+
+    final = []
+    array = []
+    for month in months:
+        mon = month.strftime("%Y-%b")
+        array.append(mon)
+
+    start = months.first()
+    start = subtract_one_month(start)
+
+    new = start.strftime('%Y-%m-%d')
+    finish = months.last().strftime('%Y-%m-%d')
+
+    dateLabels = pd.date_range(new, finish,
+                  freq='MS').strftime("%Y-%b").tolist()
+    # dateLabels = [months.first().strftime("%Y-%b")]+dateLabels
+
+    return dateLabels
+
+
+
+def getLatestBatchPerMonth():
+    import pandas as pd
+    import calendar
+
+    pos = []
+    neg = []
+    avg = []
+
+    dates = Review.objects.order_by('batch_date').values_list('batch_date', flat=True).distinct()
+    first = dates.first()
+    last = dates.last()
+    print(last)
+
+
+    first = subtract_one_month(first)
+    first = first.strftime('%Y-%m-%d')
+    finish = last.strftime('%Y-%m-%d')
+    dateRange = pd.date_range(first, finish,
+                               freq='MS').tolist()
+    hash = {}
+    count = 0
+    for date in dateRange:
+
+        # print(type(date.month))
+        # sys.exit("stop")
+        hash[date.month] = date.year
+        count+=1
+
+    # print(hash[0])
+
+    final = {}
+    for key, value in hash.items():
+        # print("{}  {}".format(key, value))
+        month = key
+        # nextMonth = key + 1
+        year = value
+        arr = calendar.monthrange(year, month)
+        start_date = datetime.date(year, month, 1)
+        end_date = datetime.date(year, month, arr[1])
+        vals = Review.objects.filter(batch_date__range=(start_date, end_date)).values_list('pos_batch_no', flat=True)
+        lastReview = Review.objects.filter(batch_date__range=(start_date, end_date)).last()
+
+        if lastReview:
+            lastDate = lastReview.batch_date
+        else:
+            continue
+
+        lastDate = lastDate.strftime("%Y-%b")
+
+        lastVal = vals.last()
+        pos_score = ""
+        neg_score = ""
+        avg_score = ""
+
+        if not lastVal:
+            pos_score = PosScores.objects.none()  # assign empty if there arent any batches in that month
+            neg_score = NegScores.objects.none()
+            avg_score = WeightedAvg.objects.none()
+            continue
+
+
+        try:
+            pos_score = PosScores.objects.get(pk=lastVal)
+        except PosScores.DoesNotExist:
+            pos_score = PosScores.objects.none()  # assign empty if there arent any batches in that month
+
+        try:
+            neg_score = NegScores.objects.get(pk=lastVal)
+        except NegScores.DoesNotExist:
+            neg_score = NegScores.objects.none()
+        try:
+            avg_score = WeightedAvg.objects.get(pk=lastVal)
+        except WeightedAvg.DoesNotExist:
+            avg_score = WeightedAvg.objects.none()
+
+        print(avg_score)
+
+        hash ={}
+
+        #append the score obj
+        pos.append(pos_score)
+        neg.append(neg_score)
+        avg.append(avg_score)
+
+        hash['positive'] = pos_score
+        hash['negative'] = neg_score
+        hash['wAverage'] = avg_score
+
+        final[lastDate] = hash
+        # print(lastDate)
+
+    return pos, neg, avg, final
+
+one, two, three, final = getLatestBatchPerMonth()
+
+# for key, value in final.items():
+#     print(key+":   {}".format(value))
+
+print(final)

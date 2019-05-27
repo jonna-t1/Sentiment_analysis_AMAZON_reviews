@@ -76,15 +76,6 @@
           <i class="fas fa-fw fa-cog"></i>
           <span>Training Models</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-          </div>
-        </div>
       </li>
 
       <!-- Divider -->
@@ -99,7 +90,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-key"></i>
-          <span>Pages</span>
+          <span>Login Pages</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -111,18 +102,28 @@
         </div>
       </li>
 
+<!--      Review pages-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Review Pages</span>
+        </a>
+        <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Review Screens:</h6>
+            <a class="collapse-item" href="{% url 'tracker-dataView' %}">All Reviews</a>
+            <a class="collapse-item" href="{% url 'tracker-match' %}">Correct Predicted Reviews</a>
+            <a class="collapse-item" href="{% url 'tracker-falsematch' %}">Incorrect Predicted Reviews</a>
+            <div class="collapse-divider"></div>
+          </div>
+        </div>
+      </li>
+
       <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" href="{% url 'tracker-classTable' %}">
           <i class="fas fas-fw fa-clipboard"></i>
           <span>Classification Scores</span></a>
-      </li>
-
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'tracker-dataView' %}">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Review data</span></a>
       </li>
 
       <!-- Divider -->

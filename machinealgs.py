@@ -457,37 +457,3 @@ def batchAlgs(X_train, y_train, X_test, y_test):
     mlp.fit(X_train, y_train)
     print("MLPClassifier aplha paramter 1 Accuracy on training set: {:.3f}".format(mlp.score(X_train, y_train)))
     print("MLPClassifier alpha parameter 1 Accuracy on test set: {:.3f}".format(mlp.score(X_test, y_test)))
-
-
-# def uncertaintyClassifiers():
-#     ## uncertainty estimates from classifiers
-#
-#
-#     # build the gradient boosting model
-#     gbrt = GradientBoostingClassifier(random_state=0)
-#     gbrt.fit(X_train, y_train)
-#
-#     print("X_test.shape:", X_test.shape)
-#     print("Decision function shape:", gbrt.decision_function(X_test).shape)
-#
-#     print("Decision function:\n{}".format(gbrt.decision_function(X_test)[:6]))
-#
-#     print("Thresholded decision function:\n{}".format(gbrt.decision_function(X_test) > 0))
-#     print("Predictions:\n{}".format(gbrt.predict(X_test)))
-#
-#     # make the boolean True/False into 0 and 1
-#     greater_zero = (gbrt.decision_function(X_test) > 0).astype(int)
-#     # use 0 and 1 as indices into classes_
-#     pred = gbrt.classes_[greater_zero]
-#     # pred is the same as the output of gbrt.predict
-#     print("pred is equal to predictions: {}".format(
-#         np.all(pred == gbrt.predict(X_test))))
-#
-#     decision_function = gbrt.decision_function(X_test)
-#     print("Decision function minimum: {:.2f} maximum: {:.2f}".format(np.min(decision_function), np.max(decision_function)))
-#
-#     ## predicting probabilities
-#     print("Shape of probabilities: {}".format(gbrt.predict_proba(X_test).shape))
-#
-#     # show the first few entries of predict_proba
-#     print("Predicted probabilities:\n{}".format(gbrt.predict_proba(X_test[:6])))

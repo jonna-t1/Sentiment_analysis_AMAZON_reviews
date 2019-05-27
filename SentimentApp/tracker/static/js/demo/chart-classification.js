@@ -32,9 +32,6 @@ var precisionDIV = document.getElementById('precision');
 var recallDIV = document.getElementById('recall');
 var f1DIV = document.getElementById('f1');
 
-// alert("Hello! I am an alert box!!");
-
-
 // Area Chart Example
 var ctx = document.getElementById("myAreaChart");
 
@@ -46,23 +43,17 @@ for (var i = 0; i < arrayLength; i++) {
   formattedDates.push(dateSplit[0])
 }
 
+var posRow = [];
+var pos_precision = [];
+var pos_recall = [];
+var pos_f1 = [];
+var pos_support = [];
 
-var arrayLength = formattedDates.length;
-var vals = []
-for (var i = 0; i < arrayLength; i++) {
-  var min=100;
-  var max=1000;
-  var random =Math.floor(Math.random() * (+max - +min)) + +min;
-  vals.push(random) //push a random value on the array
-  // console.log(random)
-}
-
-
-// for(var key in Object.keys(classObjects)){
-// //   var value = classObjects[key];
-// //   alert(key + ":  " +value)
-// // };
-
+var negRow = [];
+var neg_precision = [];
+var neg_recall = [];
+var neg_f1 = [];
+var neg_support = [];
 
 var classRow = [];
 var precision = [];
@@ -78,43 +69,25 @@ for (var key in classObjects) {
     support.push(classRow[3]);
     // precision.append(classRow[0])
 }
-
-// var resetCanvas = function () {
-//   $('#results-graph').remove(); // this is my <canvas> element
-//   $('#graph-container').append('<canvas id="results-graph"><canvas>');
-//   canvas = document.querySelector('#results-graph'); // why use jQuery?
-//   ctx = canvas.getContext('2d');
-//   ctx.canvas.width = $('#graph').width(); // resize to parent width
-//   ctx.canvas.height = $('#graph').height(); // resize to parent height
-//
-//   var x = canvas.width/2;
-//   var y = canvas.height/2;
-//   ctx.font = '10pt Verdana';
-//   ctx.textAlign = 'center';
-//   ctx.fillText('This text is centered on the canvas', x, y);
-// };
-
-
-
-
-// function convert2Float(arr) {
-//   var floatArr = [];
-//   var arr = [];
-//   for ( var num in arr) {
-//     var flo = parseFloat(num);
-//     floatArr.push(flo);
-//   }
-//   return floatArr;
-// }
-// precision = convert2Float(precision);
-// recall = convert2Float(recall);
-// f1 = convert2Float(f1);
+for (var key in posObjects) {
+    posRow = posObjects[key];
+    pos_precision.push(posRowRow[0]);
+    pos_recall.push(posRowRow[1]);
+    pos_f1.push(posRowRow[2]);
+    pos_support.push(posRowRow[3]);
+    // precision.append(classRow[0])
+}
+for (var key in negObjects) {
+    negRow = negObjects[key];
+    neg_precision.push(negRow[0]);
+    neg_recall.push(negRow[1]);
+    neg_f1.push(negRow[2]);
+    neg_support.push(negRow[3]);
+    // precision.append(classRow[0])
+}
 
 
-// vals.pop()
-
-
-if (vals.length != formattedDates.length){
+if (neg_f1.length != formattedDates.length){
     alert("Incorrect array sizes dont match: Contact admin")
     // document.getElementById("myLineChart").innerHTML = err.message;
 }
@@ -125,8 +98,10 @@ var config = {
   type: 'line',
   data: {
     labels: formattedDates,
-    datasets: [{
-      label: "Precision: ",
+    datasets: [
+    {
+      // weighted avg dataset
+      label: "Avg line: ",
       lineTension: 0.3,
       backgroundColor: "rgba(78, 115, 223, 0.05)",
       borderColor: "rgba(78, 115, 223, 1)",
@@ -140,7 +115,40 @@ var config = {
       pointBorderWidth: 2,
       // data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
       data: [1,2],
-    }],
+    },{
+      // positive scores
+      label: "Pos Line: ",
+      lineTension: 0.3,
+      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      borderColor: "rgba(78, 115, 223, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointBorderColor: "rgba(78, 115, 223, 1)",
+      pointHoverRadius: 3,
+      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      // data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+      data: [1,2],
+    },{
+      // negative scores
+      label: "Line C: ",
+      lineTension: 0.3,
+      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      borderColor: "rgba(78, 115, 223, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointBorderColor: "rgba(78, 115, 223, 1)",
+      pointHoverRadius: 3,
+      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      // data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+      data: [1,2],
+    },
+    ],
   },
   options: {
     onClick: graphClickEvent,
@@ -211,28 +219,30 @@ var config = {
 }
 
 config.data.datasets[0].data = precision;
-
+config.data.datasets[1].data = pos_precision;
+config.data.datasets[2].data = neg_precision;
 myLineChart = new Chart(ctx, config);
-// alert(precision);
-// alert(recall);
-// alert(f1);
-// alert(myLineChart.config.data.datasets[0].data);
 
 
 precisionDIV.style.cursor = 'pointer';
 precisionDIV.onclick = function() {
     myLineChart.config.data.datasets[0].data = precision;
+    myLineChart.config.data.datasets[1].data = pos_precision;
+    myLineChart.config.data.datasets[2].data = neg_precision;
     myLineChart.update();
-
 };
 recallDIV.style.cursor = 'pointer';
 recallDIV.onclick = function() {
     myLineChart.config.data.datasets[0].data = recall;
+    myLineChart.config.data.datasets[1].data = pos_recall;
+    myLineChart.config.data.datasets[2].data = neg_recall;
     myLineChart.update();
 };
 f1DIV.style.cursor = 'pointer';
 f1DIV.onclick = function() {
     myLineChart.config.data.datasets[0].data = f1;
+    myLineChart.config.data.datasets[1].data = pos_f1;
+    myLineChart.config.data.datasets[2].data = neg_f1;
     myLineChart.update();
 };
 

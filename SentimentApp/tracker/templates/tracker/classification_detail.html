@@ -1,9 +1,21 @@
 {% extends "tracker/base.html" %}
+{% load staticfiles%}
+{% load static %}
+
 
 {% load crispy_forms_tags %}
 
 
 {% block content %}
+
+<style>
+img {
+  position: relative;
+    left: 15%;
+}
+</style>
+
+<h1>{{pk}}</h1>
 
     <div class="col-12 col-lg-12">
               <div class="card card-table">
@@ -29,17 +41,20 @@
                       <tr>
                          <td>Positive:</td>
                          {% for arr in array %}
-                                {% if forloop.counter|divisibleby:2 %} <td>Negative: </td> {% endif %}
+                            {% if forloop.counter|divisibleby:2 %} <td>Negative: </td> {% endif %}
                             {% if forloop.counter|divisibleby:3 %}<td>Weighted Average: </td>{% endif %}
                                 <td>{{ arr.precision }}</td>
                                 <td>{{ arr.recall }} </td>
                                 <td>{{ arr.f1 }} </td>
                                 <td>{{ arr.support }} </td>
-
                        </tr>
                         {% endfor %}
                     </tbody>
                   </table>
+                  <div >
+                    <img src="{% get_static_prefix %}roc/RocCurve{{fileNo}}.png" alt="" align="middle">
+<!--                    <img src="{% static 'img/default.png' %}" alt="">-->
+                  </div>
                   <a class="btn btn-info btn-sm mt-1 mb-1" style="position: relative; margin-left: 45%" href="/classification/">OK</a>
 
                 </div>
@@ -51,3 +66,4 @@
 
 
 {% endblock content %}
+

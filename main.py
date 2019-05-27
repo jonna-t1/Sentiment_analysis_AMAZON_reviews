@@ -65,7 +65,7 @@ elif ans == '2':
             for file in file_list:
                 print("File upload {} started".format(count))
                 path = dirPath + file
-                filePath = populateDB.populateDatabase(path, modelFiles, batch)
+                filePath = populateDB.populateDatabase(path, modelFiles)
                 modelFiles.append(filePath)
                 print("File number {} complete".format(count))
                 print("File completed: "+ file)
