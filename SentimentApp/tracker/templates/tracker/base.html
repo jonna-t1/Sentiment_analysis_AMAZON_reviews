@@ -194,7 +194,13 @@
               <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-envelope fa-fw"></i>
                 <!-- Counter - Messages -->
-                <span class="badge badge-danger badge-counter">{{request_count}}</span>
+                <span class="badge badge-danger badge-counter">
+                  {% if request_count > 5 %}
+                    5+
+                  {% else %}
+                    {{request_count}}
+                  {% endif %}
+                </span>
               </a>
               <!-- Dropdown - Messages -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
@@ -202,7 +208,7 @@
                   <a href="/admin/" style="color: rgb(255,255,255)">Admin Requests</a>
                 </h6>
 
-                {% for i in requests %}
+                {% for i in requests|slice:":5" %}
                 <a class="dropdown-item d-flex align-items-center" href="/admin/tracker/request/">
                   <div class="dropdown-list-image mr-3">
                     <i class="fas fa-exclamation fa-2x" style="color: #ff0000 ;"></i>

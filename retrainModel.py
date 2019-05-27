@@ -83,13 +83,12 @@ def retrain(reviews, testDF):
 
     # # new model saved to disk
     tfidf_filename = ModelUtils.getModelFileName(transformerPath)
-    tfidf_filename = path + tfidf_filename
-    print(tfidf_filename)
+    tfidf_filename = transformerPath + tfidf_filename
     pickle.dump(loaded_tfidf, open(tfidf_filename, 'wb'))
     print('New transformer saved to disk')
     #
     model_filename = ModelUtils.getModelFileName(modelPath)
-    model_filename = path + model_filename
+    model_filename = modelPath + model_filename
     pickle.dump(loaded_model, open(model_filename, 'wb'))
     print(model_filename)
     print('New model saved to disk')

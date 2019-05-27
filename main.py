@@ -20,6 +20,8 @@ if ans == '1':
     app.wm_attributes('-topmost', 1)
     path = filedialog.askopenfilename(filetypes=(("Zipped files", "*.gz"),
                                                  ("All files", "*.*")))
+
+    app.destroy()
     sys.exit("No file uploaded, aborting script") if path == '' else print(path)
     if path[-2:] != 'gz':
         sys.exit("Wrong file extension, please upload .gz file")
@@ -40,6 +42,7 @@ elif ans == '2':
     app.withdraw()
     app.wm_attributes('-topmost', 1)
     dirPath = filedialog.askdirectory()
+    app.destroy()
     sys.exit("No file uploaded, aborting script") if dirPath == '' else print(dirPath)
     dirPath = dirPath+'/'
     print(dirPath)
@@ -76,6 +79,7 @@ elif ans == '2':
             for i in modelFiles:
                 print(i)
         else:
+
             sys.exit("Number exceeds the number of files in directory. Exiting script...")
 
     else:

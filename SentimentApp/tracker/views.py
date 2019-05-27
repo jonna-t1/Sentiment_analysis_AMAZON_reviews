@@ -47,7 +47,6 @@ class dataView(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super(dataView, self).get_context_data(*args, **kwargs)
 
-
         context['total_reviews'] = Review.objects.all().count()
 
         return context
@@ -97,7 +96,7 @@ def matchView(request, format=None):
 
     return render(request, 'tracker/matches.html', context)
 
-def stuff():
+def getScores():
 
     reviews = PosScores.objects.all().values_list('id', flat=True)
     results = []
@@ -123,7 +122,7 @@ class classificationView(ListView):
 
             context = super(classificationView, self).get_context_data(**kwargs)
             query = self.request.GET.get('q')
-            all = stuff()
+            all = getScores()
             # reviews = Review.objects.order_by('batch_date').values_list('avg_batch_no', flat=True).distinct()
             results = []
             if query:
@@ -138,7 +137,7 @@ class classificationView(ListView):
                 # return context
 
             else:
-                context['datum'] = stuff()
+                context['datum'] = getScores()
                 # return context
 
             return context
@@ -176,30 +175,6 @@ def sortDirFiles():
         return dirFiles.sort()
 
 def trainedModelsView(request):
-
-    # dirFiles = sortDirFiles()
-    # # print(dirFiles)
-    # # dirFiles.pop(0)
-    #
-    # # reviews = Review.objects.order_by('batch_date').values_list('batch_date', flat=True).distinct()
-    # ids = PosScores.objects.values_list('id', flat=True).distinct()
-    # idCount = PosScores.objects.values_list('id', flat=True).distinct().count()
-    # print(idCount)
-    # print(ids)
-    # print(len(dirFiles))
-    # # dirFiles = ['Original File'] + dirFiles
-    # arr = []
-    # count = 0
-    # for id in ids:
-    #     dict = {}
-    #
-    #     if count+1 == idCount:
-    #         break
-    #     dict['id'] = id
-    #     dict['file'] = dirFiles[count]
-    #     count+=1
-    #     arr.append(dict)
-
 
     p = Path(os.getcwd())
     file = p.parent / ('savedModels/accuracy/modelAccuracy.csv')
@@ -340,7 +315,7 @@ class PerformanceListView(ListView):
 #function based view - a detailed look at the data
 def class_detail(request, pk):   #pass through the primary key to the view
 
-    vals = stuff()
+    vals = getScores()
     arr = []
     Dict = {'pos': 'positive', 'neg': 'negative', 'avg': 'WeightedAvg'}
     values = ['positive', 'negative', 'weighted average']

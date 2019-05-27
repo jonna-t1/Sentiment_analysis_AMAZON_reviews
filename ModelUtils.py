@@ -81,7 +81,7 @@ def getModelFileName(path):
     if result == 'retrained_model':
         fileName = 'retrained_model' + num + '.sav'
     elif result == 'retrained_tfidftransformer':
-        fileName = 'retrained_model' + num + '.sav'
+        fileName = 'retrained_tfidftransformer' + num + '.sav'
     else:
         sys.exit("An error has occurred writing to a file")
 
