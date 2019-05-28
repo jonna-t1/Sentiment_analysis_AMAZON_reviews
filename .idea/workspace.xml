@@ -16,17 +16,6 @@
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/pie-1.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/pie-predict.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/media/ngramCoef.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/roc/RocCurve45.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/roc/RocCurve46.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/roc/RocCurve47.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/roc/RocCurve48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/roc/RocCurve49.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/roc/RocCurve50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/roc/RocCurve51.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/roc/RocCurve52.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/roc/RocCurve53.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/roc/RocCurve54.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/roc/RocCurve55.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/avgClassification.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/avg_detail.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_detail.html" afterDir="false" />
@@ -40,21 +29,9 @@
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/positiveClassification.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/trained_models.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/ROC/RocCurve45.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/ROC/RocCurve46.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/ROC/RocCurve47.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/ROC/RocCurve48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/ROC/RocCurve49.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/ROC/RocCurve50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/ROC/RocCurve51.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/ROC/RocCurve52.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/ROC/RocCurve53.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/ROC/RocCurve54.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/ROC/RocCurve55.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/model/retrained_model56.sav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedModels/transformer/retrained_model56.sav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModelUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ModelUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ROC.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/SentimentApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/SentimentApp/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/requirements.txt" afterDir="false" />
@@ -67,22 +44,20 @@
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-pie-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-pie-1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/startbootstrap-sb-admin-2-gh-pages/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/startbootstrap-sb-admin-2-gh-pages/charts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/event_detail.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/false_matches.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/false_matches.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/matches.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/matches.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/trained_models.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/trained_models.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrainModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/retrainModel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/savedModels/accuracy/modelAccuracy.csv" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/accuracy/modelAccuracy.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,48 +101,36 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/views.py">
+        <entry file="file://$PROJECT_DIR$/Testing/input_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="214" column="12" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="12" />
+            <state relative-caret-position="51">
+              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
+        <entry file="file://$PROJECT_DIR$/Testing/login_requestCRUD.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+            <state relative-caret-position="291">
+              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/retrainModel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="84" column="42" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="48" />
-              <folding>
-                <element signature="e#1#10#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ModelUtils.py">
+        <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="81" column="42" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+            <state relative-caret-position="68">
+              <caret line="99" selection-start-line="99" selection-end-line="99" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,36 +148,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sortDirFiles</find>
-      <find>ListView</find>
-      <find>Custom Utilities</find>
-      <find>batchalgs</find>
-      <find>top4</find>
-      <find>pop</find>
-      <find>performance</find>
-      <find>getLatestBatchPerMonth</find>
-      <find>precision</find>
+      <find>button</find>
+      <find>name</find>
+      <find>Make</find>
+      <find>delte</find>
+      <find>Make a</find>
+      <find>div</find>
+      <find>fa-sea</find>
+      <find>str</find>
+      <find>id</find>
+      <find>s</find>
+      <find>print</find>
+      <find>searc</find>
+      <find>input</find>
+      <find>search</find>
+      <find>'q'</find>
+      <find>matches</find>
+      <find>dataView</find>
+      <find>context</find>
+      <find>datum</find>
+      <find>paginate</find>
+      <find>get_co</find>
+      <find>btn</find>
+      <find>false</find>
+      <find>getMonthlyRange</find>
+      <find>arr</find>
       <find>change</find>
-      <find>printLas</find>
-      <find>dates</find>
-      <find>key</find>
-      <find>lineColor</find>
-      <find>lineColo</find>
-      <find>match</find>
-      <find>filter</find>
-      <find>dropdown-togg</find>
-      <find>q</find>
-      <find>Admin Re</find>
+      <find>subtract_one_month</find>
+      <find>finish</find>
+      <find>sub</find>
       <find>class</find>
-      <find>stuff</find>
-      <find>getScores</find>
-      <find>toggle</find>
-      <find>transformer saved</find>
-      <find>model saved</find>
-      <find>detail</find>
-      <find>trained</find>
-      <find>acc</find>
-      <find>fileName</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -239,24 +202,16 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SentimentApp" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/AmazonTrain.py" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/admin.py" />
-        <option value="$PROJECT_DIR$/Datasets/aclImdb/test/urls_neg.txt" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predictedCounts.html" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-pie-1.js" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/pie-2.js" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/pie-1.js" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/pos_detail.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/neg_detail.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/avg_detail.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/negativeClassification.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/avgClassification.html" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/context_processors.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/forms.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_form.html" />
@@ -282,26 +237,34 @@
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/performanceScores.html" />
         <option value="$PROJECT_DIR$/populateDatabase.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-performance.js" />
-        <option value="$PROJECT_DIR$/databaseQueries.py" />
         <option value="$PROJECT_DIR$/SentimentApp/requirements.txt" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/false_matches.html" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/matches.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_detail.html" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/trained_models.html" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/views.py" />
         <option value="$PROJECT_DIR$/retrainModel.py" />
         <option value="$PROJECT_DIR$/ModelUtils.py" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html" />
+        <option value="$PROJECT_DIR$/Testing/Crud.py" />
+        <option value="$PROJECT_DIR$/Testing/loginRequestCRUD.py" />
+        <option value="$PROJECT_DIR$/Testing/fileUploadTest.py" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/matches.html" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/false_matches.html" />
+        <option value="$PROJECT_DIR$/databaseQueries.py" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/views.py" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html" />
+        <option value="$PROJECT_DIR$/Testing/adminTesting.py" />
+        <option value="$PROJECT_DIR$/Testing/login_requestCRUD.py" />
+        <option value="$PROJECT_DIR$/Testing/input_test.py" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/tests.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
-    <option name="width" value="1938" />
-    <option name="height" value="1029" />
+    <option name="width" value="1293" />
+    <option name="height" value="687" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -320,18 +283,7 @@
             <path>
               <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
-              <item name="savedModels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
-              <item name="savedModels" type="462c0819:PsiDirectoryNode" />
-              <item name="transformer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
-              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
+              <item name="Testing" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -346,7 +298,7 @@
     <property name="SearchEverywhereHistoryKey" value="assigned&#9;null&#9;null&#10;update&#9;null&#9;null&#10;security&#9;null&#9;null&#10;csrf&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Testing" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -359,19 +311,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker\static\js\demo" />
-      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\ROC" />
-      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker\templates\tracker" />
-      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\Training" />
-      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\media" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\accuracy" />
       <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker\static" />
       <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker" />
       <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\transformer" />
       <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\Testing" />
+      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker\static\js\demo" />
+      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\ROC" />
+      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker\templates\tracker" />
+      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\Training" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -386,7 +338,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.input_test">
     <configuration name="AmazonTrain" type="PythonConfigurationType" factoryName="Python" show_console_on_std_err="true" show_console_on_std_out="true">
       <output_file path="$PROJECT_DIR$/logs/AmazonTrain.log" is_save="true" />
       <module name="SentimentApp" />
@@ -410,50 +362,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ModelUtils" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SentimentApp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ModelUtils.py" />
-      <option name="PARAMETERS" value="runserver 8080" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ROC" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SentimentApp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ROC.py" />
-      <option name="PARAMETERS" value="runserver 8080" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="SentimentApp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -468,6 +376,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/npsTracker/manage.py" />
+      <option name="PARAMETERS" value="runserver 8080" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="adminTesting" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SentimentApp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Testing/adminTesting.py" />
       <option name="PARAMETERS" value="runserver 8080" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -542,6 +472,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="input_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SentimentApp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Testing/input_test.py" />
+      <option name="PARAMETERS" value="runserver 8080" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="loginRequestCRUD" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SentimentApp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\j.turnbull\PycharmProjects\SentimentApp\Testing\login_requestCRUD.py" />
+      <option name="PARAMETERS" value="runserver 8080" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SentimentApp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -586,28 +560,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="retrainModel" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SentimentApp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/retrainModel.py" />
-      <option name="PARAMETERS" value="runserver 8080" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="weeklyScriopt" type="PythonConfigurationType" factoryName="Python" show_console_on_std_err="true" show_console_on_std_out="true">
       <output_file path="$PROJECT_DIR$/logs/" is_save="true" />
       <module name="SentimentApp" />
@@ -637,19 +589,19 @@
       <item itemvalue="Python.originalScript" />
       <item itemvalue="Python.AmazonTrain" />
       <item itemvalue="Python.weeklyScriopt" />
-      <item itemvalue="Python.ROC" />
-      <item itemvalue="Python.retrainModel" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.ModelUtils" />
       <item itemvalue="Python.databaseQueries" />
+      <item itemvalue="Python.adminTesting" />
+      <item itemvalue="Python.loginRequestCRUD" />
+      <item itemvalue="Python.input_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.input_test" />
+        <item itemvalue="Python.loginRequestCRUD" />
+        <item itemvalue="Python.adminTesting" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.databaseQueries" />
-        <item itemvalue="Python.ModelUtils" />
-        <item itemvalue="Python.ROC" />
-        <item itemvalue="Python.retrainModel" />
       </list>
     </recent_temporary>
   </component>
@@ -676,12 +628,12 @@
       <workItem from="1558540142246" duration="85977000" />
       <workItem from="1558723698456" duration="4861000" />
       <workItem from="1558733166990" duration="75900000" />
-      <workItem from="1558873814613" duration="35708000" />
+      <workItem from="1558873814613" duration="72114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="365361000" />
+    <option name="totallyTimeSpent" value="401767000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -694,21 +646,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5070093" visible="true" weight="0.20856912" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5070093" visible="true" weight="0.20856912" />
       <window_info x="499" y="249" width="283" height="182" id="Structure" order="1" sideWeight="0.48157895" side_tool="true" type="WINDOWED" weight="0.2287793" />
       <window_info id="Favorites" order="2" sideWeight="0.49299064" side_tool="true" weight="0.23282135" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32624114" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.2890071" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920508" weight="0.2890071" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39539006" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32624114" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.33156028" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007949" side_tool="true" weight="0.3291815" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49920508" weight="0.5567376" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49920508" visible="true" weight="0.5514184" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32978722" />
@@ -787,94 +738,21 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SentimentApp$AmazonTrain.coverage" NAME="AmazonTrain Coverage Results" MODIFIED="1558437117105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SentimentApp$ROC.coverage" NAME="ROC Coverage Results" MODIFIED="1558801789838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
-    <SUITE FILE_PATH="coverage/SentimentApp$retrainModel.coverage" NAME="retrainModel Coverage Results" MODIFIED="1558792098547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/SentimentApp$ModelUtils.coverage" NAME="ModelUtils Coverage Results" MODIFIED="1558806591718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SentimentApp$main.coverage" NAME="main Coverage Results" MODIFIED="1558974993206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SentimentApp$main.coverage" NAME="main Coverage Results" MODIFIED="1558975843370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SentimentApp$databaseQueries.coverage" NAME="databaseQueries Coverage Results" MODIFIED="1558963752671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/SentimentApp$weeklyScriopt.coverage" NAME="weeklyScriopt Coverage Results" MODIFIED="1558189222006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/SentimentApp$AmazonTrain.coverage" NAME="AmazonTrain Coverage Results" MODIFIED="1558437117105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SentimentApp$Crud.coverage" NAME="loginRequestCRUD Coverage Results" MODIFIED="1559054342483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Testing" />
+    <SUITE FILE_PATH="coverage/SentimentApp$input_test.coverage" NAME="input_test Coverage Results" MODIFIED="1559080412286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Testing" />
+    <SUITE FILE_PATH="coverage/SentimentApp$retrainModel.coverage" NAME="retrainModel Coverage Results" MODIFIED="1558792098547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/SentimentApp$adminTesting.coverage" NAME="adminTesting Coverage Results" MODIFIED="1559048697161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Testing" />
     <SUITE FILE_PATH="coverage/SentimentApp$LoadModel.coverage" NAME="LoadModel Coverage Results" MODIFIED="1558789921340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SentimentApp$populateDatabase.coverage" NAME="populateDatabase Coverage Results" MODIFIED="1558123465409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/SentimentApp$test.coverage" NAME="test Coverage Results" MODIFIED="1558707599824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
-    <SUITE FILE_PATH="coverage/SentimentApp$databaseQueries.coverage" NAME="databaseQueries Coverage Results" MODIFIED="1558963752671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
-    <SUITE FILE_PATH="coverage/SentimentApp$weeklyScriopt.coverage" NAME="weeklyScriopt Coverage Results" MODIFIED="1558189222006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/savedModels/ROC/RocCurve29.png" />
-    <entry file="file://$PROJECT_DIR$/savedModels/ROC/RocCurve40.png" />
-    <entry file="file://$PROJECT_DIR$/savedModels/ROC/RocCurve10.png" />
-    <entry file="file://$PROJECT_DIR$/SentimentApp/chromedriver.exe">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/pie-predict.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/js/reviewNavs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="35" lean-forward="true" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/savedModels/ROC/RocCurve28.png" />
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-area.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7fd7f38b-1f8e-4a35-85ce-a5baa6c14f45/schema/main/table/tracker_weightedavg">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="3f194e34-7715-415a-9718-cfdaecfee235">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-classification.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-          <folding>
-            <element signature="n#!!block;n#number_format#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7fd7f38b-1f8e-4a35-85ce-a5baa6c14f45/schema/main/table/tracker_request">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="3f194e34-7715-415a-9718-cfdaecfee235">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7fd7f38b-1f8e-4a35-85ce-a5baa6c14f45/schema/main/table/tracker_review">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="3f194e34-7715-415a-9718-cfdaecfee235">
-          <filtering>
-            <filter text="pos_batch_no_id=28" />
-            <filter text="pos_batch_no_id=18" />
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7fd7f38b-1f8e-4a35-85ce-a5baa6c14f45/schema/main/table/tracker_posscores">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="3f194e34-7715-415a-9718-cfdaecfee235">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://7fd7f38b-1f8e-4a35-85ce-a5baa6c14f45/schema/main/table/tracker_negscores">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="3f194e34-7715-415a-9718-cfdaecfee235">
@@ -1313,16 +1191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/populateDatabase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="161" column="47" lean-forward="true" selection-start-line="161" selection-start-column="41" selection-end-line="161" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/performanceScores.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1344,16 +1212,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1361,38 +1219,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/databaseQueries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="99" column="30" lean-forward="true" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#7848#8833#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="37" column="8" lean-forward="true" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-performance.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="111" column="17" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="29" column="88" lean-forward="true" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="88" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1405,80 +1235,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="81" column="28" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="81" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="20" selection-start-line="20" selection-start-column="4" selection-end-line="24" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/false_matches.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="87" column="28" lean-forward="true" selection-start-line="83" selection-start-column="22" selection-end-line="87" selection-end-column="28" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#!!top" />
-            <element signature="n#script#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/matches.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="89" column="28" selection-start-line="85" selection-start-column="22" selection-end-line="89" selection-end-column="28" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#!!top" />
-            <element signature="n#script#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-114" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/SentimentApp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/context_processors.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="210" column="50" lean-forward="true" selection-start-line="210" selection-start-column="16" selection-end-line="210" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#h6#0;n#div#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#div#0;n#a#0;n#div#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#li#2;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/trained_models.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1514,16 +1277,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="214" column="12" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1534,22 +1287,242 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ModelUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="81" column="42" lean-forward="true" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/loadJSON.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/pie-predict.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/chromedriver.exe">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/adminTest/s4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/RequestCRUD/preRequest.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="98" column="78" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#h6#0;n#div#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#0;n#a#0;n#div#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#li#2;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/retrainModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="84" column="42" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="48" />
+        <state relative-caret-position="30">
+          <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="24" />
           <folding>
             <element signature="e#1#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ModelUtils.py">
+    <entry file="file://$PROJECT_DIR$/Testing/LikeComment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="81" column="42" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+        <state relative-caret-position="107">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/vendor/fontawesome-free/svgs/brands/viacoin.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/matches.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="136" column="19" lean-forward="true" selection-start-line="136" selection-start-column="19" selection-end-line="136" selection-end-column="19" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#!!top" />
+            <element signature="n#script#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/false_matches.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="163" column="22" lean-forward="true" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#!!top" />
+            <element signature="n#script#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="125" column="19" lean-forward="true" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseQueries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="91" column="32" lean-forward="true" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-performance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1371">
+          <caret line="117" column="44" lean-forward="true" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="507" lean-forward="true" selection-start-line="507" selection-end-line="507" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/SentimentApp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/populateDatabase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="95" column="39" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="89" column="40" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="29" column="88" lean-forward="true" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="88" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/adminTesting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/input_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/login_requestCRUD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>

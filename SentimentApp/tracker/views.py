@@ -6,6 +6,7 @@ from colorama import Fore
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 import os
+from django.db.models import F
 # from databaseQueries import getMonthlyRange
 from .forms import RequestForm
 from .models import Review, Request, PosScores, WeightedAvg, NegScores
@@ -44,22 +45,20 @@ class dataView(ListView):
         else:
             return Review.objects.all()
 
-    def get_context_data(self, *args, **kwargs):
-        context = super(dataView, self).get_context_data(*args, **kwargs)
-
-        context['total_reviews'] = Review.objects.all().count()
+    def get_context_data(self, **kwargs):
+        context = super(dataView, self).get_context_data(**kwargs)
+        query = self.request.GET.get('q')
+        if query:
+            context['searchq'] = query
 
         return context
 
 def filterIncorrect():
-    from django.db.models import F
     falsePos = Review.objects.exclude(predictSentiment=F('actualSentiment'))
-
 
     return falsePos
 
 def filterCorrect():
-    from django.db.models import F
     matches = Review.objects.filter(predictSentiment=F('actualSentiment'))
 
     return matches
@@ -67,9 +66,14 @@ def filterCorrect():
 
 def incorrectMatchView(request):
 
-    vals = filterIncorrect()
-    paginator = Paginator(vals, 10)
+    query = request.GET.get('q')
+    if query:
+        vals = filterIncorrect()
+        vals = vals.filter(pos_batch_no=query)
+    else:
+        vals = filterIncorrect()
 
+    paginator = Paginator(vals, 10)
     page = request.GET.get('page')
     vals = paginator.get_page(page)
 
@@ -77,21 +81,29 @@ def incorrectMatchView(request):
     # context data
     context = {
         'datum': vals,
+        'searchq': query,
     }
 
     return render(request, 'tracker/false_matches.html', context)
 
 
-def matchView(request, format=None):
+def matchView(request):
 
-    vals = filterCorrect()
+    query = request.GET.get('q')
+    if query:
+        vals = filterCorrect()
+        vals = vals.filter(pos_batch_no=query)
+
+    else:
+        vals = filterCorrect()
+
     paginator = Paginator(vals, 10)
-
     page = request.GET.get('page')
     vals = paginator.get_page(page)
     # context data
     context = {
         'datum': vals,
+        'searchq': query,
     }
 
     return render(request, 'tracker/matches.html', context)
@@ -121,7 +133,7 @@ class classificationView(ListView):
         if self.request.user.is_authenticated:
 
             context = super(classificationView, self).get_context_data(**kwargs)
-            query = self.request.GET.get('q')
+            query = self.request.GET.get('query')
             all = getScores()
             # reviews = Review.objects.order_by('batch_date').values_list('avg_batch_no', flat=True).distinct()
             results = []
@@ -441,13 +453,13 @@ def getMonthlyRange():
 
     return vals, reviews.count()
 
-
-def subtract_one_month(t):
-    one_day = datetime.timedelta(days=1)
-    one_month_earlier = t - one_day
-    while one_month_earlier.month == t.month or one_month_earlier.day > t.day:
-        one_month_earlier -= one_day
-    return one_month_earlier
+#
+# def subtract_one_month(t):
+#     one_day = datetime.timedelta(days=1)
+#     one_month_earlier = t - one_day
+#     while one_month_earlier.month == t.month or one_month_earlier.day > t.day:
+#         one_month_earlier -= one_day
+#     return one_month_earlier
 
 
 def getMonthLabels():
@@ -463,7 +475,7 @@ def getMonthLabels():
         array.append(mon)
 
     start = months.first()
-    start = subtract_one_month(start)
+    # start = subtract_one_month(start)
 
     new = start.strftime('%Y-%m-%d')
     finish = months.last().strftime('%Y-%m-%d')
@@ -477,8 +489,6 @@ def getMonthLabels():
 
 
 def getLatestBatchPerMonth():
-    import pandas as pd
-    import calendar
 
     pos = []
     neg = []
@@ -489,10 +499,19 @@ def getLatestBatchPerMonth():
     last = dates.last()
     print(last)
 
+    try:
+        first = first.strftime('%Y-%m-%d')
+        finish = last.strftime('%Y-%m-%d')
+    except AttributeError as err:
+        first = datetime.date.today()
+        finish = datetime.date.today()
 
-    first = subtract_one_month(first)
-    first = first.strftime('%Y-%m-%d')
-    finish = last.strftime('%Y-%m-%d')
+
+        print(err)
+
+    # first = subtract_one_month(first)
+    # first = first.strftime('%Y-%m-%d')
+    # finish = last.strftime('%Y-%m-%d')
     dateRange = pd.date_range(first, finish,
                                freq='MS').tolist()
     hash = {}
@@ -504,14 +523,13 @@ def getLatestBatchPerMonth():
         hash[date.month] = date.year
         count+=1
 
-    # print(hash[0])
 
     final = {}
     for key, value in hash.items():
         # print("{}  {}".format(key, value))
         month = key
-        # nextMonth = key + 1
         year = value
+
         arr = calendar.monthrange(year, month)
         start_date = datetime.date(year, month, 1)
         end_date = datetime.date(year, month, arr[1])
@@ -535,7 +553,6 @@ def getLatestBatchPerMonth():
             neg_score = NegScores.objects.none()
             avg_score = WeightedAvg.objects.none()
             continue
-
 
         try:
             pos_score = PosScores.objects.get(pk=lastVal)

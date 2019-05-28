@@ -6,9 +6,9 @@
 
         <form class="mr-auto">
             <div class="input-group">
-              <input type="number" name="q" class="form-control" placeholder="Input a number for BatchID search..." aria-label="Search" >
+              <input type="number" name="query" class="form-control" placeholder="Input a number for BatchID search..." aria-label="Search" >
               <div class="input-group-append">
-                <button class="btn btn-secondary" type="button">
+                <button id="search-button" class="btn btn-secondary" type="submit">
                   <i class="fas fa-search fa-sm"></i>
                 </button>
             </div>
@@ -38,7 +38,7 @@
                     <tbody class="no-border-x">
                         {% for dat in datum %}
                           <tr>
-                            <td> <a href="{% url 'class-detail' dat.id %}"> {{ dat.id }} </a> </td>
+                            <td> <a class="first-row" href="{% url 'class-detail' dat.id %}"> {{ dat.id }} </a> </td>
                             <td> {{ dat.precision}} </td>
                             <td> {{ dat.recall }} </td>
                             <td> {{ dat.f1 }} </td>

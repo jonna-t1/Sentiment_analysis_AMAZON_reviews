@@ -1,9 +1,9 @@
 from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
-from .models import Event
-
 import datetime
+
+from .models import PosScores, WeightedAvg, NegScores, Review
 
 
 class HomePageTests(TestCase):
@@ -26,20 +26,26 @@ class Setup_Class(TestCase):
 
     def setUp(self):
         self.user = User.objects.create_user(username='jtur', email='jtur@accenture.com', password='onion')
-        user = User.objects.first()
-        cr_date = datetime.datetime(2019, 5, 5, 18, 23, 29)
-        Event.objects.create(type = 'Problem', reference = 'P1063', status = 1, resolution_date=cr_date, priority = 'P4', assigned_team = 'NISPI/DWP', assigned_person = user, summary = 'this is an example summary')
+        PosScores.objects.create(precision=0.122, recall=0.988, f1=0.266, support=24423)
+        NegScores.objects.create(precision=0.122, recall=0.988, f1=0.242, support=24423)
+        WeightedAvg.objects.create(precision=0.122, recall=0.988, f1=0.234, support=24423)
+        lpos = PosScores.objects.first()
+        lneg = NegScores.objects.first()
+        lavg = WeightedAvg.objects.first()
+        # cr_date = datetime.date.today()
+        for i in range(100):
+            Review.objects.create(reviewText = 'This is a test', predictSentiment = 'positive', actualSentiment = 'negative',
+                                  pos_batch_no = lpos, neg_batch_no = lneg, avg_batch_no = lavg)
 
 class EventTests(Setup_Class):
     def test_content(self):
-        event = Event.objects.first()
-        expected_event_reference = f'{event.reference}'
-        self.assertEquals(expected_event_reference, 'P1063')
-
+        review = Review.objects.first()
+        expected_event_reference = f'{review.reviewText}'
+        self.assertEquals(expected_event_reference, 'This is a test')
+#
     def test_event_list_view(self):
         response = self.client.get(reverse('tracker-home'))
         self.assertEqual(response.status_code, 200)
-        # self.assertContains(response, 'P1063')
         self.assertTemplateUsed(response, 'tracker/home.html')
 
 class LogInTest(TestCase):
@@ -57,33 +63,43 @@ class LogInTest(TestCase):
 
 
 
-class TableTest(TestCase):
+class TableTest(Setup_Class):
     def setUp(self):
-        self.credentials = {
-            'username': 'jtur',
-            'password': 'onion'}
-        User.objects.create_user(**self.credentials)
-        user = User.objects.first()
-        cr_date = datetime.datetime(2019, 5, 5, 18, 23, 29)
-        Event.objects.create(type='Problem', reference='P1063', status=1, resolution_date=cr_date, priority='P4',
-                             assigned_team='NISPI/DWP',assigned_person=user, summary='this is an example summary')
-        Event.objects.create(type='Problem', reference='P1039', status=1, resolution_date=cr_date, priority='P4',
-                             assigned_team='NISPI/DWP', assigned_person=user, summary='this is an example summary')
+        super().setUp()
 
     def test_table_layout(self):
         # send login data
+        self.credentials = {
+            'username': 'jtur1',
+            'password': 'onion'}
+        User.objects.create_user(**self.credentials)
         response = self.client.post('/login/', self.credentials, follow=True)
-        # should be logged in now
         self.assertTrue(response.context['user'].is_active)
-        self.assertContains(response, '<th>Type</th>')
-        self.assertContains(response, '<th>Reference</th>')
-        self.assertContains(response, '<th>Status </th>')
-        self.assertContains(response, '<th>Resolution Date</th>')
-        self.assertContains(response, 'Resolution Countdown')
-        self.assertContains(response, '<th>Priority</th>')
-        self.assertContains(response, '<th>Assigned Team</th>')
-        self.assertContains(response, '<th>Assigned Person</th>')
-        self.assertContains(response, '<th>Summary</th>')
-        self.assertContains(response, 'Incidents for jtur')
-        self.assertContains(response, 'P1063')
-        self.assertContains(response, 'P1039')
+
+        response = self.client.get(reverse('tracker-classTable'))
+        self.assertEquals(response.status_code, 200)
+        self.assertContains(response, 'Precision')
+        self.assertContains(response, 'Recall')
+        self.assertContains(response, 'F1-score')
+        self.assertContains(response, '0.122')
+        self.assertContains(response, '0.988')
+        self.assertContains(response, '0.266')
+
+class CountTest(Setup_Class):
+    def setUp(self):
+        super().setUp()
+
+    def test_count_display(self):
+        # send login data
+        self.credentials = {
+            'username': 'jtur1',
+            'password': 'onion'}
+        User.objects.create_user(**self.credentials)
+        response = self.client.post('/login/', self.credentials, follow=True)
+        self.assertTrue(response.context['user'].is_active)
+
+
+
+
+
+

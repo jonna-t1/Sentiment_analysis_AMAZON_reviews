@@ -71,7 +71,7 @@
             <div class="input-group">
               <input type="number" name="q" class="form-control" placeholder="Input a number for BatchID search..." aria-label="Search" >
               <div class="input-group-append">
-                <button class="btn btn-secondary" type="button">
+                <button class="btn btn-secondary" type="submit">
                   <i class="fas fa-search fa-sm"></i>
                 </button>
             </div>
@@ -126,8 +126,8 @@
         <div id="pag" class="pagination">
     <span class="step-links">
         {% if datum.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ datum.previous_page_number }}">previous</a>
+            <a href="?q={{searchq}}&page=1">&laquo; first</a>
+            <a href="?q={{searchq}}&page={{ datum.previous_page_number }}">previous</a>
         {% endif %}
 
         <span class="current">
@@ -135,8 +135,8 @@
         </span>
 
         {% if datum.has_next %}
-            <a href="?page={{ datum.next_page_number }}">next</a>
-            <a href="?page={{ datum.paginator.num_pages }}">last &raquo;</a>
+            <a href="?q={{searchq}}&page={{ datum.next_page_number }}">next</a>
+            <a href="?q={{searchq}}&page={{ datum.paginator.num_pages }}">last &raquo;</a>
         {% endif %}
     </span>
 </div>
