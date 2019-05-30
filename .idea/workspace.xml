@@ -29,8 +29,6 @@
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/positiveClassification.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/trained_models.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Testing/input_test_reviews.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Testing/visuals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/SentimentApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/SentimentApp/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/db.sqlite3" afterDir="false" />
@@ -53,9 +51,6 @@
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing/LikeComment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing/input_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/input_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +93,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -113,7 +108,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="442">
               <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
@@ -122,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AmazonTrain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="169" column="48" lean-forward="true" selection-start-line="169" selection-start-column="48" selection-end-line="169" selection-end-column="48" />
+            <state relative-caret-position="2329">
+              <caret line="169" column="48" selection-start-line="169" selection-start-column="48" selection-end-line="169" selection-end-column="48" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -134,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/retrainModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="123" column="8" lean-forward="true" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+            <state relative-caret-position="1768">
+              <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
               <folding>
                 <element signature="e#1#10#0" expanded="true" />
               </folding>
@@ -146,7 +141,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LoadModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="1445">
               <caret line="111" selection-start-line="111" selection-end-line="111" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -155,105 +150,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="uml://Python/#C:/Users/j.turnbull/PycharmProjects/SentimentApp/SentimentApp/tracker/tests.py">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>Python</ID>
-              <OriginalElement>#C:/Users/j.turnbull/PycharmProjects/SentimentApp/SentimentApp/tracker/tests.py</OriginalElement>
-              <nodes>
-                <node x="1480.5" y="385.0">SentimentApp.tracker.tests.LogInTest</node>
-                <node x="1097.75" y="0.0">object</node>
-                <node x="799.5" y="385.0">SentimentApp.tracker.tests.DatabaseUpload</node>
-                <node x="1057.75" y="77.0">unittest.TestCase</node>
-                <node x="1003.0" y="462.0">SentimentApp.tracker.tests.ActualCountTest</node>
-                <node x="1010.25" y="308.0">django.test.testcases.TestCase</node>
-                <node x="622.0" y="462.0">SentimentApp.tracker.tests.PredictiveCountTest</node>
-                <node x="307.0" y="462.0">SentimentApp.tracker.tests.EventTests</node>
-                <node x="477.5" y="385.0">SentimentApp.tracker.tests.Setup_Class</node>
-                <node x="988.25" y="154.0">django.test.testcases.SimpleTestCase</node>
-                <node x="1143.5" y="385.0">SentimentApp.tracker.tests.HomePageTests</node>
-                <node x="0.0" y="462.0">SentimentApp.tracker.tests.TableTest</node>
-                <node x="969.75" y="231.0">django.test.testcases.TransactionTestCase</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="SentimentApp.tracker.tests.LogInTest" target="django.test.testcases.TestCase">
-                  <point x="0.0" y="-13.5" />
-                  <point x="1624.0" y="355.0" />
-                  <point x="1222.875" y="355.0" />
-                  <point x="91.125" y="13.5" />
-                </edge>
-                <edge source="django.test.testcases.TransactionTestCase" target="django.test.testcases.SimpleTestCase">
-                  <point x="0.0" y="-13.5" />
-                  <point x="0.0" y="13.5" />
-                </edge>
-                <edge source="SentimentApp.tracker.tests.Setup_Class" target="django.test.testcases.TestCase">
-                  <point x="0.0" y="-13.5" />
-                  <point x="628.5" y="355.0" />
-                  <point x="1040.625" y="355.0" />
-                  <point x="-91.125" y="13.5" />
-                </edge>
-                <edge source="SentimentApp.tracker.tests.DatabaseUpload" target="django.test.testcases.TestCase">
-                  <point x="0.0" y="-13.5" />
-                  <point x="961.5" y="365.0" />
-                  <point x="1101.375" y="365.0" />
-                  <point x="-30.375" y="13.5" />
-                </edge>
-                <edge source="SentimentApp.tracker.tests.TableTest" target="SentimentApp.tracker.tests.Setup_Class">
-                  <point x="0.0" y="-13.5" />
-                  <point x="143.5" y="432.0" />
-                  <point x="515.25" y="432.0" />
-                  <point x="-113.25" y="13.5" />
-                </edge>
-                <edge source="SentimentApp.tracker.tests.EventTests" target="SentimentApp.tracker.tests.Setup_Class">
-                  <point x="0.0" y="-13.5" />
-                  <point x="454.5" y="442.0" />
-                  <point x="590.75" y="442.0" />
-                  <point x="-37.75" y="13.5" />
-                </edge>
-                <edge source="unittest.TestCase" target="object">
-                  <point x="0.0" y="-13.5" />
-                  <point x="0.0" y="13.5" />
-                </edge>
-                <edge source="SentimentApp.tracker.tests.PredictiveCountTest" target="SentimentApp.tracker.tests.Setup_Class">
-                  <point x="0.0" y="-13.5" />
-                  <point x="802.5" y="442.0" />
-                  <point x="666.25" y="442.0" />
-                  <point x="37.75" y="13.5" />
-                </edge>
-                <edge source="django.test.testcases.SimpleTestCase" target="unittest.TestCase">
-                  <point x="0.0" y="-13.5" />
-                  <point x="0.0" y="13.5" />
-                </edge>
-                <edge source="django.test.testcases.TestCase" target="django.test.testcases.TransactionTestCase">
-                  <point x="0.0" y="-13.5" />
-                  <point x="0.0" y="13.5" />
-                </edge>
-                <edge source="SentimentApp.tracker.tests.ActualCountTest" target="SentimentApp.tracker.tests.Setup_Class">
-                  <point x="0.0" y="-13.5" />
-                  <point x="1169.0" y="432.0" />
-                  <point x="741.75" y="432.0" />
-                  <point x="113.25" y="13.5" />
-                </edge>
-                <edge source="SentimentApp.tracker.tests.HomePageTests" target="django.test.testcases.TestCase">
-                  <point x="0.0" y="-13.5" />
-                  <point x="1302.0" y="365.0" />
-                  <point x="1162.125" y="365.0" />
-                  <point x="30.375" y="13.5" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.3968565815324165" x="957.3638613861388" y="290.5" />
-              <SelectedNodes />
-              <Categories />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/databaseQueries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
+            <state relative-caret-position="7072">
               <caret line="422" column="69" selection-start-line="422" selection-end-line="423" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -389,7 +289,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="width" value="1293" />
     <option name="height" value="687" />
@@ -400,7 +300,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -408,37 +307,11 @@
               <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
-              <item name="savedModels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
-              <item name="savedModels" type="462c0819:PsiDirectoryNode" />
-              <item name="ROC" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
-              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
-              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
-              <item name="tracker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
-              <item name="Testing" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -780,12 +653,13 @@
       <workItem from="1558733166990" duration="75900000" />
       <workItem from="1558873814613" duration="73269000" />
       <workItem from="1559083926258" duration="198000" />
-      <workItem from="1559084264685" duration="13441000" />
+      <workItem from="1559084264685" duration="14718000" />
+      <workItem from="1559222546866" duration="616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="416561000" />
+    <option name="totallyTimeSpent" value="418454000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -797,10 +671,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5070093" visible="true" weight="0.21503638" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5070093" visible="true" weight="0.21827" />
       <window_info x="499" y="249" width="283" height="182" id="Structure" order="1" sideWeight="0.48157895" side_tool="true" type="WINDOWED" weight="0.2287793" />
       <window_info id="Favorites" order="2" sideWeight="0.49299064" side_tool="true" weight="0.23282135" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1027,16 +900,7 @@
     <entry file="file://$PROJECT_DIR$/Testing/RequestCRUD/preRequest.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/LikeComment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/LikeComment.py" />
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/vendor/fontawesome-free/svgs/brands/viacoin.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1118,16 +982,8 @@
     <entry file="file://$PROJECT_DIR$/classes_Pyreverse.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes_Pyreverse.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/classes_Pyreverse.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/classes_Pyreverse.dot" />
+    <entry file="file://$PROJECT_DIR$/SentimentApp/classes_Pyreverse.png" />
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
@@ -1158,9 +1014,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/input_test_reviews/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/input_test_reviews/__init__.py" />
     <entry file="file://$PROJECT_DIR$/Testing/visuals/LineChart.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1222,65 +1076,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/databaseQueries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="422" column="69" selection-start-line="422" selection-end-line="423" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AmazonTrain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="169" column="48" lean-forward="true" selection-start-line="169" selection-start-column="48" selection-end-line="169" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/retrainModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="123" column="8" lean-forward="true" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
-          <folding>
-            <element signature="e#1#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/savedModels/ROC/RocCurve54.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoadModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="uml://Python/#C:/Users/j.turnbull/PycharmProjects/SentimentApp/SentimentApp/tracker/tests.py">
       <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -1369,9 +1166,67 @@
               <point x="30.375" y="13.5" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.3968565815324165" x="957.3638613861388" y="290.5" />
+          <settings layout="Hierarchic Group" zoom="0.3968565815324165" x="957.0" y="291.0" />
           <SelectedNodes />
           <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AmazonTrain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2329">
+          <caret line="169" column="48" selection-start-line="169" selection-start-column="48" selection-end-line="169" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retrainModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+          <folding>
+            <element signature="e#1#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoadModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseQueries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7072">
+          <caret line="422" column="69" selection-start-line="422" selection-end-line="423" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
