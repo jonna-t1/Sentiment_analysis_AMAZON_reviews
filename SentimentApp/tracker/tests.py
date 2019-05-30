@@ -1,7 +1,11 @@
+import sys
+sys.path.append(r'C:\\Users\j.turnbull\PycharmProjects\SentimentApp')
+####
 from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 import datetime
+from main import main, hellow
 
 from .models import PosScores, WeightedAvg, NegScores, Review
 
@@ -85,7 +89,8 @@ class TableTest(Setup_Class):
         self.assertContains(response, '0.988')
         self.assertContains(response, '0.266')
 
-class CountTest(Setup_Class):
+
+class ActualCountTest(Setup_Class):
     def setUp(self):
         super().setUp()
 
@@ -98,6 +103,44 @@ class CountTest(Setup_Class):
         response = self.client.post('/login/', self.credentials, follow=True)
         self.assertTrue(response.context['user'].is_active)
 
+        count = Review.objects.all().count()
+        count = str(count)
+        response = self.client.get(reverse('tracker-home'))
+        self.assertEquals(response.status_code, 200)
+        self.assertContains(response, count)
+
+# -	Display a predictive count of the total numbers of positive and negative reviews found in the data source.
+class PredictiveCountTest(Setup_Class):
+    def setUp(self):
+        super().setUp()
+
+    def test_count_display(self):
+        # send login data
+        self.credentials = {
+            'username': 'jtur1',
+            'password': 'onion'}
+        User.objects.create_user(**self.credentials)
+        response = self.client.post('/login/', self.credentials, follow=True)
+        self.assertTrue(response.context['user'].is_active)
+
+        pred_pos = str(Review.objects.filter(predictSentiment='positive').count())
+        pred_neg = str(Review.objects.filter(predictSentiment='negative').count())
+        act_pos = str(Review.objects.filter(actualSentiment='positive').count())
+        act_neg = str(Review.objects.filter(actualSentiment='negative').count())
+
+        response = self.client.get(reverse('tracker-counts'))
+        self.assertEquals(response.status_code, 200)
+        self.assertContains(response, pred_pos)
+        self.assertContains(response, pred_neg)
+        self.assertContains(response, act_pos)
+        self.assertContains(response, act_neg)
+
+
+class DatabaseUpload(TestCase):
+
+    def setUp(self):
+        main()
+        hellow()
 
 
 

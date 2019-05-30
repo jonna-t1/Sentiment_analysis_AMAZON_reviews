@@ -28,7 +28,7 @@
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center"> Correct Predictions </div>
+                  <div id="correct-page"  class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center"> Correct Predictions </div>
                   <div class="row no-gutters align-items-center">
                   </div>
                 </div>
@@ -48,7 +48,7 @@
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center"> Incorrect Predictions </div>
+                  <div id="incorrect-page" class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center"> Incorrect Predictions </div>
                 </div>
                 <div class="col-auto">
 <!--                  <i class="fas fa-comments fa-2x text-gray-300"></i>-->
@@ -95,7 +95,7 @@
                     <tbody class="no-border-x">
                       <tr>
                        {% for dat in datum %}
-                              <td> <a href="{% url 'class-detail' dat.pos_batch_no %}"> {{dat.pos_batch_no}}</a></td>
+                              <td> <a class="first-row" href="{% url 'class-detail' dat.pos_batch_no %}"> {{dat.pos_batch_no}}</a></td>
                               <td> {{ dat.reviewText}} </td>
                                 <td> {{ dat.predictSentiment }} </td>
                                 <td> {{ dat.actualSentiment }} </td>
@@ -116,7 +116,6 @@
               </div>
             </div>
 
-q={{searchq}}&
     <!--number of results per page limited-->
     {% if is_paginated %}
 

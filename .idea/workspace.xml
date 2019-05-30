@@ -29,9 +29,9 @@
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/positiveClassification.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/trained_models.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Testing/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/input_test_reviews.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/visuals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ROC.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/SentimentApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/SentimentApp/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/requirements.txt" afterDir="false" />
@@ -46,18 +46,16 @@
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/event_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/false_matches.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/false_matches.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/matches.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/matches.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SentimentApp/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentApp/tracker/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedModels/accuracy/modelAccuracy.csv" beforeDir="false" afterPath="$PROJECT_DIR$/savedModels/accuracy/modelAccuracy.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing/LikeComment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing/input_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/input_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,38 +97,166 @@
     <favorites_list name="SentimentApp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testing/input_test.py">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testing/login_requestCRUD.py">
+        <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+            <state relative-caret-position="171">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AmazonTrain.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="169" column="48" lean-forward="true" selection-start-line="169" selection-start-column="48" selection-end-line="169" selection-end-column="48" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/retrainModel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="123" column="8" lean-forward="true" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+              <folding>
+                <element signature="e#1#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoadModel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/tests.py">
+        <entry file="uml://Python/#C:/Users/j.turnbull/PycharmProjects/SentimentApp/SentimentApp/tracker/tests.py">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>Python</ID>
+              <OriginalElement>#C:/Users/j.turnbull/PycharmProjects/SentimentApp/SentimentApp/tracker/tests.py</OriginalElement>
+              <nodes>
+                <node x="1480.5" y="385.0">SentimentApp.tracker.tests.LogInTest</node>
+                <node x="1097.75" y="0.0">object</node>
+                <node x="799.5" y="385.0">SentimentApp.tracker.tests.DatabaseUpload</node>
+                <node x="1057.75" y="77.0">unittest.TestCase</node>
+                <node x="1003.0" y="462.0">SentimentApp.tracker.tests.ActualCountTest</node>
+                <node x="1010.25" y="308.0">django.test.testcases.TestCase</node>
+                <node x="622.0" y="462.0">SentimentApp.tracker.tests.PredictiveCountTest</node>
+                <node x="307.0" y="462.0">SentimentApp.tracker.tests.EventTests</node>
+                <node x="477.5" y="385.0">SentimentApp.tracker.tests.Setup_Class</node>
+                <node x="988.25" y="154.0">django.test.testcases.SimpleTestCase</node>
+                <node x="1143.5" y="385.0">SentimentApp.tracker.tests.HomePageTests</node>
+                <node x="0.0" y="462.0">SentimentApp.tracker.tests.TableTest</node>
+                <node x="969.75" y="231.0">django.test.testcases.TransactionTestCase</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="SentimentApp.tracker.tests.LogInTest" target="django.test.testcases.TestCase">
+                  <point x="0.0" y="-13.5" />
+                  <point x="1624.0" y="355.0" />
+                  <point x="1222.875" y="355.0" />
+                  <point x="91.125" y="13.5" />
+                </edge>
+                <edge source="django.test.testcases.TransactionTestCase" target="django.test.testcases.SimpleTestCase">
+                  <point x="0.0" y="-13.5" />
+                  <point x="0.0" y="13.5" />
+                </edge>
+                <edge source="SentimentApp.tracker.tests.Setup_Class" target="django.test.testcases.TestCase">
+                  <point x="0.0" y="-13.5" />
+                  <point x="628.5" y="355.0" />
+                  <point x="1040.625" y="355.0" />
+                  <point x="-91.125" y="13.5" />
+                </edge>
+                <edge source="SentimentApp.tracker.tests.DatabaseUpload" target="django.test.testcases.TestCase">
+                  <point x="0.0" y="-13.5" />
+                  <point x="961.5" y="365.0" />
+                  <point x="1101.375" y="365.0" />
+                  <point x="-30.375" y="13.5" />
+                </edge>
+                <edge source="SentimentApp.tracker.tests.TableTest" target="SentimentApp.tracker.tests.Setup_Class">
+                  <point x="0.0" y="-13.5" />
+                  <point x="143.5" y="432.0" />
+                  <point x="515.25" y="432.0" />
+                  <point x="-113.25" y="13.5" />
+                </edge>
+                <edge source="SentimentApp.tracker.tests.EventTests" target="SentimentApp.tracker.tests.Setup_Class">
+                  <point x="0.0" y="-13.5" />
+                  <point x="454.5" y="442.0" />
+                  <point x="590.75" y="442.0" />
+                  <point x="-37.75" y="13.5" />
+                </edge>
+                <edge source="unittest.TestCase" target="object">
+                  <point x="0.0" y="-13.5" />
+                  <point x="0.0" y="13.5" />
+                </edge>
+                <edge source="SentimentApp.tracker.tests.PredictiveCountTest" target="SentimentApp.tracker.tests.Setup_Class">
+                  <point x="0.0" y="-13.5" />
+                  <point x="802.5" y="442.0" />
+                  <point x="666.25" y="442.0" />
+                  <point x="37.75" y="13.5" />
+                </edge>
+                <edge source="django.test.testcases.SimpleTestCase" target="unittest.TestCase">
+                  <point x="0.0" y="-13.5" />
+                  <point x="0.0" y="13.5" />
+                </edge>
+                <edge source="django.test.testcases.TestCase" target="django.test.testcases.TransactionTestCase">
+                  <point x="0.0" y="-13.5" />
+                  <point x="0.0" y="13.5" />
+                </edge>
+                <edge source="SentimentApp.tracker.tests.ActualCountTest" target="SentimentApp.tracker.tests.Setup_Class">
+                  <point x="0.0" y="-13.5" />
+                  <point x="1169.0" y="432.0" />
+                  <point x="741.75" y="432.0" />
+                  <point x="113.25" y="13.5" />
+                </edge>
+                <edge source="SentimentApp.tracker.tests.HomePageTests" target="django.test.testcases.TestCase">
+                  <point x="0.0" y="-13.5" />
+                  <point x="1302.0" y="365.0" />
+                  <point x="1162.125" y="365.0" />
+                  <point x="30.375" y="13.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.3968565815324165" x="957.3638613861388" y="290.5" />
+              <SelectedNodes />
+              <Categories />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databaseQueries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="99" selection-start-line="99" selection-end-line="99" />
+            <state relative-caret-position="107">
+              <caret line="422" column="69" selection-start-line="422" selection-end-line="423" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,15 +274,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>button</find>
-      <find>name</find>
-      <find>Make</find>
-      <find>delte</find>
-      <find>Make a</find>
-      <find>div</find>
-      <find>fa-sea</find>
-      <find>str</find>
-      <find>id</find>
       <find>s</find>
       <find>print</find>
       <find>searc</find>
@@ -178,6 +295,15 @@
       <find>finish</find>
       <find>sub</find>
       <find>class</find>
+      <find>input_test</find>
+      <find>q</find>
+      <find>q=</find>
+      <find>id</find>
+      <find>Correct</find>
+      <find>RequestCRUD</find>
+      <find>Inc</find>
+      <find>Visualisa</find>
+      <find>sys.path</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -195,6 +321,8 @@
       <replace>posList</replace>
       <replace>negList</replace>
       <replace>datum</replace>
+      <replace>input_test_reviews</replace>
+      <replace>visuals</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp</dir>
@@ -202,13 +330,11 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SentimentApp" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/pos_detail.html" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/neg_detail.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/avg_detail.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/negativeClassification.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/avgClassification.html" />
@@ -239,16 +365,13 @@
         <option value="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-performance.js" />
         <option value="$PROJECT_DIR$/SentimentApp/requirements.txt" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_detail.html" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/trained_models.html" />
         <option value="$PROJECT_DIR$/retrainModel.py" />
         <option value="$PROJECT_DIR$/ModelUtils.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/predict_counts.html" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html" />
         <option value="$PROJECT_DIR$/Testing/Crud.py" />
         <option value="$PROJECT_DIR$/Testing/loginRequestCRUD.py" />
         <option value="$PROJECT_DIR$/Testing/fileUploadTest.py" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/matches.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/false_matches.html" />
         <option value="$PROJECT_DIR$/databaseQueries.py" />
@@ -256,12 +379,17 @@
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html" />
         <option value="$PROJECT_DIR$/Testing/adminTesting.py" />
         <option value="$PROJECT_DIR$/Testing/login_requestCRUD.py" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html" />
+        <option value="$PROJECT_DIR$/Testing/input_test_reviews.py" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html" />
+        <option value="$PROJECT_DIR$/Testing/visuals.py" />
         <option value="$PROJECT_DIR$/Testing/input_test.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/tests.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-12" />
     <option name="width" value="1293" />
     <option name="height" value="687" />
@@ -279,6 +407,28 @@
             <path>
               <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
+              <item name="savedModels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
+              <item name="savedModels" type="462c0819:PsiDirectoryNode" />
+              <item name="ROC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
+              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
+              <item name="SentimentApp" type="462c0819:PsiDirectoryNode" />
+              <item name="tracker" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SentimentApp" type="b2602c69:ProjectViewProjectNode" />
@@ -311,19 +461,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\accuracy" />
-      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker\static" />
-      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker" />
-      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\transformer" />
-      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\model" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\Testing" />
       <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker\static\js\demo" />
       <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\ROC" />
       <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker\templates\tracker" />
       <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\Training" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\accuracy" />
+      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker\static" />
+      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\SentimentApp\tracker" />
+      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\transformer" />
+      <recent name="C:\Users\j.turnbull\PycharmProjects\SentimentApp\savedModels\model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -338,7 +488,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.input_test">
+  <component name="RunManager" selected="Python.visuals">
     <configuration name="AmazonTrain" type="PythonConfigurationType" factoryName="Python" show_console_on_std_err="true" show_console_on_std_out="true">
       <output_file path="$PROJECT_DIR$/logs/AmazonTrain.log" is_save="true" />
       <module name="SentimentApp" />
@@ -398,28 +548,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Testing/adminTesting.py" />
-      <option name="PARAMETERS" value="runserver 8080" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="databaseQueries" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SentimentApp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/databaseQueries.py" />
       <option name="PARAMETERS" value="runserver 8080" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -494,6 +622,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="input_test_reviews" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SentimentApp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Testing/input_test_reviews.py" />
+      <option name="PARAMETERS" value="runserver 8080" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="loginRequestCRUD" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SentimentApp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -508,28 +658,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="C:\Users\j.turnbull\PycharmProjects\SentimentApp\Testing\login_requestCRUD.py" />
-      <option name="PARAMETERS" value="runserver 8080" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SentimentApp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="runserver 8080" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -553,6 +681,28 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/originalScript.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="visuals" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SentimentApp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Testing/visuals.py" />
+      <option name="PARAMETERS" value="runserver 8080" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -589,19 +739,19 @@
       <item itemvalue="Python.originalScript" />
       <item itemvalue="Python.AmazonTrain" />
       <item itemvalue="Python.weeklyScriopt" />
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.databaseQueries" />
       <item itemvalue="Python.adminTesting" />
       <item itemvalue="Python.loginRequestCRUD" />
       <item itemvalue="Python.input_test" />
+      <item itemvalue="Python.input_test_reviews" />
+      <item itemvalue="Python.visuals" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.visuals" />
+        <item itemvalue="Python.input_test_reviews" />
         <item itemvalue="Python.input_test" />
         <item itemvalue="Python.loginRequestCRUD" />
         <item itemvalue="Python.adminTesting" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.databaseQueries" />
       </list>
     </recent_temporary>
   </component>
@@ -628,12 +778,14 @@
       <workItem from="1558540142246" duration="85977000" />
       <workItem from="1558723698456" duration="4861000" />
       <workItem from="1558733166990" duration="75900000" />
-      <workItem from="1558873814613" duration="72114000" />
+      <workItem from="1558873814613" duration="73269000" />
+      <workItem from="1559083926258" duration="198000" />
+      <workItem from="1559084264685" duration="13441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="401767000" />
+    <option name="totallyTimeSpent" value="416561000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -645,9 +797,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5070093" visible="true" weight="0.20856912" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5070093" visible="true" weight="0.21503638" />
       <window_info x="499" y="249" width="283" height="182" id="Structure" order="1" sideWeight="0.48157895" side_tool="true" type="WINDOWED" weight="0.2287793" />
       <window_info id="Favorites" order="2" sideWeight="0.49299064" side_tool="true" weight="0.23282135" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -659,7 +812,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32624114" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.33156028" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007949" side_tool="true" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49920508" visible="true" weight="0.5514184" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49920508" visible="true" weight="0.5514184" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32978722" />
@@ -741,439 +894,20 @@
     <SUITE FILE_PATH="coverage/SentimentApp$ROC.coverage" NAME="ROC Coverage Results" MODIFIED="1558801789838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/SentimentApp$ModelUtils.coverage" NAME="ModelUtils Coverage Results" MODIFIED="1558806591718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SentimentApp$main.coverage" NAME="main Coverage Results" MODIFIED="1558975843370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SentimentApp$input_test_reviews.coverage" NAME="input_test_reviews Coverage Results" MODIFIED="1559087511989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Testing" />
     <SUITE FILE_PATH="coverage/SentimentApp$databaseQueries.coverage" NAME="databaseQueries Coverage Results" MODIFIED="1558963752671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/SentimentApp$weeklyScriopt.coverage" NAME="weeklyScriopt Coverage Results" MODIFIED="1558189222006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/SentimentApp$AmazonTrain.coverage" NAME="AmazonTrain Coverage Results" MODIFIED="1558437117105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SentimentApp$Crud.coverage" NAME="loginRequestCRUD Coverage Results" MODIFIED="1559054342483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Testing" />
-    <SUITE FILE_PATH="coverage/SentimentApp$input_test.coverage" NAME="input_test Coverage Results" MODIFIED="1559080412286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Testing" />
+    <SUITE FILE_PATH="coverage/SentimentApp$input_test.coverage" NAME="input_test Coverage Results" MODIFIED="1559084888351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Testing" />
     <SUITE FILE_PATH="coverage/SentimentApp$retrainModel.coverage" NAME="retrainModel Coverage Results" MODIFIED="1558792098547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/SentimentApp$adminTesting.coverage" NAME="adminTesting Coverage Results" MODIFIED="1559048697161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Testing" />
     <SUITE FILE_PATH="coverage/SentimentApp$LoadModel.coverage" NAME="LoadModel Coverage Results" MODIFIED="1558789921340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SentimentApp$populateDatabase.coverage" NAME="populateDatabase Coverage Results" MODIFIED="1558123465409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
     <SUITE FILE_PATH="coverage/SentimentApp$test.coverage" NAME="test Coverage Results" MODIFIED="1558707599824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/SentimentApp$visuals.coverage" NAME="visuals Coverage Results" MODIFIED="1559094876760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Testing" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://7fd7f38b-1f8e-4a35-85ce-a5baa6c14f45/schema/main/table/tracker_negscores">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="3f194e34-7715-415a-9718-cfdaecfee235">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-classification-changes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/dateseries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="115" selection-start-line="5" selection-end-line="115" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/savedModels/accuracy/modelAccuracy.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="43" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://Python/#C:/Users/j.turnbull/PycharmProjects/SentimentApp/SentimentApp/tracker/models.py">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>#C:/Users/j.turnbull/PycharmProjects/SentimentApp/SentimentApp/tracker/models.py</OriginalElement>
-          <nodes>
-            <node x="423.0198336532311" y="198.68330134357007">SentimentApp.tracker.models.WeightedAvg</node>
-            <node x="683.5" y="77.0">django.db.models.base.Model</node>
-            <node x="846.0505438259759" y="204.8893154190659">SentimentApp.tracker.models.NegScores</node>
-            <node x="651.5175943698016" y="161.44721689059497">SentimentApp.tracker.models.Request</node>
-            <node x="576.25" y="0.0">django.db.models.base.ModelBase</node>
-            <node x="1040.6890595009597" y="156.48240563019834">SentimentApp.tracker.models.Review</node>
-            <node x="852.25" y="0.0">object</node>
-            <node x="182.45681381957775" y="157.7236084452975">SentimentApp.tracker.models.PosScores</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="SentimentApp.tracker.models.Review" target="django.db.models.base.Model">
-              <point x="0.0" y="-13.5" />
-              <point x="1180.9302623160588" y="125.24120281509914" />
-              <point x="886.9" y="124.0" />
-              <point x="90.39999999999998" y="13.5" />
-            </edge>
-            <edge source="django.db.models.base.Model" target="django.db.models.base.ModelBase">
-              <point x="-56.5" y="-13.5" />
-              <point x="740.0" y="52.0" />
-              <point x="704.25" y="52.0" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="django.db.models.base.Model" target="object">
-              <point x="56.5" y="-13.5" />
-              <point x="853.0" y="52.0" />
-              <point x="888.75" y="52.0" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.models.WeightedAvg" target="django.db.models.base.Model">
-              <point x="0.0" y="-13.5" />
-              <point x="578.7786308381319" y="137.72360844529746" />
-              <point x="751.3" y="134.0" />
-              <point x="-45.200000000000045" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.models.PosScores" target="django.db.models.base.Model">
-              <point x="0.0" y="-13.5" />
-              <point x="333.69801663467695" y="124.0" />
-              <point x="706.1" y="124.0" />
-              <point x="-90.39999999999998" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.models.Request" target="django.db.models.base.Model">
-              <point x="0.0" y="-13.5" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.models.NegScores" target="django.db.models.base.Model">
-              <point x="0.0" y="-13.5" />
-              <point x="994.8093410108764" y="135.24120281509917" />
-              <point x="841.7" y="134.0" />
-              <point x="45.200000000000045" y="13.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.8056701030927834" x="768.3653230966091" y="152.81536251715744" />
-          <SelectedNodes>
-            <node>SentimentApp.tracker.models.PosScores</node>
-          </SelectedNodes>
-          <Categories />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://Python/django.views.generic.list.ListView">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>django.views.generic.list.ListView</OriginalElement>
-          <nodes>
-            <node x="" y="">django.views.generic.base.TemplateResponseMixin</node>
-            <node x="" y="">django.views.generic.list.MultipleObjectTemplateResponseMixin</node>
-            <node x="" y="">django.views.generic.list.MultipleObjectMixin</node>
-            <node x="" y="">django.views.generic.list.ListView</node>
-            <node x="" y="">django.views.generic.base.ContextMixin</node>
-            <node x="" y="">object</node>
-            <node x="" y="">django.views.generic.list.BaseListView</node>
-            <node x="" y="">django.views.generic.base.View</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8793264733395697" x="550.5" y="167.5" />
-          <SelectedNodes />
-          <Categories />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://Python/SentimentApp.tracker.views.dataView">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>SentimentApp.tracker.views.dataView</OriginalElement>
-          <nodes>
-            <node x="" y="">django.views.generic.list.ListView</node>
-            <node x="" y="">django.views.generic.list.MultipleObjectTemplateResponseMixin</node>
-            <node x="" y="">django.views.generic.base.ContextMixin</node>
-            <node x="" y="">SentimentApp.tracker.views.dataView</node>
-            <node x="" y="">django.views.generic.list.MultipleObjectMixin</node>
-            <node x="" y="">django.views.generic.base.View</node>
-            <node x="" y="">object</node>
-            <node x="" y="">django.views.generic.list.BaseListView</node>
-            <node x="" y="">django.views.generic.base.TemplateResponseMixin</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8793264733395697" x="534.5" y="206.0" />
-          <SelectedNodes />
-          <Categories />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://Python/#C:/Users/j.turnbull/PycharmProjects/SentimentApp/SentimentApp/tracker/views.py">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>#C:/Users/j.turnbull/PycharmProjects/SentimentApp/SentimentApp/tracker/views.py</OriginalElement>
-          <nodes>
-            <node x="1736.0" y="328.0">django.views.generic.detail.SingleObjectTemplateResponseMixin</node>
-            <node x="1397.0" y="328.0">django.views.generic.edit.BaseCreateView</node>
-            <node x="1056.375" y="77.0">django.views.generic.base.ContextMixin</node>
-            <node x="2769.625" y="542.0">SentimentApp.tracker.views.classificationView</node>
-            <node x="1679.125" y="405.0">django.views.generic.edit.CreateView</node>
-            <node x="1030.375" y="154.0">django.views.generic.detail.SingleObjectMixin</node>
-            <node x="1649.625" y="502.0">SentimentApp.tracker.views.RequestCreateView</node>
-            <node x="2545.7776785714286" y="154.0">django.views.generic.base.View</node>
-            <node x="3419.625" y="686.0">SentimentApp.tracker.views.posView</node>
-            <node x="2865.625" y="600.0">SentimentApp.tracker.views.negView</node>
-            <node x="3494.625" y="640.0">SentimentApp.tracker.views.dataView</node>
-            <node x="2591.3610119047617" y="241.0">django.views.generic.edit.ProcessFormView</node>
-            <node x="377.8705357142853" y="154.0">django.views.generic.edit.FormMixin</node>
-            <node x="638.012797619047" y="405.0">django.views.generic.detail.DetailView</node>
-            <node x="0.0" y="502.0">SentimentApp.tracker.views.NegScoreDetailView</node>
-            <node x="1983.46875" y="241.0">django.views.generic.list.BaseListView</node>
-            <node x="752.0" y="502.0">SentimentApp.tracker.views.RequestDetailView</node>
-            <node x="1213.875" y="241.0">django.views.generic.detail.BaseDetailView</node>
-            <node x="3708.625" y="540.0">SentimentApp.tracker.views.avgView</node>
-            <node x="439.1205357142853" y="241.0">django.views.generic.edit.ModelFormMixin</node>
-            <node x="2260.71875" y="0.0">object</node>
-            <node x="1797.21875" y="154.0">django.views.generic.list.MultipleObjectMixin</node>
-            <node x="2940.625" y="644.0">SentimentApp.tracker.views.ReviewListView</node>
-            <node x="3566.625" y="586.0">SentimentApp.tracker.views.PredictCountsListView</node>
-            <node x="3469.2455357142853" y="241.0">django.views.generic.base.TemplateResponseMixin</node>
-            <node x="3510.2455357142853" y="328.0">django.views.generic.list.MultipleObjectTemplateResponseMixin</node>
-            <node x="376.0" y="502.0">SentimentApp.tracker.views.PosScoreDetailView</node>
-            <node x="3032.625" y="688.0">SentimentApp.tracker.views.PerformanceListView</node>
-            <node x="3252.356547619047" y="405.0">django.views.generic.list.ListView</node>
-            <node x="1273.625" y="502.0">SentimentApp.tracker.views.AvgScoreDetailView</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="SentimentApp.tracker.views.dataView" target="django.views.generic.list.ListView">
-              <point x="0.0" y="-13.5" />
-              <point x="3513.625" y="660.0" />
-              <point x="3441.419047619047" y="472.0" />
-              <point x="51.5625" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.detail.BaseDetailView" target="django.views.generic.base.View">
-              <point x="83.5" y="-13.5" />
-              <point x="1464.375" y="211.0" />
-              <point x="2586.6110119047617" y="211.0" />
-              <point x="-81.66666666666652" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.edit.ModelFormMixin" target="django.views.generic.edit.FormMixin">
-              <point x="-79.75" y="-13.5" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.detail.DetailView" target="django.views.generic.detail.SingleObjectTemplateResponseMixin">
-              <point x="76.0" y="-13.5" />
-              <point x="866.012797619047" y="385.0" />
-              <point x="1854.25" y="385.0" />
-              <point x="-118.25" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.detail.DetailView" target="django.views.generic.detail.BaseDetailView">
-              <point x="-76.0" y="-13.5" />
-              <point x="714.012797619047" y="308.0" />
-              <point x="1380.875" y="308.0" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.PosScoreDetailView" target="django.views.generic.detail.DetailView">
-              <point x="0.0" y="-13.5" />
-              <point x="554.0" y="482.0" />
-              <point x="752.012797619047" y="482.0" />
-              <point x="-38.0" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.detail.SingleObjectMixin" target="django.views.generic.base.ContextMixin">
-              <point x="0.0" y="-13.5" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.base.ContextMixin" target="object">
-              <point x="0.0" y="-13.5" />
-              <point x="1208.375" y="57.0" />
-              <point x="2272.3854166666665" y="57.0" />
-              <point x="-23.333333333333485" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.avgView" target="django.views.generic.list.ListView">
-              <point x="0.0" y="-13.5" />
-              <point x="3736.125" y="542.0" />
-              <point x="3510.169047619047" y="452.0" />
-              <point x="120.3125" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.PredictCountsListView" target="django.views.generic.list.ListView">
-              <point x="0.0" y="-13.5" />
-              <point x="3661.625" y="594.0" />
-              <point x="3475.794047619047" y="462.0" />
-              <point x="85.9375" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.AvgScoreDetailView" target="django.views.generic.detail.DetailView">
-              <point x="0.0" y="-13.5" />
-              <point x="1451.625" y="472.0" />
-              <point x="904.012797619047" y="472.0" />
-              <point x="114.0" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.edit.CreateView" target="django.views.generic.edit.BaseCreateView">
-              <point x="-72.25" y="-13.5" />
-              <point x="1751.375" y="375.0" />
-              <point x="1556.5" y="375.0" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.detail.SingleObjectTemplateResponseMixin" target="django.views.generic.base.TemplateResponseMixin">
-              <point x="0.0" y="-13.5" />
-              <point x="1972.5" y="308.0" />
-              <point x="3561.7455357142853" y="308.0" />
-              <point x="-92.5" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.edit.BaseCreateView" target="django.views.generic.edit.ModelFormMixin">
-              <point x="-79.75" y="-13.5" />
-              <point x="1476.75" y="298.0" />
-              <point x="598.6205357142853" y="298.0" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.PerformanceListView" target="django.views.generic.list.ListView">
-              <point x="0.0" y="-13.5" />
-              <point x="3334.125" y="696.0" />
-              <point x="3372.669047619047" y="482.0" />
-              <point x="-17.1875" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.base.View" target="object">
-              <point x="0.0" y="-13.5" />
-              <point x="2668.2776785714286" y="57.0" />
-              <point x="2295.71875" y="57.0" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.edit.CreateView" target="django.views.generic.detail.SingleObjectTemplateResponseMixin">
-              <point x="72.25" y="-13.5" />
-              <point x="1895.875" y="385.0" />
-              <point x="2090.75" y="385.0" />
-              <point x="118.25" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.list.ListView" target="django.views.generic.list.BaseListView">
-              <point x="-68.75" y="-13.5" />
-              <point x="3321.106547619047" y="385.0" />
-              <point x="2992.106547619047" y="385.0" />
-              <point x="2992.106547619047" y="288.0" />
-              <point x="2135.46875" y="288.0" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.list.MultipleObjectMixin" target="django.views.generic.base.ContextMixin">
-              <point x="0.0" y="-13.5" />
-              <point x="1975.21875" y="129.0" />
-              <point x="1309.7083333333333" y="129.0" />
-              <point x="101.33333333333326" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.detail.BaseDetailView" target="django.views.generic.detail.SingleObjectMixin">
-              <point x="-83.5" y="-13.5" />
-              <point x="89.0" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.classificationView" target="django.views.generic.list.ListView">
-              <point x="0.0" y="-13.5" />
-              <point x="3131.625" y="550.0" />
-              <point x="3269.544047619047" y="452.0" />
-              <point x="-120.3125" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.base.TemplateResponseMixin" target="object">
-              <point x="0.0" y="-13.5" />
-              <point x="3654.2455357142853" y="47.0" />
-              <point x="2319.0520833333335" y="47.0" />
-              <point x="23.333333333333485" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.list.BaseListView" target="django.views.generic.list.MultipleObjectMixin">
-              <point x="-76.0" y="-13.5" />
-              <point x="2059.46875" y="201.0" />
-              <point x="1975.21875" y="201.0" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.edit.ProcessFormView" target="django.views.generic.base.View">
-              <point x="0.0" y="-13.5" />
-              <point x="2754.3610119047617" y="221.0" />
-              <point x="2749.9443452380947" y="221.0" />
-              <point x="81.66666666666652" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.list.ListView" target="django.views.generic.list.MultipleObjectTemplateResponseMixin">
-              <point x="68.75" y="-13.5" />
-              <point x="3458.606547619047" y="385.0" />
-              <point x="3746.7455357142853" y="385.0" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.list.BaseListView" target="django.views.generic.base.View">
-              <point x="76.0" y="-13.5" />
-              <point x="2211.46875" y="221.0" />
-              <point x="2668.2776785714286" y="221.0" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.edit.ModelFormMixin" target="django.views.generic.detail.SingleObjectMixin">
-              <point x="79.75" y="-13.5" />
-              <point x="678.3705357142853" y="221.0" />
-              <point x="1119.375" y="221.0" />
-              <point x="-89.0" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.edit.FormMixin" target="django.views.generic.base.ContextMixin">
-              <point x="0.0" y="-13.5" />
-              <point x="518.8705357142853" y="129.0" />
-              <point x="1107.0416666666667" y="129.0" />
-              <point x="-101.33333333333326" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.ReviewListView" target="django.views.generic.list.ListView">
-              <point x="0.0" y="-13.5" />
-              <point x="3257.625" y="644.0" />
-              <point x="3338.294047619047" y="472.0" />
-              <point x="-51.5625" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.list.MultipleObjectTemplateResponseMixin" target="django.views.generic.base.TemplateResponseMixin">
-              <point x="0.0" y="-13.5" />
-              <point x="92.5" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.NegScoreDetailView" target="django.views.generic.detail.DetailView">
-              <point x="0.0" y="-13.5" />
-              <point x="178.0" y="472.0" />
-              <point x="676.012797619047" y="472.0" />
-              <point x="-114.0" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.posView" target="django.views.generic.list.ListView">
-              <point x="0.0" y="-13.5" />
-              <point x="3429.125" y="714.0" />
-              <point x="3407.044047619047" y="482.0" />
-              <point x="17.1875" y="13.5" />
-            </edge>
-            <edge source="django.views.generic.edit.BaseCreateView" target="django.views.generic.edit.ProcessFormView">
-              <point x="79.75" y="-13.5" />
-              <point x="1636.25" y="298.0" />
-              <point x="2754.3610119047617" y="298.0" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.negView" target="django.views.generic.list.ListView">
-              <point x="0.0" y="-13.5" />
-              <point x="3135.125" y="600.0" />
-              <point x="3303.919047619047" y="462.0" />
-              <point x="-85.9375" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.RequestCreateView" target="django.views.generic.edit.CreateView">
-              <point x="0.0" y="-13.5" />
-              <point x="0.0" y="13.5" />
-            </edge>
-            <edge source="SentimentApp.tracker.views.RequestDetailView" target="django.views.generic.detail.DetailView">
-              <point x="0.0" y="-13.5" />
-              <point x="926.0" y="482.0" />
-              <point x="828.012797619047" y="482.0" />
-              <point x="38.0" y="13.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="3072.428571428571" y="483.974025974026" />
-          <SelectedNodes />
-          <Categories />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="25" column="89" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/tracker/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="108" column="6" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/machinealgs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
@@ -1181,16 +915,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ROC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ROC.py" />
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/performanceScores.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1198,16 +923,6 @@
           <folding>
             <element signature="e#1588#2405#0" />
             <element signature="e#2444#3117#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoadModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1277,16 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ModelUtils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -1304,26 +1009,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/loadJSON.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/Testing/loadJSON.py" />
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/pie-predict.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1339,28 +1026,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Testing/RequestCRUD/preRequest.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="98" column="78" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="78" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#h6#0;n#div#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#div#0;n#a#0;n#div#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#li#2;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/retrainModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="24" />
-          <folding>
-            <element signature="e#1#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Testing/LikeComment.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1401,23 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="125" column="19" lean-forward="true" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/databaseQueries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="91" column="32" lean-forward="true" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-performance.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1371">
@@ -1452,36 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="89" column="40" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="29" column="88" lean-forward="true" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="88" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/adminTesting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-end-line="30" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-77">
@@ -1497,20 +1115,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/input_test.py">
+    <entry file="file://$PROJECT_DIR$/classes_Pyreverse.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes_Pyreverse.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/classes_Pyreverse.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="86" column="19" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <caret line="15" column="80" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/adminTesting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/input_test_reviews/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/visuals/LineChart.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/visuals/PieChart.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/visuals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/login_requestCRUD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/input_test_reviews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/input_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/login_requestCRUD.py">
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+        <state relative-caret-position="107">
+          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+          <folding>
+            <element signature="e#3888#3906#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#h6#0;n#div#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#0;n#a#0;n#div#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#li#2;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseQueries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="422" column="69" selection-start-line="422" selection-end-line="423" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -1519,11 +1244,134 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
+        <state relative-caret-position="171">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AmazonTrain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="169" column="48" lean-forward="true" selection-start-line="169" selection-start-column="48" selection-end-line="169" selection-end-column="48" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retrainModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="123" column="8" lean-forward="true" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+          <folding>
+            <element signature="e#1#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/savedModels/ROC/RocCurve54.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoadModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#C:/Users/j.turnbull/PycharmProjects/SentimentApp/SentimentApp/tracker/tests.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#C:/Users/j.turnbull/PycharmProjects/SentimentApp/SentimentApp/tracker/tests.py</OriginalElement>
+          <nodes>
+            <node x="1480.5" y="385.0">SentimentApp.tracker.tests.LogInTest</node>
+            <node x="1097.75" y="0.0">object</node>
+            <node x="799.5" y="385.0">SentimentApp.tracker.tests.DatabaseUpload</node>
+            <node x="1057.75" y="77.0">unittest.TestCase</node>
+            <node x="1003.0" y="462.0">SentimentApp.tracker.tests.ActualCountTest</node>
+            <node x="1010.25" y="308.0">django.test.testcases.TestCase</node>
+            <node x="622.0" y="462.0">SentimentApp.tracker.tests.PredictiveCountTest</node>
+            <node x="307.0" y="462.0">SentimentApp.tracker.tests.EventTests</node>
+            <node x="477.5" y="385.0">SentimentApp.tracker.tests.Setup_Class</node>
+            <node x="988.25" y="154.0">django.test.testcases.SimpleTestCase</node>
+            <node x="1143.5" y="385.0">SentimentApp.tracker.tests.HomePageTests</node>
+            <node x="0.0" y="462.0">SentimentApp.tracker.tests.TableTest</node>
+            <node x="969.75" y="231.0">django.test.testcases.TransactionTestCase</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="SentimentApp.tracker.tests.LogInTest" target="django.test.testcases.TestCase">
+              <point x="0.0" y="-13.5" />
+              <point x="1624.0" y="355.0" />
+              <point x="1222.875" y="355.0" />
+              <point x="91.125" y="13.5" />
+            </edge>
+            <edge source="django.test.testcases.TransactionTestCase" target="django.test.testcases.SimpleTestCase">
+              <point x="0.0" y="-13.5" />
+              <point x="0.0" y="13.5" />
+            </edge>
+            <edge source="SentimentApp.tracker.tests.Setup_Class" target="django.test.testcases.TestCase">
+              <point x="0.0" y="-13.5" />
+              <point x="628.5" y="355.0" />
+              <point x="1040.625" y="355.0" />
+              <point x="-91.125" y="13.5" />
+            </edge>
+            <edge source="SentimentApp.tracker.tests.DatabaseUpload" target="django.test.testcases.TestCase">
+              <point x="0.0" y="-13.5" />
+              <point x="961.5" y="365.0" />
+              <point x="1101.375" y="365.0" />
+              <point x="-30.375" y="13.5" />
+            </edge>
+            <edge source="SentimentApp.tracker.tests.TableTest" target="SentimentApp.tracker.tests.Setup_Class">
+              <point x="0.0" y="-13.5" />
+              <point x="143.5" y="432.0" />
+              <point x="515.25" y="432.0" />
+              <point x="-113.25" y="13.5" />
+            </edge>
+            <edge source="SentimentApp.tracker.tests.EventTests" target="SentimentApp.tracker.tests.Setup_Class">
+              <point x="0.0" y="-13.5" />
+              <point x="454.5" y="442.0" />
+              <point x="590.75" y="442.0" />
+              <point x="-37.75" y="13.5" />
+            </edge>
+            <edge source="unittest.TestCase" target="object">
+              <point x="0.0" y="-13.5" />
+              <point x="0.0" y="13.5" />
+            </edge>
+            <edge source="SentimentApp.tracker.tests.PredictiveCountTest" target="SentimentApp.tracker.tests.Setup_Class">
+              <point x="0.0" y="-13.5" />
+              <point x="802.5" y="442.0" />
+              <point x="666.25" y="442.0" />
+              <point x="37.75" y="13.5" />
+            </edge>
+            <edge source="django.test.testcases.SimpleTestCase" target="unittest.TestCase">
+              <point x="0.0" y="-13.5" />
+              <point x="0.0" y="13.5" />
+            </edge>
+            <edge source="django.test.testcases.TestCase" target="django.test.testcases.TransactionTestCase">
+              <point x="0.0" y="-13.5" />
+              <point x="0.0" y="13.5" />
+            </edge>
+            <edge source="SentimentApp.tracker.tests.ActualCountTest" target="SentimentApp.tracker.tests.Setup_Class">
+              <point x="0.0" y="-13.5" />
+              <point x="1169.0" y="432.0" />
+              <point x="741.75" y="432.0" />
+              <point x="113.25" y="13.5" />
+            </edge>
+            <edge source="SentimentApp.tracker.tests.HomePageTests" target="django.test.testcases.TestCase">
+              <point x="0.0" y="-13.5" />
+              <point x="1302.0" y="365.0" />
+              <point x="1162.125" y="365.0" />
+              <point x="30.375" y="13.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.3968565815324165" x="957.3638613861388" y="290.5" />
+          <SelectedNodes />
+          <Categories />
         </state>
       </provider>
     </entry>

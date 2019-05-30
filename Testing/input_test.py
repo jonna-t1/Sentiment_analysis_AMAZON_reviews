@@ -20,7 +20,6 @@ driver.find_element_by_id("login-button").click()
 
 driver.get("http://localhost:8080/classification")
 
-
 print("testing input")
 driver.find_element_by_xpath('//input[@type="number"]').send_keys('12313451')
 driver.find_element_by_xpath('//input[@type="number"]').send_keys('12313451')
