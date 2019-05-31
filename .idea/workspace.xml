@@ -130,10 +130,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state>
               <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -142,6 +142,30 @@
                 <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="322" lean-forward="true" selection-start-line="322" selection-end-line="322" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,7 +221,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>s</find>
       <find>print</find>
       <find>searc</find>
       <find>input</find>
@@ -217,7 +240,6 @@
       <find>subtract_one_month</find>
       <find>finish</find>
       <find>sub</find>
-      <find>class</find>
       <find>input_test</find>
       <find>q</find>
       <find>q=</find>
@@ -227,6 +249,8 @@
       <find>Inc</find>
       <find>Visualisa</find>
       <find>sys.path</find>
+      <find>class</find>
+      <find>detail</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -269,7 +293,6 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/chart-classification.js" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/static/js/demo/pie-predict.js" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/urls.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/models.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/static/js/reviewNavs.js" />
         <option value="$PROJECT_DIR$/ROC.py" />
@@ -293,7 +316,6 @@
         <option value="$PROJECT_DIR$/Testing/loginRequestCRUD.py" />
         <option value="$PROJECT_DIR$/Testing/fileUploadTest.py" />
         <option value="$PROJECT_DIR$/databaseQueries.py" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/views.py" />
         <option value="$PROJECT_DIR$/Testing/adminTesting.py" />
         <option value="$PROJECT_DIR$/Testing/login_requestCRUD.py" />
         <option value="$PROJECT_DIR$/Testing/input_test_reviews.py" />
@@ -302,13 +324,15 @@
         <option value="$PROJECT_DIR$/Testing/input_test.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/tests.py" />
-        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_detail.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_detail.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/trained_models.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/data_view.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/matches.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/false_matches.html" />
         <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_detail.html" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/views.py" />
+        <option value="$PROJECT_DIR$/SentimentApp/tracker/urls.py" />
       </list>
     </option>
   </component>
@@ -703,12 +727,12 @@
       <workItem from="1558873814613" duration="73269000" />
       <workItem from="1559083926258" duration="198000" />
       <workItem from="1559084264685" duration="14718000" />
-      <workItem from="1559222546866" duration="4225000" />
+      <workItem from="1559222546866" duration="6315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="422063000" />
+    <option name="totallyTimeSpent" value="424153000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -721,6 +745,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5070093" visible="true" weight="0.21827" />
       <window_info x="499" y="249" width="283" height="182" id="Structure" order="1" sideWeight="0.48157895" side_tool="true" type="WINDOWED" weight="0.2287793" />
@@ -734,7 +759,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32624114" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.33156028" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007949" side_tool="true" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49920508" visible="true" weight="0.5514184" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49920508" visible="true" weight="0.20921986" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32978722" />
@@ -907,16 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="507" lean-forward="true" selection-start-line="507" selection-end-line="507" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/SentimentApp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -945,16 +960,6 @@
           <caret line="86" column="19" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="19" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="15" column="80" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1182,13 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="72" column="11" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1269,7 +1267,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/classification_table.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state>
           <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1278,6 +1276,33 @@
             <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/templates/tracker/request_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentApp/tracker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="322" lean-forward="true" selection-start-line="322" selection-end-line="322" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
