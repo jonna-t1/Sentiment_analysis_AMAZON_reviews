@@ -15,6 +15,9 @@ table {
 
 
 {% block content %}
+
+
+{% if user.is_authenticated %}
 <div class="container-fluid">
             <h1 class="h3 mb-0 text-gray-800">Request Confirmed</h1>
 
@@ -61,5 +64,12 @@ table {
 
 
         <a class="btn btn-success btn-sm mt-1 mb-1" style="position: relative; margin-left: 45%" href="/">OK</a>
+
+{% else %}
+    <h1 class="text-center" ><a href="{% url 'login' %}">Login here</a></h1>
+    <br>
+    <h2 class="text-center"> <a href="{% url 'request-create' %}"> Request access </a> </h2>
+
+{% endif %}
 {% endblock content %}
 

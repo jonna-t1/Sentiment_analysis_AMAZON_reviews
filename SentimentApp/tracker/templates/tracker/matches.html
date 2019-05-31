@@ -3,6 +3,8 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
 <style>
     #pag {
         position: absolute;
@@ -162,5 +164,12 @@ f1DIV.onclick = function() {
 };
 
 </script>
+
+{% else %}
+    <h1 class="text-center" ><a href="{% url 'login' %}">Login here</a></h1>
+    <br>
+    <h2 class="text-center"> <a href="{% url 'request-create' %}"> Request access </a> </h2>
+
+{% endif %}
 
 {% endblock content %}

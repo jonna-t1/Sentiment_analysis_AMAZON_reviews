@@ -1,6 +1,8 @@
 {% extends "tracker/base.html" %}
 {% block content %}
 
+{% if user.is_authenticated %}
+
     <h1>Classification Scores</h1>
     <br><br>
 
@@ -52,7 +54,12 @@
                 </div>
               </div>
             </div>
+{% else %}
+    <h1 class="text-center" ><a href="{% url 'login' %}">Login here</a></h1>
+    <br>
+    <h2 class="text-center"> <a href="{% url 'request-create' %}"> Request access </a> </h2>
 
+{% endif %}
 
 
 {% endblock content %}

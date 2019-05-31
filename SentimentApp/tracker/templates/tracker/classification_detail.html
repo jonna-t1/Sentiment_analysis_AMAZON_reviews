@@ -17,6 +17,8 @@ img {
 
 <h2>Classification table for BatchID - {{fileNo}}</h2>
 
+
+{% if user.is_authenticated %}
     <div class="col-12 col-lg-12">
               <div class="card card-table">
                 <div class="card-header">
@@ -61,7 +63,12 @@ img {
               </div>
             </div>
 
+{% else %}
+    <h1 class="text-center" ><a href="{% url 'login' %}">Login here</a></h1>
+    <br>
+    <h2 class="text-center"> <a href="{% url 'request-create' %}"> Request access </a> </h2>
 
+{% endif %}
 
 
 
