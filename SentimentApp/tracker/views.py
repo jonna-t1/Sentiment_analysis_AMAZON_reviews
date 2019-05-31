@@ -55,12 +55,10 @@ class dataView(ListView):
 
 def filterIncorrect():
     falsePos = Review.objects.exclude(predictSentiment=F('actualSentiment'))
-
     return falsePos
 
 def filterCorrect():
     matches = Review.objects.filter(predictSentiment=F('actualSentiment'))
-
     return matches
 
 
@@ -72,11 +70,11 @@ def incorrectMatchView(request):
         vals = vals.filter(pos_batch_no=query)
     else:
         vals = filterIncorrect()
+        query = ''
 
     paginator = Paginator(vals, 10)
     page = request.GET.get('page')
     vals = paginator.get_page(page)
-
 
     # context data
     context = {
@@ -96,6 +94,7 @@ def matchView(request):
 
     else:
         vals = filterCorrect()
+        query = ''
 
     paginator = Paginator(vals, 10)
     page = request.GET.get('page')
@@ -223,6 +222,38 @@ def trainedModelsView(request):
 
 
 
+class posView(ListView):
+    model = PosScores
+    template_name = 'tracker/positiveClassification.html'  # Default: <app_label>/<model_name>_list.html
+    context_object_name = 'datum'
+    paginate_by = 10
+
+class negView(ListView):
+    model = NegScores
+    template_name = 'tracker/negativeClassification.html'  # Default: <app_label>/<model_name>_list.html
+    context_object_name = 'negs'
+    paginate_by = 10
+
+class avgView(ListView):
+    model = WeightedAvg
+    template_name = 'tracker/avgClassification.html'  # Default: <app_label>/<model_name>_list.html
+    context_object_name = 'avgs'
+    paginate_by = 10
+
+class AvgScoreDetailView(DetailView):
+    model = WeightedAvg
+    template_name = 'tracker/avg_detail.html'
+
+class PosScoreDetailView(DetailView):
+    model = PosScores
+    template_name = 'tracker/pos_detail.html'
+
+
+class NegScoreDetailView(DetailView):
+    model = NegScores
+    template_name = 'tracker/neg_detail.html'
+
+
 class ReviewListView(ListView):
     model = Review
     template_name = 'tracker/home.html'
@@ -341,6 +372,37 @@ class PredictCountsListView(ListView):
 
 
 
+def toggleView(request):
+    toggle = request.session.get('toggleTime', None)
+
+    data = {}
+    status = 200
+
+    if toggle is None:
+        request.session['toggleTime']=True
+    elif toggle:
+        request.session['toggleTime']=False
+    else:
+        request.session['toggleTime'] = True
+
+    return HttpResponse(json.dumps(data), content_type='application/json', status=status)
+
+def toggleView2(request):
+    toggle = request.session.get('toggleTime2', None)
+
+    data = {}
+    status = 200
+
+    if toggle is None:
+        request.session['toggleTime2']=True
+    elif toggle:
+        request.session['toggleTime2']=False
+    else:
+        request.session['toggleTime2'] = True
+
+    return HttpResponse(json.dumps(data), content_type='application/json', status=status)
+
+
 
 class RequestDetailView(DetailView):
     model = Request
@@ -356,6 +418,21 @@ class RequestCreateView(CreateView):
 
     login_url = '/login/'
     redirect_field_name = 'redirect_to'
+
+
+def about(request):
+    return render(request, 'tracker/about.html')
+
+def get_date(request):
+    data = Event.objects.all()
+    event_dates = []
+    for d in data:
+        ed = d.resolution_date
+        ed = "{0}-{1}-{2} {3}:{4}:{5}".format(ed.year,ed.month,ed.day,ed.hour,ed.minute,ed.second)
+        ev_id = [d.id,ed,]
+        event_dates.append(ev_id)
+        # print(json.dumps(event_dates))
+    return HttpResponse(json.dumps(event_dates), content_type="application/json")
 
 
 
