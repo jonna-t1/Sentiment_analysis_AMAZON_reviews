@@ -7,9 +7,6 @@ import populateDatabase as populateDB
 from ModelUtils import sortDirFiles
 
 
-def hellow():
-    print("hihinny")
-
 def main():
     batch = ''
 
@@ -93,7 +90,7 @@ def main():
     else:
         sys.exit("Invalid input")
 
-
+main()
 # if __name__ == '__main__':
 #     main()
 
