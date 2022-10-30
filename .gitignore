@@ -2,7 +2,10 @@
 Datasets/
 
 #ignore venv
-venv/
+env/
 
 #ignore database
 SentimentApp/db.sqlite3
+
+#ignore DATA
+DATA/

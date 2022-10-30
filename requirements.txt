@@ -8,7 +8,6 @@ Django==2.2.1
 django-crispy-forms==1.7.2
 django-form-utils==1.0.3
 django-pandas==0.6.1
-en-core-web-sm==2.1.0
 idna==2.8
 imageio==2.5.0
 jsonschema==2.6.0
