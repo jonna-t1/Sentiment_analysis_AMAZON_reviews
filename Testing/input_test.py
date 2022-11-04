@@ -15,7 +15,7 @@ driver.find_element_by_link_text("Login").click()
 driver.save_screenshot("input_test/login.png")
 
 driver.find_element_by_id("id_username").send_keys("jtur")
-driver.find_element_by_id("id_password").send_keys("Sabore123")
+driver.find_element_by_id("id_password").send_keys("Passy123")
 driver.find_element_by_id("login-button").click()
 
 driver.get("http://localhost:8080/classification")

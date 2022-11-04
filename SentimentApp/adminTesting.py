@@ -7,7 +7,7 @@ driver.get("http://localhost:8080/admin")
 
 
 driver.find_element_by_id("id_username").send_keys("jtur")
-driver.find_element_by_id("id_password").send_keys("Sabore123")
+driver.find_element_by_id("id_password").send_keys("Passy123")
 
 driver.find_element_by_xpath('//input[@value="Log in"]').click()
 driver.find_element_by_link_text("Users").click()
