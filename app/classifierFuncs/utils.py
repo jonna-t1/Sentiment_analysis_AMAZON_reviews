@@ -2,6 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 
+
+### credit for the following functions goes to "amueller" 
+
 cm = ListedColormap(['#0000aa', '#ff2020'])
 
 def visualize_coefficients(coefficients, feature_names, n_top_features=25):
