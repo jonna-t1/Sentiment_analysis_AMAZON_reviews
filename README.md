@@ -91,4 +91,8 @@ host  all  all 0.0.0.0/0 md5
 
 The algorithms used are based from a thorough Literature review.
 
-- Run `classifier_main.py` found in root directory. This saves a model to file/database which can be used for iterative learning.</br>
+- Run `classifier_main.py` found in ./app/ directory. This saves a model to file/database which can be used for iterative learning.</br>
+
+## Running the web application
+
+- To run the web application: python3 SentimentApp/manage.py runserver
