@@ -1,6 +1,6 @@
 import re
 import spacy
-import mglearn
+#import mglearn
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer

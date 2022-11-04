@@ -22,5 +22,6 @@ echo $CLC
 zcat $2 | split -l $CLC - ./DATA/
 gzip DATA/a*
 zcat DATA/Electronics_5.json.gz | head -1 > DATA/output.json
+zip output.json
 fi;
 exit;

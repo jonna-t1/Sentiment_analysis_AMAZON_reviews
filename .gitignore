@@ -3,9 +3,22 @@ Datasets/
 
 #ignore venv
 env/
+venv/
 
 #ignore database
 SentimentApp/db.sqlite3
 
 #ignore DATA
 DATA/
+./Electronics_5.json.gz
+
+#ignore pgadmin4
+pgadmin4/
+
+#ignore logs
+logs/
+
+Electronics_5.json.gz
+Electronics_5.json.gz
+./.git
+__pycache__

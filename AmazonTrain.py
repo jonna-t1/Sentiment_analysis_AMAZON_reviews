@@ -1,21 +1,21 @@
 import pickle
 
-from sklearn.datasets import load_files
+# from sklearn.datasets import load_files
 import numpy as np
 import urllib
 import pandas as pd
 import re
-import mglearn
+# import mglearn
 import matplotlib.pyplot as plt
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.svm import SVC
+# from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+# from sklearn.svm import SVC
 import time
 import dataprocess as proc
 import machinealgs as algs
 import os
 import sys
 import spacy
-import nltk
+# import nltk
 
 ##sklearn funcs
 from sklearn.model_selection import train_test_split, KFold
@@ -33,18 +33,19 @@ from sklearn.pipeline import make_pipeline
 from sklearn.decomposition import LatentDirichletAllocation
 
 
-start = time. time()
+start = time.time()
 
 
 path = os.getcwd()
 
-directory = path + '/Datasets/ElectronicsReviews/'
+print(path)
+directory = path + '/DATA/'
+print(directory)
 singleJSON = directory+'output.json.gz'
 
 
 ## loading datasets to pandas dataframe
 singleDF = proc.getDF(singleJSON)
-
 df = proc.files2DF(singleDF, directory)
 # df = proc.getDF(gzpathSmall)
 df = df.reset_index(drop=True)

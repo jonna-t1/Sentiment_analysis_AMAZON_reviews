@@ -14,8 +14,9 @@ def timer(func):
 def parse(path):
     # print(path)
     g = gzip.open(path, 'rb')
-    for l in g:
-        yield eval(l)
+    for line in g:
+        # print(type(l))
+        yield eval(line)()
 
 def getDF(path, *args):
     print(path)

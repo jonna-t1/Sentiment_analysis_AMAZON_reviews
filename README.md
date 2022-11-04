@@ -12,7 +12,14 @@ The final project relied on drawing together concepts from machine learning, nat
 
 ## Requirements
 
+python3 -m pip install --upgrade pip
+
+Recommended: python3 -m venv /path/to/new/virtual/environment, source env/bin/active
+
 pip install -r requirements.txt --upgrade
+
+=== UBUNTU / DEBIAN ===</br>
+sudo apt-get install python3-tk
 
 ## Data 
 
@@ -20,13 +27,68 @@ Data can be downloaded from https://nijianmo.github.io/amazon/index.html
 
 ### Data pre-processing 
 
-- zcat reviews_Electronics_5.json.gz | wc -l
+Run the `pp.sh` script
 
-- zcat reviews_Electronics_5.json.gz | split -l 170000 - 'file.gz.part'
+### Postgres Database setup
 
-- gzip file.gz.parta*
+#### Linux setup:
 
-- zcat elecReview\ \(1\).gz | head -1 > output.json
+- sudo apt update
 
-- gzip > output.json.gz
+- sudo apt install postgresql postgresql-contrib
 
+- download pgadmin4 - https://www.pgadmin.org/download/pgadmin-4-python/
+
+
+- pip install psycopg2
+
+### Change configuration files
+
+- Change the following config files; pg_hba.conf, postgresql.conf.
+
+- To find; 
+
+- `$ psql -U postgres` </br>
+`postgres=# SHOW config_file;`
+
+- Alternatively:
+
+`$(ls /etc/postgresql/*/main/pg_hba.conf)`
+`$(ls /etc/postgresql/*/main/postgresql.conf)`
+
+### May need to change file permissions to the following...  
+
+- postgresql.conf: add this line listen_addresses = '*'
+- In **pg_hba.conf** - first line should go:</br>
+#Database administrative </br>
+host all postgres 127.0.0.1/32 trust
+
+- Also add this below </br>
+#TYPE DATABASE USER CIDR-ADDRESS  METHOD</br>
+host  all  all 0.0.0.0/0 md5
+
+
+### Starting the postgresql database
+
+- `sudo -u postgres -i` ## log into postgres user
+
+- `postgres=# systemctl start postgresql`
+
+- And `postgres=# systemctl stop postgresql` </br> `postgres=# systemctl restart postgresql`. To stop and restart the database.
+
+- Start pgadmin and go to the ip address to create database with the config settings defined in the config dictionary found in ./DBFuncs/dbConfig.py or configure your own!
+
+## Getting the data into the database
+
+### Create the database table
+- Run the `python3 create_database.py` found in the root directory.
+
+### Upload reviews into db
+
+- Run `python3 review_upload.py` found in the root directory. Reviews should now be in the db.
+
+## Training the classifier
+
+The algorithms used are based from a thorough Literature review.
+
+- Run `classifier_main.py` found in root directory. This saves a model to file/database which can be used for iterative learning.</br>
