@@ -1,4 +1,4 @@
-# TITLE
+# Purpose
 
 The purpose of the project was to gain business intelligence and bolster profit margins through intelligence gained from large scale opinion mining also known as sentiment analysis. To solve a growing need to understand the increasing demands that “big data” trends present. The client uses sentiment analysis models on a regular basis and would like to gain actionable insights regarding data trends. Visualisations are presented to gather information quickly and efficiently on sentiment classification, these are portable visualisations represented in a web application format. In addition, the calibrated models will perform sentiment analysis without labelled data.
 
@@ -10,24 +10,28 @@ Many skills were adopted on the project some of which encompass; Literature revi
 
 The final project relied on drawing together concepts from machine learning, natural language processing and applying them to a software product. The results and outcomes of the experiment and were a highly accurate, precise machine learning classifier that enables simple and interpretable visualisations of results in a user-friendly display validated through client feedback, heuristic evaluations and user questionnaires. Future investigation would include real time feedback on sentiment this would cascade change to the training architecture. Deep Neural Network investigations for model improvement would also be considered.
 
-## Requirements
+## Requirements (Windows)
 
-python3 -m pip install --upgrade pip
-
-Recommended: python3 -m venv /path/to/new/virtual/environment, source env/bin/active
-
-pip install -r requirements.txt --upgrade
+* Git bash (preferred) / Cygwin / MSYS/MinGW / WSL Ubuntu.
+* `python3 -m pip install --upgrade pip`
+* `python3 -m venv /path/to/new/virtual/environment`
+* `source env/bin/active`
+* `pip install -r requirements.txt --upgrade`
 
 === UBUNTU / DEBIAN ===</br>
 sudo apt-get install python3-tk
 
 ## Data 
 
-Data can be downloaded from https://nijianmo.github.io/amazon/index.html 
+* Data can be downloaded from https://nijianmo.github.io/amazon/index.html
+* Scroll down to "Small" subsets for experimentation. I chose Electronics	5-core (6,739,590 reviews)
+* cd Sentiment_analysis_AMAZON_reviews
+* Create directory DATA/
 
-### Data pre-processing 
+### Data pre-processing steps (Windows/Unix)
 
-Run the `pp.sh` script
+* Install Git bash/Cygwin/MSYS/MinGW/WSL Ubuntu
+* From top level run `./pp.sh` bash script. To generate more manageable files for ML processing.
 
 ### Postgres Database setup
 
