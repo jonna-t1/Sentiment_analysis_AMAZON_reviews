@@ -11,11 +11,12 @@ Many skills were adopted on the project some of which encompass; Literature revi
 The final project relied on drawing together concepts from machine learning, natural language processing and applying them to a software product. The results and outcomes of the experiment and were a highly accurate, precise machine learning classifier that enables simple and interpretable visualisations of results in a user-friendly display validated through client feedback, heuristic evaluations and user questionnaires. Future investigation would include real time feedback on sentiment this would cascade change to the training architecture. Deep Neural Network investigations for model improvement would also be considered.
 
 ## Requirements (Windows)
-
+* Python 3.12.3 
 * Git bash (preferred) / Cygwin / MSYS/MinGW / WSL Ubuntu.
-* `python3 -m pip install --upgrade pip`
-* `python3 -m venv /path/to/new/virtual/environment`
-* `source env/bin/active`
+* `python -m venv venv`
+* `venv\Scripts\activate`
+* `python -m pip install --upgrade pip`
+* `pip install --upgrade pip setuptools wheel`
 * `pip install -r requirements.txt --upgrade`
 
 === UBUNTU / DEBIAN ===</br>
