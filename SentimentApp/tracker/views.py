@@ -40,7 +40,6 @@ class dataView(ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         if query:
-
             return Review.objects.filter(pos_batch_no=query)
         else:
             return Review.objects.all()
@@ -63,6 +62,8 @@ def filterCorrect():
 
 
 def incorrectMatchView(request):
+
+
 
     query = request.GET.get('q')
     if query:
@@ -219,8 +220,6 @@ def trainedModelsView(request):
     }
 
     return render(request, 'tracker/trained_models.html', context)
-
-
 
 class posView(ListView):
     model = PosScores
