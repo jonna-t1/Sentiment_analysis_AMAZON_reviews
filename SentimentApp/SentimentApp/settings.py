@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'tracker.apps.TrackerConfig',
     'crispy_forms',
+    'crispy_bootstrap5',
+    'bootstrap4',
     'form_utils',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -60,7 +63,9 @@ ROOT_URLCONF = 'SentimentApp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR + 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,7 +140,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 # print("base dir path", BASE_DIR)
-
+DATA_DIR = os.path.join(BASE_DIR, 'DATA')
 
 # val = os.path.join(BASE_DIR, "tracker\static")
 # print("base dir path", val)
@@ -144,6 +149,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'tracker-home'
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 # DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
 DEFAULT_FROM_EMAIL = 'jturnbullt@gmail.com'

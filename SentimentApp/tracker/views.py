@@ -18,6 +18,11 @@ from pathlib import Path
 import os
 import re
 from django.conf import settings
+from django.shortcuts import render
+from django.http import HttpResponse
+from .forms import FileUploadForm
+from django.http import JsonResponse
+
 
 
 def home(request):
@@ -418,10 +423,50 @@ class RequestCreateView(CreateView):
     login_url = '/login/'
     redirect_field_name = 'redirect_to'
 
+def data_upload_page(request):
+    return render(request, 'tracker/upload.html')
+
+
+def upload_file(request):
+    if request.method == 'POST':
+        form = FileUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            # Get the uploaded file
+            uploaded_file = form.cleaned_data['file']
+
+            # Define the path to save the file in the DATA directory
+            data_dir = os.path.join(settings.BASE_DIR, 'DATA')
+            if not os.path.exists(data_dir):
+                os.makedirs(data_dir)  # Create the DATA directory if it doesn't exist
+
+            # Save the file to the DATA directory
+            file_path = os.path.join(data_dir, uploaded_file.name)
+            with open(file_path, 'wb+') as destination:
+                for chunk in uploaded_file.chunks():
+                    destination.write(chunk)
+
+            return HttpResponse(f"File uploaded successfully to {file_path}.")
+    else:
+        form = FileUploadForm()
+    return render(request, 'tracker/upload.html', {'form': form})
+
+def train_model(request):
+    return render(request, 'tracker/train.html')
+
+from django.http import JsonResponse
+import time
+def start_counting(request):
+    # Simulate a long-running operation (e.g., counting to 100)
+    count = 0
+    while count < 100:
+        time.sleep(0.1)  # Simulate some processing
+        count += 1
+
+    return JsonResponse({'status': 'done', 'count': count})
 
 def about(request):
     return render(request, 'tracker/about.html')
-
+#### Query functions ####
 def get_date(request):
     data = Event.objects.all()
     event_dates = []
@@ -433,9 +478,6 @@ def get_date(request):
         # print(json.dumps(event_dates))
     return HttpResponse(json.dumps(event_dates), content_type="application/json")
 
-
-
-#### Query functions ####
 
 def getMonthlyRange():
 

@@ -5,7 +5,6 @@ from crispy_forms.layout import Field
 
 from django import forms
 
-
 class RequestForm(forms.ModelForm):
 
     class Meta:
@@ -20,3 +19,12 @@ class RequestForm(forms.ModelForm):
         ]
 
 
+class FileUploadForm(forms.Form):
+    file = forms.FileField(label='Upload a .json.gz file')
+
+    def clean_file(self):
+        uploaded_file = self.cleaned_data['file']
+        # Check the file extension
+        if not uploaded_file.name.endswith('.json.gz'):
+            raise forms.ValidationError("The file must be a .json.gz file.")
+        return uploaded_file

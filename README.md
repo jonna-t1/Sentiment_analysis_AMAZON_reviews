@@ -19,9 +19,6 @@ The final project relied on drawing together concepts from machine learning, nat
 * `pip install --upgrade pip setuptools wheel`
 * `pip install -r requirements.txt --upgrade`
 
-=== UBUNTU / DEBIAN ===</br>
-sudo apt-get install python3-tk
-
 ## Data 
 
 * Data can be downloaded from https://nijianmo.github.io/amazon/index.html
@@ -32,7 +29,7 @@ sudo apt-get install python3-tk
 ### Data pre-processing steps (Windows/Unix)
 
 * Install Git bash/Cygwin/MSYS/MinGW/WSL Ubuntu
-* From top level run `./pp.sh` bash script. To generate more manageable files for ML processing.
+* From top level run `./reduce_file_size.sh` bash script. To generate more manageable files for ML processing.
 
 ### Postgres Database setup
 
@@ -86,18 +83,19 @@ host  all  all 0.0.0.0/0 md5
 ## Getting the data into the database
 
 ### Create the database table
-- Run the `python3 create_database.py` found in the root directory.
+
+[//]: # (- Run the `python create_database.py` found in the root directory.)
 
 ### Upload reviews into db
 
-- Run `python3 review_upload.py` found in the root directory. Reviews should now be in the db.
+- Run `python review_upload.py` found in the root directory. Reviews should now be in the db.
 
 ## Training the classifier
 
 The algorithms used are based from a thorough Literature review.
 
-- Run `classifier_main.py` found in ./app/ directory. This saves a model to file/database which can be used for iterative learning.</br>
+- Run `classifier_main.py` found in ./app/ directory. This saves a model to file/database which can be used for incremental learning.</br>
 
 ## Running the web application
 
-- To run the web application: python3 SentimentApp/manage.py runserver
+- To run the web application: python SentimentApp/manage.py runserver

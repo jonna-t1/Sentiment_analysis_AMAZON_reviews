@@ -1,4 +1,3 @@
-from django.conf.urls import url
 from django.urls import path
 from django.views.i18n import JavaScriptCatalog
 from django.contrib.staticfiles.urls import static
@@ -20,6 +19,9 @@ urlpatterns = [
     path('dataView/matches/', views.matchView, name='tracker-match'),
     path('dataView/falsematches/', views.incorrectMatchView, name='tracker-falsematch'),
     path('classification/', views.classificationView.as_view(), name='tracker-classTable'),
+    path('upload/', views.upload_file, name='upload_file'),
+    path('train/', views.train_model, name='tracker-train'),
+    path('start-counting/', views.start_counting, name='start_counting'),
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
 ]+ static(settings.STATIC_URL)
 

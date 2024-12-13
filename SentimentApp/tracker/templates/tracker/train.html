@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counting Button</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function startCounting() {
+            // Disable the button to prevent further clicks
+            document.getElementById('countBtn').disabled = true;
+
+            // Initialize the output area
+            const output = document.getElementById('output');
+            output.innerText = 'Counting... Please wait.';
+
+            // Send an AJAX request to the Django view
+            $.ajax({
+                url: '/start-counting/',  // Django URL for the counting process
+                method: 'GET',
+                success: function(data) {
+                    // Update the output when counting is done
+                    output.innerText = `Done! Count reached: ${data.count}`;
+                },
+                error: function(xhr, status, error) {
+                    // Handle any errors
+                    output.innerText = 'Error occurred during counting.';
+                },
+                complete: function() {
+                    // Re-enable the button when done
+                    document.getElementById('countBtn').disabled = false;
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <button id="countBtn" onclick="startCounting()">Start Counting</button>
+    <p id="output">Waiting to start...</p>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Button with Loading Effect</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            display: flex;-->
+<!--            flex-direction: column;-->
+<!--            align-items: center;-->
+<!--            justify-content: center;-->
+<!--            height: 100vh;-->
+<!--            margin: 0;-->
+<!--            background-color: #f4f4f4;-->
+<!--        }-->
+<!--        button {-->
+<!--            padding: 10px 20px;-->
+<!--            font-size: 16px;-->
+<!--            color: white;-->
+<!--            background-color: #007bff;-->
+<!--            border: none;-->
+<!--            border-radius: 5px;-->
+<!--            cursor: pointer;-->
+<!--            transition: background-color 0.3s ease;-->
+<!--        }-->
+<!--        button:hover {-->
+<!--            background-color: #0056b3;-->
+<!--        }-->
+<!--        .loading {-->
+<!--            cursor: progress;-->
+<!--        }-->
+<!--        #output {-->
+<!--            margin-top: 20px;-->
+<!--            font-size: 18px;-->
+<!--            color: #333;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<form method="POST" id="myForm">-->
+<!--  {% csrf_token %}-->
+<!--  &lt;!&ndash; Your form fields here &ndash;&gt;-->
+<!--  <button type="submit" id="myButton">Submit</button>-->
+<!--</form>-->
+
+<!--<script>-->
+<!--document.getElementById('myButton').addEventListener('click', function(event) {-->
+<!--    // Prevent the form from submitting immediately (for handling custom JS logic)-->
+<!--    event.preventDefault();-->
+
+<!--    // Optional: Handle any custom client-side logic (e.g., validation, spinner)-->
+<!--    console.log('Button clicked, handling JS logic first');-->
+
+<!--    // Trigger the form submission after JS logic, if needed-->
+<!--    document.getElementById('myForm').submit();-->
+<!--});-->
+<!--</script>-->
+
+
+<!--    <form method="POST">-->
+<!--        {% csrf_token %}-->
+<!--        <button type="submit" id="actionButton">Click Me</button>-->
+<!--    </form>-->
+<!--    <div id="output"></div>-->
+
+<!--    <script>-->
+<!--        const myVariable = "{{ success_message|escapejs }}"; // Use escapejs to escape special characters-->
+<!--        console.log(myVariable);-->
+<!--        const button = document.getElementById("actionButton");-->
+<!--        const output = document.getElementById("output");-->
+
+<!--        button.addEventListener("click", () => {-->
+<!--            // Set the button and body to loading state-->
+<!--            button.disabled = true;-->
+<!--            button.classList.add("loading");-->
+
+<!--            // Simulate a 3-second delay-->
+<!--            setTimeout(() => {-->
+<!--                // Remove the loading state-->
+<!--                button.disabled = false;-->
+<!--                button.classList.remove("loading");-->
+
+<!--                // Display the variable-->
+<!--                output.textContent = myVariable;-->
+<!--            }, 3000);-->
+<!--        });-->
+<!--    </script>-->
+<!--</body>-->

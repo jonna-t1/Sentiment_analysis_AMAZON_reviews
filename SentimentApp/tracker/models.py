@@ -6,6 +6,7 @@ from django.urls import reverse
 from django.utils import timezone
 from datetime import date
 from django.core.exceptions import ValidationError
+from django.utils.timezone import now
 
 def no_future(value):
     today = date.today()
@@ -87,7 +88,7 @@ class Review(models.Model):
     actualSentiment = models.CharField(max_length=10, choices=SENTIMENT)
     # batch_date = models.DateField(default=datetime.date.today)
     # batch_date = models.DateTimeField(default=timezone.now)
-    batch_date = models.DateTimeField(default=datetime.date.today())
+    batch_date = models.DateTimeField(default=now)
     pos_batch_no = models.ForeignKey(PosScores, on_delete=models.CASCADE)
     neg_batch_no = models.ForeignKey(NegScores, on_delete=models.CASCADE)
     avg_batch_no = models.ForeignKey(WeightedAvg, on_delete=models.CASCADE)
