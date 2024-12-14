@@ -42,7 +42,6 @@ def no_future(value):
 
 
 class PosScores(models.Model):
-
     precision = models.DecimalField(max_digits=5, decimal_places=3)
     recall = models.DecimalField(max_digits=5, decimal_places=3)
     f1 = models.DecimalField(max_digits=5, decimal_places=3)

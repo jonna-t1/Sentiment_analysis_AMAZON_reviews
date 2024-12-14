@@ -6,7 +6,6 @@ from colorama import Fore
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 import os
-from django.db.models import F
 # from databaseQueries import getMonthlyRange
 from .forms import RequestForm
 from .models import Review, Request, PosScores, WeightedAvg, NegScores
@@ -22,7 +21,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import FileUploadForm
 from django.http import JsonResponse
-
+from .ml_pipeline import train_update
 
 
 def home(request):
@@ -67,9 +66,6 @@ def filterCorrect():
 
 
 def incorrectMatchView(request):
-
-
-
     query = request.GET.get('q')
     if query:
         vals = filterIncorrect()
@@ -456,11 +452,13 @@ def train_model(request):
 from django.http import JsonResponse
 import time
 def start_counting(request):
+    train_update()
     # Simulate a long-running operation (e.g., counting to 100)
-    count = 0
-    while count < 100:
-        time.sleep(0.1)  # Simulate some processing
-        count += 1
+    # count = 0
+    # while count < 100:
+    #     time.sleep(0.1)  # Simulate some processing
+    #     count += 1
+    count = "done"
 
     return JsonResponse({'status': 'done', 'count': count})
 
