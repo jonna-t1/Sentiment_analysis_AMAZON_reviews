@@ -12,6 +12,7 @@ from pathlib import Path
 import pickle
 from models import Review
 from pathlib import Path
+import db_interact
 
 # Data extraction
 # C:\Users\jturn\PycharmProjects\Sentiment_analysis_AMAZON_reviews\SentimentApp\DATA
@@ -45,6 +46,8 @@ first_10_reviews = Review.objects.all()[:10]
 
 for review in first_10_reviews:
     print(review)
+
+
 
 # X_train_raw = X_train_raw.rename(columns={"reviewText": "reviewTextRaw"})
 # Concatenate along columns (indices match)
