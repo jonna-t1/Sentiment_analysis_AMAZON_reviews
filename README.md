@@ -32,7 +32,8 @@ The final project relied on drawing together concepts from machine learning, nat
 * From top level run `./reduce_file_size.sh` bash script. To generate more manageable files for ML processing.
 
 ## set up admin user
-`python manage.py createsuperuser {your name}`
+* `cd SentimentApp/`
+* `python manage.py createsuperuser {your name}`
 
 ## Getting the data into the database
 
