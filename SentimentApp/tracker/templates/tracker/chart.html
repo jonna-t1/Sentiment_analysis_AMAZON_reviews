@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "tracker/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<style>
+img {
+  position: relative;
+    left: 15%;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+{% if user.is_authenticated %}
+
+<h2>Weighted average chart</h2>
+
+<body>
+    <canvas id="myLineChart" width="400" height="200"></canvas>
+
+    <script>
+        // Data from Django passed via context
+        const labels = {{ labels|safe }};
+        const precision = {{ precision|safe }};
+        const recall = {{ recall|safe }};
+        const f1 = {{ f1|safe }};
+
+        // Create the chart
+        const ctx = document.getElementById('myLineChart').getContext('2d');
+        const myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Precision',
+                        data: precision,
+                        borderColor: 'rgba(78, 115, 223, 1)',
+                        backgroundColor: 'rgba(78, 115, 223, 0.1)',
+                        tension: 0.4,
+                    },
+                    {
+                        label: 'Recall',
+                        data: recall,
+                        borderColor: 'rgba(28, 200, 138, 1)',
+                        backgroundColor: 'rgba(28, 200, 138, 0.1)',
+                        tension: 0.4,
+                    },
+                    {
+                        label: 'F1 Score',
+                        data: f1,
+                        borderColor: 'rgba(231, 74, 59, 1)',
+                        backgroundColor: 'rgba(231, 74, 59, 0.1)',
+                        tension: 0.4,
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    },
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Batch ID',
+                        },
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Score',
+                        },
+                        beginAtZero: true,
+                        max: 1, // Assuming scores range from 0 to 1
+                    },
+                },
+            },
+        });
+    </script>
+</body>
+{% else %}
+    <h1 class="text-center" ><a href="{% url 'login' %}">Login here</a></h1>
+    <br>
+    <h2 class="text-center"> <a href="{% url 'request-create' %}"> Request access </a> </h2>
+
+{% endif %}
+
+
+
+{% endblock content %}

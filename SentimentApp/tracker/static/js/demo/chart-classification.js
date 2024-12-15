@@ -35,119 +35,81 @@ var f1DIV = document.getElementById('f1');
 // Area Chart Example
 var ctx = document.getElementById("myAreaChart");
 
-var arrayLength = dates.length;
-var formattedDates = []
-for (var i = 0; i < arrayLength; i++) {
-  var dateSplit = dates[i].split(" ");
-  // console.log(dateSplit[0]);
-  formattedDates.push(dateSplit[0])
-}
-
-var posRow = [];
+// Filtered data arrays
+var formattedDates = [];
 var pos_precision = [];
-var pos_recall = [];
-var pos_f1 = [];
-var pos_support = [];
-
-var negRow = [];
 var neg_precision = [];
-var neg_recall = [];
-var neg_f1 = [];
-var neg_support = [];
-
-var classRow = [];
 var precision = [];
-var recall = [];
-var f1 = [];
-var support = [];
 
-for (var key in classObjects) {
-    classRow = classObjects[key];
-    precision.push(classRow[0]);
-    recall.push(classRow[1]);
-    f1.push(classRow[2]);
-    support.push(classRow[3]);
-    // precision.append(classRow[0])
-}
-for (var key in posObjects) {
-    posRow = posObjects[key];
-    pos_precision.push(posRowRow[0]);
-    pos_recall.push(posRowRow[1]);
-    pos_f1.push(posRowRow[2]);
-    pos_support.push(posRowRow[3]);
-    // precision.append(classRow[0])
-}
-for (var key in negObjects) {
-    negRow = negObjects[key];
-    neg_precision.push(negRow[0]);
-    neg_recall.push(negRow[1]);
-    neg_f1.push(negRow[2]);
-    neg_support.push(negRow[3]);
-    // precision.append(classRow[0])
-}
+for (var i = 0; i < dates.length; i++) {
+  var dateSplit = dates[i].split(" ");
+  var date = dateSplit[0];
 
+  // Check if precision data for the date is available, and filter accordingly
+  if (pos_precision[i] !== null && pos_precision[i] !== undefined &&
+      neg_precision[i] !== null && neg_precision[i] !== undefined &&
+      precision[i] !== null && precision[i] !== undefined) {
 
-if (neg_f1.length != formattedDates.length){
-    alert("Incorrect array sizes dont match: Contact admin")
-    // document.getElementById("myLineChart").innerHTML = err.message;
+    formattedDates.push(date);
+    pos_precision.push(pos_precision[i]);
+    neg_precision.push(neg_precision[i]);
+    precision.push(precision[i]);
+  }
 }
-
 
 var config = {
-
   type: 'line',
   data: {
     labels: formattedDates,
     datasets: [
-    {
-      // weighted avg dataset
-      label: "Avg line: ",
-      lineTension: 0.3,
-      backgroundColor: "rgba(78, 115, 223, 0.05)",
-      borderColor: "rgba(78, 115, 223, 1)",
-      pointRadius: 3,
-      pointBackgroundColor: "rgba(78, 115, 223, 1)",
-      pointBorderColor: "rgba(78, 115, 223, 1)",
-      pointHoverRadius: 3,
-      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
-      pointHitRadius: 10,
-      pointBorderWidth: 2,
-      // data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
-      data: [1,2],
-    },{
-      // positive scores
-      label: "Pos Line: ",
-      lineTension: 0.3,
-      backgroundColor: "rgba(78, 115, 223, 0.05)",
-      borderColor: "rgba(78, 115, 223, 1)",
-      pointRadius: 3,
-      pointBackgroundColor: "rgba(78, 115, 223, 1)",
-      pointBorderColor: "rgba(78, 115, 223, 1)",
-      pointHoverRadius: 3,
-      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
-      pointHitRadius: 10,
-      pointBorderWidth: 2,
-      // data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
-      data: [1,2],
-    },{
-      // negative scores
-      label: "Line C: ",
-      lineTension: 0.3,
-      backgroundColor: "rgba(78, 115, 223, 0.05)",
-      borderColor: "rgba(78, 115, 223, 1)",
-      pointRadius: 3,
-      pointBackgroundColor: "rgba(78, 115, 223, 1)",
-      pointBorderColor: "rgba(78, 115, 223, 1)",
-      pointHoverRadius: 3,
-      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
-      pointHitRadius: 10,
-      pointBorderWidth: 2,
-      // data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
-      data: [1,2],
-    },
+      {
+        // Avg precision line
+        label: "Avg line: ",
+        lineTension: 0.3,
+        backgroundColor: "rgba(78, 115, 223, 0.05)",
+        borderColor: "rgba(78, 115, 223, 1)",
+        pointRadius: 3,
+        pointBackgroundColor: "rgba(78, 115, 223, 1)",
+        pointBorderColor: "rgba(78, 115, 223, 1)",
+        pointHoverRadius: 3,
+        pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+        pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+        pointHitRadius: 10,
+        pointBorderWidth: 2,
+        data: precision, // Filtered precision data
+      },
+      {
+        // Positive precision
+        label: "Pos Line: ",
+        lineTension: 0.3,
+        backgroundColor: "rgba(78, 115, 223, 0.05)",
+        borderColor: "rgba(78, 115, 223, 1)",
+        pointRadius: 3,
+        pointBackgroundColor: "rgba(78, 115, 223, 1)",
+        pointBorderColor: "rgba(78, 115, 223, 1)",
+        pointHoverRadius: 3,
+        pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+        pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+        pointHitRadius: 10,
+        pointBorderWidth: 2,
+        data: pos_precision, // Filtered positive precision data
+      },
+      {
+        // Negative precision
+        label: "Neg Line: ",
+        lineTension: 0.3,
+        backgroundColor: "rgba(78, 115, 223, 0.05)",
+        borderColor: "rgba(78, 115, 223, 1)",
+        pointRadius: 3,
+        pointBackgroundColor: "rgba(78, 115, 223, 1)",
+        pointBorderColor: "rgba(78, 115, 223, 1)",
+        pointHoverRadius: 3,
+        pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+        pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+        pointHitRadius: 10,
+        pointBorderWidth: 2,
+        data: neg_precision, // Filtered negative precision data
+      }
     ],
   },
   options: {
@@ -208,9 +170,6 @@ var config = {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          // var datasetIndex = chart.datasets[tooltipItem.datasetIndex] || '';
-          printIndex(tooltipItem.index);
-          // console.log(tooltipItem.yLabel)
           return datasetLabel + ' ' + tooltipItem.yLabel;
         }
       }
@@ -218,12 +177,10 @@ var config = {
   }
 }
 
-config.data.datasets[0].data = precision;
-config.data.datasets[1].data = pos_precision;
-config.data.datasets[2].data = neg_precision;
+// Initialize the chart
 myLineChart = new Chart(ctx, config);
 
-
+// Add event listeners for switching data views
 precisionDIV.style.cursor = 'pointer';
 precisionDIV.onclick = function() {
     myLineChart.config.data.datasets[0].data = precision;
@@ -231,6 +188,7 @@ precisionDIV.onclick = function() {
     myLineChart.config.data.datasets[2].data = neg_precision;
     myLineChart.update();
 };
+
 recallDIV.style.cursor = 'pointer';
 recallDIV.onclick = function() {
     myLineChart.config.data.datasets[0].data = recall;
@@ -238,6 +196,7 @@ recallDIV.onclick = function() {
     myLineChart.config.data.datasets[2].data = neg_recall;
     myLineChart.update();
 };
+
 f1DIV.style.cursor = 'pointer';
 f1DIV.onclick = function() {
     myLineChart.config.data.datasets[0].data = f1;
@@ -245,4 +204,3 @@ f1DIV.onclick = function() {
     myLineChart.config.data.datasets[2].data = neg_f1;
     myLineChart.update();
 };
-

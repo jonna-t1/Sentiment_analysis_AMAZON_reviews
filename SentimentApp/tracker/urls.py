@@ -22,9 +22,13 @@ urlpatterns = [
     path('upload/', views.upload_file, name='upload_file'),
     path('train/', views.train_model, name='tracker-train'),
     path('start-counting/', views.start_counting, name='start_counting'),
+    # path('chart/', views.score_view, name='tracker-chart'),
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
+    path('chart/', views.chart_view, name='chart'),
+    path('get-pos-scores/', views.get_pos_scores, name='get_pos_scores'),
 ]+ static(settings.STATIC_URL)
 
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

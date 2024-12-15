@@ -122,7 +122,6 @@ def getScores():
 
     return results
 
-
 class classificationView(ListView):
     model = PosScores
     template_name = 'tracker/classification_table.html'  # Default: <app_label>/<model_name>_list.html
@@ -274,6 +273,32 @@ class ReviewListView(ListView):
             # context['actual_negative'] = all.filter(actualSentiment='negative').count()
             return context
 
+
+def chart_view(request):
+    # Query all data from the PosScores model
+    scores = WeightedAvg.objects.all().order_by('id')
+
+    # Prepare data for the chart
+    labels = [str(score.id) for score in scores]  # Use ID as labels (you can adjust this to your dates if available)
+    precision = [float(score.precision) for score in scores]
+    recall = [float(score.recall) for score in scores]
+    f1 = [float(score.f1) for score in scores]
+
+    context = {
+        'labels': labels,
+        'precision': precision,
+        'recall': recall,
+        'f1': f1,
+    }
+
+    return render(request, 'tracker/chart.html', context)
+
+def get_pos_scores(request):
+    # Fetch all data from PosScores
+    scores = PosScores.objects.all().values('id', 'precision', 'recall', 'f1', 'support')
+
+    # Return as JSON
+    return JsonResponse(list(scores), safe=False)
 
 class PerformanceListView(ListView):
     model = Review
