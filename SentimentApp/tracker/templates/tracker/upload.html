@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>File Upload</title>
-</head>
-<body>
-    <h1>Upload a .json.gz file</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Upload</button>
-    </form>
-</body>
-</html>
+
+{% extends "tracker/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<style>
+img {
+  position: relative;
+    left: 15%;
+}
+</style>
+
+{% if user.is_authenticated %}
+    <head>
+        <title>File Upload</title>
+    </head>
+    <body>
+        <h1>Upload a .json.gz file</h1>
+    <!--    <form method="post" enctype="multipart/form-data" action="{% url 'tracker-train' %}">-->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Upload</button>
+        </form>
+    </body>
+{% else %}
+    <h1 class="text-center" ><a href="{% url 'login' %}">Login here</a></h1>
+    <br>
+    <h2 class="text-center"> <a href="{% url 'request-create' %}"> Request access </a> </h2>
+
+{% endif %}
+
+
+
+{% endblock content %}

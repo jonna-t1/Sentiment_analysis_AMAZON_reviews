@@ -4,9 +4,8 @@ import pandas as pd
 import calendar
 from colorama import Fore
 from django.core.paginator import Paginator
-from django.shortcuts import render, get_object_or_404
+from django.db.models import F
 import os
-# from databaseQueries import getMonthlyRange
 from .forms import RequestForm
 from .models import Review, Request, PosScores, WeightedAvg, NegScores
 from django.http import HttpResponse
@@ -17,7 +16,7 @@ from pathlib import Path
 import os
 import re
 from django.conf import settings
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import FileUploadForm
 from django.http import JsonResponse
@@ -192,7 +191,6 @@ def trainedModelsView(request):
     p = Path(os.getcwd())
     file = p.parent / ('savedModels/accuracy/modelAccuracy.csv')
     # dirFiles = os.listdir(dirPath)  # list of directory files
-
     arr = []
 
     with open(file, 'r') as f:
@@ -441,7 +439,8 @@ def upload_file(request):
                 for chunk in uploaded_file.chunks():
                     destination.write(chunk)
 
-            return HttpResponse(f"File uploaded successfully to {file_path}.")
+            # return HttpResponse(f"File uploaded successfully to {file_path}.")
+            return redirect('tracker-train')
     else:
         form = FileUploadForm()
     return render(request, 'tracker/upload.html', {'form': form})

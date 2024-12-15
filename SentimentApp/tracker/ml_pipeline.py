@@ -30,7 +30,13 @@ def train_update():
     raw_df['sentiment'] = raw_df['overall'].apply(pre_proc.get_sentiment)
     raw_df['reviewText'] = raw_df['reviewText'].fillna("")
     labels = raw_df['sentiment']
-    X_train_raw, X_test_raw, y_train_raw, y_test_raw = train_test_split(raw_df['reviewText'], labels, test_size=0.2, random_state=42)
+    if len(raw_df) > 1 and len(labels) > 1:
+        X_train_raw, X_test_raw, y_train_raw, y_test_raw = train_test_split(
+            raw_df['reviewText'], labels, test_size=0.2, random_state=42
+        )
+    else:
+        raise ValueError("Dataset is too small to split. Add more data or check earlier pipeline steps.")
+    # X_train_raw, X_test_raw, y_train_raw, y_test_raw = train_test_split(raw_df['reviewText'], labels, test_size=0.2, random_state=42)
 
     # Pre_processing
     df = pd.DataFrame(raw_df['reviewText'].apply(pre_proc.preprocess_text))

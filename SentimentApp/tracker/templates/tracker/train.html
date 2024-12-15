@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
+{% extends "tracker/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<style>
+img {
+  position: relative;
+    left: 15%;
+}
+</style>
+
+{% if user.is_authenticated %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counting Button</title>
+    <title>Train model</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function startCounting() {
@@ -20,7 +34,7 @@
                 method: 'GET',
                 success: function(data) {
                     // Update the output when counting is done
-                    output.innerText = `Done! Count reached: ${data.count}`;
+                    output.innerText = `Done! Data uploaded to db and new model trained: ${data.count}`;
                 },
                 error: function(xhr, status, error) {
                     // Handle any errors
@@ -35,10 +49,19 @@
     </script>
 </head>
 <body>
-    <button id="countBtn" onclick="startCounting()">Start Counting</button>
+    <button id="countBtn" onclick="startCounting()">Train on the new data</button>
     <p id="output">Waiting to start...</p>
 </body>
-</html>
+{% else %}
+    <h1 class="text-center" ><a href="{% url 'login' %}">Login here</a></h1>
+    <br>
+    <h2 class="text-center"> <a href="{% url 'request-create' %}"> Request access </a> </h2>
+
+{% endif %}
+
+
+
+{% endblock content %}
 
 
 <!--<!DOCTYPE html>-->
