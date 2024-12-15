@@ -37,4 +37,4 @@ The final project relied on drawing together concepts from machine learning, nat
 
 ## Running the web application
 
-- To run the web application: python SentimentApp/manage.py runserver
+- To run the web application: `python SentimentApp/manage.py runserver`
