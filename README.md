@@ -35,22 +35,6 @@ The final project relied on drawing together concepts from machine learning, nat
 * `cd SentimentApp/`
 * `python manage.py createsuperuser {your name}`
 
-## Getting the data into the database
-
-### Create the database table
-
-- Run the `python create_database.py` found in the root directory.
-
-### Upload reviews into db
-
-- Run `python review_upload.py` found in the root directory. Reviews should now be in the db.
-
-## Training the classifier
-
-The algorithms used are based from a thorough Literature review.
-
-- Run `classifier_main.py` found in ./app/ directory. This saves a model to file/database which can be used for incremental learning.</br>
-
 ## Running the web application
 
 - To run the web application: python SentimentApp/manage.py runserver
